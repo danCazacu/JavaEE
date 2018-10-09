@@ -1,7 +1,6 @@
 package laborator1;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,13 +13,9 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Random;
-import java.util.Set;
 import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,43 +29,51 @@ import javax.servlet.http.HttpServletResponse;
 public class Servlet1 extends HttpServlet {
 
     private final Object lock = new Object();
-    Map<String,Entry> map;
+    //private final Object lockProperties = new Object();
+    //private final Object lockText = new Object();
+    Map<Integer,Entry> map;
     File outputFile, outputPropertiesFile;
-    OutputStream propertiesFileOutput = null;
+    
+    PrintWriter txtWriter;
+    FileReader fileReader;
+    BufferedReader bufferedReader;
+    
+    InputStream propertiesFileInputStream;
+    OutputStream propertiesFileOutputStream;
+    
     Properties prop;
-    int counterProp;
+    int requestId;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String python = request.getParameter("submit");
-        if(python.equals("javaapp"))
-        {
+        String submitType = request.getParameter("submit");
+        if(submitType != null && submitType.equals("javaapp")){
+            
             synchronized(lock){
-                 try (PrintWriter out = response.getWriter()) {
+                try (PrintWriter out = response.getWriter()) {
                  
-                 out.print("this is PYTHON !!!");
-                 for(String key : map.keySet()){
+                    out.print("this is PYTHON !!!");
+                    for(Integer key : map.keySet()){
 
-                    Entry entry = map.get(key);
-                
-                    out.print(key+" ");
-                    out.print(entry.getEmail()+" ");
-                    out.print(entry.getName()+" ");
+                        Entry entry = map.get(key);
 
-                    out.println();
-                 }
-                 
-                 }
+                        out.print(key+" ");
+                        out.print(entry.getEmail()+" ");
+                        out.print(entry.getName()+" ");
+
+                        out.println();
+                    }
+                }
             }
-
         }
         else{
             try (PrintWriter out = response.getWriter()) {
 
-                returnResponsFromMap(out);
-                //returnResponsFromFile(out);
-                //returnResponseFromPropertiesFile(out);
+                showHTMLResponseFromMap(out);
+                //showHTMLResponseFromTXTFile(out);
+                //showHTMLResponseFromPropertiesFile(out);
+                
                 /**
                  * write in server log
                  */
@@ -92,12 +95,14 @@ public class Servlet1 extends HttpServlet {
         SimpleDateFormat newFormat = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
         String timestamp = newFormat.format(new Timestamp(System.currentTimeMillis()));
         
-        Random random = new Random();
-        String id = String.valueOf(random.nextInt(1000000 + 1));
-        while(map.get(id) != null){
-        
-            id = String.valueOf(random.nextInt(1000000 + 1));
-        }
+        //generate random id
+//        Random random = new Random();
+//        String id = String.valueOf(random.nextInt(1000000 + 1));
+//        while(map.get(id) != null){
+//        
+//            id = String.valueOf(random.nextInt(1000000 + 1));
+//        }
+        //end of generate random id
         
         if ((name == null || name.trim().length() == 0) && (email == null || email.trim().length() == 0)) {
             
@@ -110,23 +115,23 @@ public class Servlet1 extends HttpServlet {
             out.println("<p>Email value is missing...Please try again...</p>");
         }else{
         
-            Entry entry = new Entry(id,name,email, timestamp);
-            //map.put(id, entry);
-            addToMap(id,entry);
-            //writeToFile(id, entry);
-            
-            //writeToPropertiesFile(id,entry);
+            Entry entry = new Entry(name,email, timestamp);
+            exportData(entry);
+
         }
         
         processRequest(request,response);
         
     }
-    void addToMap(String id, Entry entry)
-    {
-        synchronized(lock){
-            map.put(id, entry);
-        }
-
+    
+    
+    public void exportData(Entry entry){
+            synchronized(lock){
+                addToMap(entry);
+                writeToTXTFile(entry);
+                writeToPropertiesFile(entry);
+            }
+            
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -143,6 +148,7 @@ public class Servlet1 extends HttpServlet {
         }
     }
 
+    
     @Override
     public String getServletInfo() {
         return "This is the first laboratory from Java Technologies - MISS 2018-2019";
@@ -155,15 +161,27 @@ public class Servlet1 extends HttpServlet {
         map = new TreeMap<>();
         outputFile = new File(System.getProperty("user.home") + "/Desktop/servletInfo.txt");
         
-        if(outputFile.exists()){
-            
-            outputFile.delete();
-        }
+//        if(outputFile.exists()){
+//            
+//            outputFile.delete();
+//        }
         
         try {
+            
             outputFile.createNewFile();
+            //writer txt
+            txtWriter = new PrintWriter(new FileWriter(outputFile,true));
+            //reader txt
+            fileReader = new FileReader(outputFile);
+            bufferedReader = new BufferedReader(fileReader);
+                
+        } catch (FileNotFoundException ex) {
+            
+            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "Problem occured while trying to create file reader", ex);
+        
         } catch (IOException ex) {
-            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "File wasn't created...", ex);
+            
+            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "File/Stream (printWriter) wasn't created...", ex);
         }
         
         /**
@@ -171,24 +189,55 @@ public class Servlet1 extends HttpServlet {
          */
         
         prop = new Properties();
-        counterProp = 1;
+        requestId = 1;
         
         outputPropertiesFile = new File(System.getProperty("user.home") + "/Desktop/servletInfo.properties");
         
-        if(outputPropertiesFile.exists()){
-            
-            outputPropertiesFile.delete();
-        }
+//        if(outputPropertiesFile.exists()){
+//            
+//            outputPropertiesFile.delete();
+//        }
         
         try {
             
             outputPropertiesFile.createNewFile();
+            propertiesFileOutputStream = new FileOutputStream(outputPropertiesFile,true);
+            propertiesFileInputStream = new FileInputStream(outputPropertiesFile);
+            prop.load(propertiesFileInputStream);
+            requestId = (prop.size()/3) + 1;
+            
+        } catch (FileNotFoundException ex) {
+            
+            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "File wasn't found (\".properties\" file)...", ex);
+        
         } catch (IOException ex) {
             
             Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "File wasn't created (\".properties\" file)...", ex);
         }
+        
 
-      
+        
+    }
+    
+    
+    @Override
+    public void destroy(){
+        
+        try {
+            
+            txtWriter.close();
+            propertiesFileOutputStream.close();
+            bufferedReader.close();
+            propertiesFileInputStream.close();
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "Something went wrong (close -destroy) ...", ex);
+        }
+        
+    }
+    
+    void addToMap(Entry entry){
+        map.put(requestId, entry);
     }
     
     public void showUserInfoInServerLog(HttpServletRequest request){
@@ -196,6 +245,7 @@ public class Servlet1 extends HttpServlet {
         System.out.println("-------------info-----------------");
     
         System.out.println("Http method used: " + request.getMethod());
+       
         System.out.println("IP-Adress of the client: " + request.getLocalAddr());
 
         if(request.getHeader("user-agent") == null){
@@ -234,10 +284,10 @@ public class Servlet1 extends HttpServlet {
             
             System.out.println("The function \".getParameterMap()\" from the request hasn't return any value... " );
         }
-        
     }
     
-    public void returnResponsFromMap(PrintWriter out){
+    
+    public void showHTMLResponseFromMap(PrintWriter out){
     
         out.println( "<p><i>(The response is read from map)</i></p>");
         if(map.size() > 0){
@@ -245,8 +295,8 @@ public class Servlet1 extends HttpServlet {
             out.println("<p> maps no of elements: " + map.size() + "</p>");
 
             out.println("<p> Map's values: </p>");
-
-            for(String key : map.keySet()){
+            synchronized(lock){
+            for(Integer key : map.keySet()){
 
                 Entry entry = map.get(key);
 
@@ -254,6 +304,7 @@ public class Servlet1 extends HttpServlet {
                 entry.doPrintEntry(out);
 
                 out.println();
+            }
             }
         }else{
 
@@ -263,59 +314,51 @@ public class Servlet1 extends HttpServlet {
     
     /**
      * .txt file
+     * @param id : the id - random generated 
+     * @param entry : key (=id), name, email, timestamp
      */
-    public void writeToFile(String id, Entry entry) throws IOException{
+    public void writeToTXTFile(Entry entry){
     
         try {
 
-            PrintWriter writer;
-            writer = new PrintWriter(new FileWriter(outputFile,true));
             if(!outputFile.canWrite()){
                 
                 outputFile.setWritable(true);
             }   
                         // Write to file
-            writer.println("Map - new entry (key):  " + id + System.getProperty( "line.separator" ) );
-            writer.println("   (entry) key:  " + entry.getKey());
-            writer.println("   (entry) Name:  " + entry.getName());
-            writer.println("   (entry) Email:  " + entry.getEmail());
-            writer.println("   (entry) TimeStamp:  " + entry.getTimestamp());
-            writer.println("-----------------------------------------------------------" + System.getProperty( "line.separator" ));
+            txtWriter.println("Map - new entry (key):  " + requestId + System.getProperty( "line.separator" ) );
+            txtWriter.println("   (entry) Name:  " + entry.getName());
+            txtWriter.println("   (entry) Email:  " + entry.getEmail());
+            txtWriter.println("   (entry) TimeStamp:  " + entry.getTimestamp());
+            txtWriter.println("-----------------------------------------------------------" + System.getProperty( "line.separator" ));
        
-            writer.flush();
-            writer.close();
             
-        } catch (FileNotFoundException ex) {
+        } catch (Exception ex) {
             
             Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "Problem occured during the writing to \".txt\" file ... ", ex);
         }
     }
     
-    public void returnResponsFromFile(PrintWriter out){
+    
+    public void showHTMLResponseFromTXTFile(PrintWriter out){
     
         out.println( "<p><i>(The response is read from file)</i></p>");
-
+        
         try {
             
             if(outputFile.exists()){
-                
-                FileReader fileReader = new FileReader(outputFile);
-
-                BufferedReader bufferedReader;
-                bufferedReader = new BufferedReader(fileReader);
 
                 String line;
+                synchronized(lock){
                 while((line = bufferedReader.readLine()) != null) {
 
                     out.println("<p>" + line + "</p>");
                 }
-
-                bufferedReader.close(); 
+                }
             }else{
                 
                 out.println("file not exist...");
             }
-            
         } catch (IOException ex) {
             
             Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "Problem occured the reading from \".txt\" file ... ", ex);
@@ -324,72 +367,67 @@ public class Servlet1 extends HttpServlet {
     
     /**
      * .properties file
+     * @param id : the id - random generated 
+     * @param entry : key (=id), name, email, timestamp
      */
     
-    public void writeToPropertiesFile(String id, Entry entry){
-        //prop.clear();
-        prop.setProperty("id." + counterProp, id);
-        prop.setProperty("entry." + counterProp + ".id", entry.getKey());
-        prop.setProperty("entry." + counterProp + ".name", entry.getName());
-        prop.setProperty("entry." + counterProp + ".email", entry.getEmail());
-        prop.setProperty("entry." + counterProp + ".timestamp", entry.getTimestamp());
-       
-        try {
-            
-            propertiesFileOutput = new FileOutputStream(outputPropertiesFile);
+    public void writeToPropertiesFile(Entry entry){
         
-            prop.store(propertiesFileOutput, "Value no.: " + counterProp);
-            propertiesFileOutput.close();
+            prop = new Properties();
+//            prop.setProperty("id." + counterProp, id);
+//            prop.setProperty("entry." + counterProp + ".id", entry.getKey());
+//            prop.setProperty("entry." + counterProp + ".name", entry.getName());
+//            prop.setProperty("entry." + counterProp + ".email", entry.getEmail());
+//            prop.setProperty("entry." + counterProp + ".timestamp", entry.getTimestamp());
+            //prop.setProperty("id." + counterProp, id);
+            //prop.setProperty("entry." + counterProp + ".id", entry.getKey());
+            prop.setProperty("entry." + requestId + ".name", entry.getName());
+            prop.setProperty("entry." + requestId + ".email", entry.getEmail());
+            prop.setProperty("entry." + requestId + ".timestamp", entry.getTimestamp());
        
-        } catch (FileNotFoundException ex) {
+            try {
+                requestId++;
+                prop.store(propertiesFileOutputStream, "Value no.: " + requestId);
+            } catch (IOException ex) {
+           
+                Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "!Something went wrong while trying to store the properties n properties file output...", ex);
+            }
             
-            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "output stream problem...", ex);
-        } catch (IOException ex) {
-            
-            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "Something went wrong ... the property wasn't add to file...", ex);
-        }
+
         
-        counterProp++;
+        
     }
     
     
-    public void returnResponseFromPropertiesFile(PrintWriter out){
+    public void showHTMLResponseFromPropertiesFile(PrintWriter out){
         
         out.println( "<p><i>(The response is read from file (.properties file)...</i></p>");
-        InputStream input = null;
+            
+        try {
+            
+            prop.load(propertiesFileInputStream);
 
-	try {
-
-            input = new FileInputStream(outputPropertiesFile);
-
-            // load a properties file
-            prop.load(input);
-
-            int counter = 1;
-            while(prop.get("id." + counter) != null){
-
-                out.println("<p>ID: " + prop.get("id." + counter) + "</p>");
-                out.println("<pre>" + "   (entry) key:  " +  prop.get("entry." + counter + ".id")  + " </pre>");
-                out.println("<pre>" + "   (entry) Name:  " +  prop.get("entry." + counter + ".name")  + " </pre>");
-                out.println("<pre>" + "   (entry) Email:  " +  prop.get("entry." + counter + ".email")  + " </pre>");
-                out.println("<pre>" + "   (entry) TimeStamp:  " +  prop.get("entry." + counter + ".timestamp")  + " </pre>");
-                
-                counter++;
+//            int counter = 1;
+//            while(prop.get("id." + counter) != null){
+//
+//                out.println("<p>ID: " + prop.get("id." + counter) + "</p>");
+//                out.println("<pre>" + "   (entry) key:  " +  counterProp + " </pre>");
+//                out.println("<pre>" + "   (entry) Name:  " +  prop.get("entry." + counter + ".name")  + " </pre>");
+//                out.println("<pre>" + "   (entry) Email:  " +  prop.get("entry." + counter + ".email")  + " </pre>");
+//                out.println("<pre>" + "   (entry) TimeStamp:  " +  prop.get("entry." + counter + ".timestamp")  + " </pre>");
+//                
+//                counter++;
+//            }
+            for(int i=1; i<=requestId; i++){
+                out.println("<p>ID: " + i + "</p>");
+                out.println("<pre>" + "   (entry) Name:  " +  prop.get("entry." + i + ".name")  + " </pre>");
+                out.println("<pre>" + "   (entry) Email:  " +  prop.get("entry." + i + ".email")  + " </pre>");
+                out.println("<pre>" + "   (entry) TimeStamp:  " +  prop.get("entry." + i + ".timestamp")  + " </pre>");
             }
-                
-	} catch (IOException ex) {
+        } catch (IOException ex) {
             
-		ex.printStackTrace();
-	} finally {
-            
-		if (input != null) {
-			try {
-				input.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+            Logger.getLogger(Servlet1.class.getName()).log(Level.SEVERE, "Something went wrong while trying to load the \".properties\" file...", ex);
+        }
     }
 
 }
