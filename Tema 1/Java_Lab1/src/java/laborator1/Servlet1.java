@@ -53,7 +53,7 @@ public class Servlet1 extends HttpServlet {
             synchronized(lock){
                 try (PrintWriter out = response.getWriter()) {
                  
-                    out.print("this is PYTHON !!!");
+                    out.print("(Java App) ");
                     for(Integer key : map.keySet()){
 
                         Entry entry = map.get(key);
@@ -159,7 +159,7 @@ public class Servlet1 extends HttpServlet {
     public void init(){
     
         map = new TreeMap<>();
-        outputFile = new File(System.getProperty("user.home") + "/Desktop/servletInfo.txt");
+        outputFile = new File(System.getProperty("user.home") + "/Desktop/JavaEE_Lab1/servletInfo.txt");
         
 //        if(outputFile.exists()){
 //            
@@ -191,7 +191,7 @@ public class Servlet1 extends HttpServlet {
         prop = new Properties();
         requestId = 1;
         
-        outputPropertiesFile = new File(System.getProperty("user.home") + "/Desktop/servletInfo.properties");
+        outputPropertiesFile = new File(System.getProperty("user.home") + "/Desktop/JavaEE_Lab1/servletInfo.properties");
         
 //        if(outputPropertiesFile.exists()){
 //            
@@ -314,8 +314,7 @@ public class Servlet1 extends HttpServlet {
     
     /**
      * .txt file
-     * @param id : the id - random generated 
-     * @param entry : key (=id), name, email, timestamp
+     * @param entry : name, email, timestamp
      */
     public void writeToTXTFile(Entry entry){
     
@@ -350,10 +349,10 @@ public class Servlet1 extends HttpServlet {
 
                 String line;
                 synchronized(lock){
-                while((line = bufferedReader.readLine()) != null) {
+                    while((line = bufferedReader.readLine()) != null) {
 
-                    out.println("<p>" + line + "</p>");
-                }
+                        out.println("<p>" + line + "</p>");
+                    }
                 }
             }else{
                 
@@ -367,8 +366,7 @@ public class Servlet1 extends HttpServlet {
     
     /**
      * .properties file
-     * @param id : the id - random generated 
-     * @param entry : key (=id), name, email, timestamp
+     * @param entry : name, email, timestamp
      */
     
     public void writeToPropertiesFile(Entry entry){
