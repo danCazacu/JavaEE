@@ -16,6 +16,8 @@ public class PropertiesManager extends Properties {
     public PropertiesManager(String pathToFile){
 
         try {
+            File file = new File(pathToFile);
+            file.createNewFile();
             propertiesInputStream = new FileInputStream(pathToFile);
             properties = new Properties();
             properties.load(propertiesInputStream);

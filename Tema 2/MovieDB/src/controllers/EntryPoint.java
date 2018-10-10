@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 @WebServlet(name = "EntryPoint", urlPatterns = "/")
 public class EntryPoint extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -39,9 +40,10 @@ public class EntryPoint extends HttpServlet {
 //                "        <option value=\"horror\">Horror</option>\n" +
 //                "        <option value=\"thriller\">Thriller</option>\n" +
 //                "        <option value=\"drama\">Drama</option>";
-
-        request.setAttribute("select", select.toString());
+        request.getSession().setAttribute("error","");
+        request.getSession().setAttribute("select", select.toString());
         request.getRequestDispatcher("/input.jsp").forward(request,response);
+
 
     }
 }
