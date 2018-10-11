@@ -60,6 +60,23 @@ public class PropertiesManager extends Properties {
         }
         return propertiesMap;
     }
+
+    public void updateMovie(MovieDetails movieDetails) {
+        int id = getMovieId(movieDetails.getName());
+        if(id>0){
+            properties.setProperty("movie."+id+".description",movieDetails.getDescription());
+            properties.setProperty("movie."+id+".genre",movieDetails.getGenre());
+        }
+
+    }
+    public int getMovieId(String movieName){
+        for(int i = 1; i <=getMoviesCount(); i++) {
+            String name = properties.getProperty("movie."+i+".name");
+            if(name.toLowerCase().equals(movieName.toLowerCase()))
+                return i;
+        }
+        return -1;
+    }
 //    public String getMovieDescription(String movieName){
 //        properties = new Properties();
 //        try {

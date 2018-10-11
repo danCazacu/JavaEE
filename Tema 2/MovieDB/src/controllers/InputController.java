@@ -30,9 +30,19 @@ public class InputController extends HttpServlet {
         }else if(request.getParameter("operationType").toLowerCase().equals("get")){
             showAllRecords(request,response);
         }else if(request.getParameter("operationType").toLowerCase().equals("update")){
-            //TODO update operation with comparison on movie name
+            updateRecord(request,response);
         }
 
+    }
+    private void updateRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        if(checkRequestParameters(request,response)) {
+            String name = request.getParameter("name");
+            String description = request.getParameter("description");
+            String genre = request.getParameter("genre");
+            MovieDetails movieDetails = new MovieDetails(name, description, genre);
+            propertiesManager.updateMovie(movieDetails);
+            showAllRecords(request, response);
+        }
     }
     private void createRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(checkRequestParameters(request,response)) {
@@ -74,7 +84,7 @@ public class InputController extends HttpServlet {
         String databaseOutput = "OK!\n";
         for (int i = 1; i <= movies.size(); i++) {
             MovieDetails movie = movies.get(i);
-            databaseOutput += "<pre>" + "    Name:  " + movie.getName() + "with ID: " + i + "\n";
+            databaseOutput += "<pre>" + "    Name:  " + movie.getName() + " with ID: " + i + "\n";
             databaseOutput += "    Description:  " + movie.getDescription() + "\n";
             databaseOutput += "    Genre:  " + movie.getGenre() + " </pre>" + "\n";
 
