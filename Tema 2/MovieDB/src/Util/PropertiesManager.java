@@ -26,12 +26,16 @@ public class PropertiesManager extends Properties {
             e.printStackTrace();
         }
     }
-    public void addNewMovie(MovieDetails movie){
+    public boolean addNewMovie(MovieDetails movie){
         int id = (getMoviesCount())+1;
-        properties.setProperty("movie."+id+".name", movie.getName());
-        properties.setProperty("movie."+id+".description", movie.getDescription());
-        properties.setProperty("movie."+id+".genre", movie.getGenre());
-        properties.setProperty("total",""+id);
+        if(getMovieId(movie.getName())<0) {
+            properties.setProperty("movie." + id + ".name", movie.getName());
+            properties.setProperty("movie." + id + ".description", movie.getDescription());
+            properties.setProperty("movie." + id + ".genre", movie.getGenre());
+            properties.setProperty("total", "" + id);
+            return true;
+        }
+        return false;
     }
     public int getMoviesCount(){
         String stringtotal = properties.getProperty("total");

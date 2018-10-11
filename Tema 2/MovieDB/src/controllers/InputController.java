@@ -23,8 +23,7 @@ public class InputController extends HttpServlet {
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(request.getParameter("operationType")==null) {
-            request.getSession().setAttribute("error", "Please select type of operation");
-            getServletContext().getRequestDispatcher("/input.jsp").forward(request,response);
+            showInputError(request,response,"Please select type of operation");
         }else if(request.getParameter("operationType").toLowerCase().equals("create")){
             createRecord(request,response);
         }else if(request.getParameter("operationType").toLowerCase().equals("get")){
@@ -50,31 +49,37 @@ public class InputController extends HttpServlet {
             String description = request.getParameter("description");
             String genre = request.getParameter("genre");
             MovieDetails movieDetails = new MovieDetails(name, description, genre);
-            propertiesManager.addNewMovie(movieDetails);
-            showAllRecords(request, response);
+            if(propertiesManager.addNewMovie(movieDetails))
+            {
+                showAllRecords(request, response);
+            }
+            else{
+                showInputError(request,response,"Movie name already exists! Try update.");
+            }
+
         }
+    }
+    private void showInputError(HttpServletRequest request, HttpServletResponse response,String message) throws ServletException, IOException {
+        request.getSession().setAttribute("error", message);
+        getServletContext().getRequestDispatcher("/input.jsp").forward(request,response);
     }
     private boolean checkRequestParameters(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         if(name==null){
-            request.getSession().setAttribute("error", "Invalid name");
-            getServletContext().getRequestDispatcher("/input.jsp").forward(request,response);
+            showInputError(request,response,"Invalid name");
             return false;
         }
         if (name.trim().length()<=0) {
-            request.getSession().setAttribute("error", "Invalid name");
-            getServletContext().getRequestDispatcher("/input.jsp").forward(request, response);
+            showInputError(request,response,"Invalid name");
             return false;
         }
         String description = request.getParameter("description");
         if(description==null){
-            request.getSession().setAttribute("error", "Invalid description");
-            getServletContext().getRequestDispatcher("/input.jsp").forward(request,response);
+            showInputError(request,response,"Invalid description");
             return false;
         }
         if (description.trim().length()<=0) {
-            request.getSession().setAttribute("error", "Invalid description");
-            getServletContext().getRequestDispatcher("/input.jsp").forward(request, response);
+            showInputError(request,response,"Invalid description");
             return false;
         }
         return true;
