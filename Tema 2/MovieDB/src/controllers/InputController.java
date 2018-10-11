@@ -39,8 +39,10 @@ public class InputController extends HttpServlet {
             String description = request.getParameter("description");
             String genre = request.getParameter("genre");
             MovieDetails movieDetails = new MovieDetails(name, description, genre);
-            propertiesManager.updateMovie(movieDetails);
-            showAllRecords(request, response);
+            if(propertiesManager.updateMovie(movieDetails))
+                showAllRecords(request, response);
+            else
+                showInputError(request,response,"Movie name does not exist");
         }
     }
     private void createRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -86,13 +88,21 @@ public class InputController extends HttpServlet {
     }
     private void showAllRecords(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         TreeMap<Integer, MovieDetails> movies = propertiesManager.getPropertiesAsMap();
-        String databaseOutput = "OK!\n";
+        String databaseOutput = "OK!<br>";
+//        for (int i = 1; i <= movies.size(); i++) {
+//            MovieDetails movie = movies.get(i);
+//            databaseOutput += "<pre>" + "    Name:  " + movie.getName() + " with ID: " + i + "\n";
+//            databaseOutput += "    Description:  " + movie.getDescription() + "\n";
+//            databaseOutput += "    Genre:  " + movie.getGenre() + " </pre>" + "\n";
+//
+//        }
         for (int i = 1; i <= movies.size(); i++) {
             MovieDetails movie = movies.get(i);
-            databaseOutput += "<pre>" + "    Name:  " + movie.getName() + " with ID: " + i + "\n";
-            databaseOutput += "    Description:  " + movie.getDescription() + "\n";
-            databaseOutput += "    Genre:  " + movie.getGenre() + " </pre>" + "\n";
-
+            databaseOutput+="<tr>";
+            databaseOutput+="<th>"+movie.getName()+"</th>";
+            databaseOutput+="<th>"+movie.getDescription()+"</th>";
+            databaseOutput+="<th>"+movie.getGenre()+"</th>";
+            databaseOutput+="</tr>";
         }
         request.setAttribute("database", databaseOutput);
         getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
@@ -109,6 +119,4 @@ public class InputController extends HttpServlet {
     public void destroy() {
         propertiesManager.store();
     }
-
-
 }

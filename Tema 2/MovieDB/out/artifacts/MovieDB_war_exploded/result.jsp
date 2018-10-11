@@ -7,14 +7,38 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
 <head>
     <title><%=request.getParameter("name")%></title>
 </head>
 <body>
-<p>
+
+<table>
     <%=
-        request.getAttribute("database")
+    request.getAttribute("database")
     %>
-</p>
+</table>
+
+<%--<p>--%>
+    <%--<%=--%>
+        <%--request.getAttribute("database")--%>
+    <%--%>--%>
+<%--</p>--%>
 </body>
 </html>

@@ -26,6 +26,7 @@ public class PropertiesManager extends Properties {
             e.printStackTrace();
         }
     }
+
     public boolean addNewMovie(MovieDetails movie){
         int id = (getMoviesCount())+1;
         if(getMovieId(movie.getName())<0) {
@@ -37,6 +38,7 @@ public class PropertiesManager extends Properties {
         }
         return false;
     }
+
     public int getMoviesCount(){
         String stringtotal = properties.getProperty("total");
         if(stringtotal!=null){
@@ -44,6 +46,7 @@ public class PropertiesManager extends Properties {
         }
         return 0;
     }
+
     public void store(){
         if(propertiesOutputStream !=null) {
             try {
@@ -53,6 +56,7 @@ public class PropertiesManager extends Properties {
             }
         }
     }
+
     public TreeMap<Integer,MovieDetails> getPropertiesAsMap(){
         TreeMap<Integer,MovieDetails> propertiesMap = new TreeMap<>();
         for(int i = 1; i <=getMoviesCount(); i++){
@@ -65,14 +69,17 @@ public class PropertiesManager extends Properties {
         return propertiesMap;
     }
 
-    public void updateMovie(MovieDetails movieDetails) {
+    public boolean updateMovie(MovieDetails movieDetails) {
         int id = getMovieId(movieDetails.getName());
         if(id>0){
             properties.setProperty("movie."+id+".description",movieDetails.getDescription());
             properties.setProperty("movie."+id+".genre",movieDetails.getGenre());
+            return true;
         }
+        return false;
 
     }
+
     public int getMovieId(String movieName){
         for(int i = 1; i <=getMoviesCount(); i++) {
             String name = properties.getProperty("movie."+i+".name");
