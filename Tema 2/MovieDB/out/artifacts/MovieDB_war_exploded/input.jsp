@@ -21,10 +21,10 @@
     <input type="radio" name="operationType" value="get"> GET <br>
 
     <p style="color:blue;">Movie name:</p>
-    <input type="text" name="name" size="20" value=""/><br/>
+    <input type="text" name="name" size="20" value="<%=request.getSession().getAttribute("moviename")%>"/><br/>
 
     <p style="color:blue;">Movie description:</p>
-    <input type="text" name="description" size="20" value=""/> <br/>
+    <input type="text" name="description" size="20" value="<%=request.getSession().getAttribute("moviedesc")%>"/> <br/>
 
     <p style="color:green;">Movie genre:</p>
     <select name="genre">

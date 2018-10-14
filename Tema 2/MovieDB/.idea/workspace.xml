@@ -7,11 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc6844fe-1b5d-4255-ba04-4fc0746ecc57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/internal/PageState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/Resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/Resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/PropertiesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/PropertiesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieDB.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MovieDB.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/WEB-INF/classes/controllers/EntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/WEB-INF/classes/controllers/EntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/WEB-INF/classes/controllers/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/WEB-INF/classes/controllers/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/WEB-INF/classes/internal/MovieDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MovieDB_war_exploded/WEB-INF/classes/internal/MovieDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MovieDB/controllers/EntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MovieDB/controllers/EntryPoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MovieDB/controllers/InputController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MovieDB/controllers/InputController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MovieDB/internal/MovieDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MovieDB/internal/MovieDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/EntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/EntryPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/internal/MovieDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/internal/MovieDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/input.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/input.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,54 +71,52 @@
     <session id="1990290162">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="12" />
+          <entry key="java" value="14" />
+          <entry key="jsp" value="1" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="12" />
+          <entry key="JAVA" value="14" />
+          <entry key="JSP" value="1" />
           <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1196" />
-          <entry key="jsp" value="179" />
+          <entry key="java" value="2356" />
+          <entry key="jsp" value="265" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1196" />
-          <entry key="JSP" value="179" />
+          <entry key="JAVA" value="2356" />
+          <entry key="JSP" value="265" />
         </counts>
       </usages-collector>
     </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="MovieDB" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/result.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="459">
               <caret line="27" column="40" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/input.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -118,41 +124,69 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Util/PropertiesManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="748">
+              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#340#797#0" />
-                <element signature="e#802#1299#0" />
-                <element signature="e#1304#1509#0" />
-                <element signature="e#1514#1762#0" />
-                <element signature="e#1767#2348#0" />
-                <element signature="e#2354#2670#0" />
-                <element signature="e#2675#2965#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controllers/InputController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="100" column="35" lean-forward="true" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5165#5166#0" expanded="true" />
-                <element signature="e#5206#5207#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/InputController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/internal/PageState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="89" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="89" />
+              <folding>
+                <element signature="e#163#164#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
+                <element signature="e#395#396#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#599#600#0" expanded="true" />
+                <element signature="e#631#632#0" expanded="true" />
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/internal/MovieDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/EntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="68">
+              <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -162,14 +196,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>database</find>
+      <find>forward</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,12 +216,13 @@
         <option value="$PROJECT_DIR$/src/InputController.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/result.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/internal/MovieDetails.java" />
-        <option value="$PROJECT_DIR$/src/controllers/EntryPoint.java" />
-        <option value="$PROJECT_DIR$/web/input.jsp" />
         <option value="$PROJECT_DIR$/src/Util/PropertiesManager.java" />
         <option value="$PROJECT_DIR$/web/result.jsp" />
+        <option value="$PROJECT_DIR$/src/internal/MovieDetails.java" />
+        <option value="$PROJECT_DIR$/src/internal/PageState.java" />
         <option value="$PROJECT_DIR$/src/controllers/InputController.java" />
+        <option value="$PROJECT_DIR$/src/controllers/EntryPoint.java" />
+        <option value="$PROJECT_DIR$/web/input.jsp" />
       </list>
     </option>
   </component>
@@ -203,11 +239,11 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-23" />
-    <option name="y" value="-12" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1359" />
+    <option name="y" value="-313" />
+    <option name="width" value="1191" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -215,6 +251,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,18 +297,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539193450054" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539544873985" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -379,22 +418,25 @@
       <workItem from="1539189463272" duration="3846000" />
       <workItem from="1539245763537" duration="2227000" />
       <workItem from="1539262806603" duration="2646000" />
+      <workItem from="1539419619873" duration="213000" />
+      <workItem from="1539514149657" duration="1076000" />
+      <workItem from="1539540250107" duration="4840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22497000" />
+    <option name="totallyTimeSpent" value="28626000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="1359" y="-313" width="1191" height="1047" extended-state="0" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.39443535" side_tool="true" weight="0.27231467" />
       <window_info id="Capture Tool" order="3" />
-      <window_info id="Web" order="4" sideWeight="0.111292966" side_tool="true" visible="true" weight="0.17473525" />
+      <window_info id="Web" order="4" sideWeight="0.39606127" side_tool="true" visible="true" weight="0.22458002" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.88870704" visible="true" weight="0.17473525" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.60393876" visible="true" weight="0.22458002" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32936078" />
@@ -405,8 +447,8 @@
       <window_info anchor="bottom" id="Application Servers" order="6" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.28150573" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.31260228" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.28118163" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.3118162" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" />
@@ -430,13 +472,27 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
-        <watch expression="request.getAttribute(&quot;select&quot;)" language="JAVA" />
-        <watch expression="request.getSession().getAttribute(&quot;select&quot;)" language="JAVA" />
+        <watch expression="request.getSession().getAttribute(&quot;moviename&quot;)" language="JSP" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>request.getSession().getAttribute(&quot;moviename&quot;)</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getCookies()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>cookie</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>request.getSession().getAttribute(&quot;select&quot;)</expression-string>
         <language-id>JAVA</language-id>
@@ -490,58 +546,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/internal/MovieDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/EntryPoint.java">
+    <entry file="file://$PROJECT_DIR$/src/internal/PageState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/input.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+        <state relative-caret-position="136">
+          <caret line="8" column="89" selection-start-line="8" selection-start-column="89" selection-end-line="8" selection-end-column="89" />
+          <folding>
+            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/result.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="459">
           <caret line="27" column="40" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util/PropertiesManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="748">
+          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#340#797#0" />
-            <element signature="e#802#1299#0" />
-            <element signature="e#1304#1509#0" />
-            <element signature="e#1514#1762#0" />
-            <element signature="e#1767#2348#0" />
-            <element signature="e#2354#2670#0" />
-            <element signature="e#2675#2965#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/InputController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="100" column="35" lean-forward="true" selection-start-line="100" selection-start-column="35" selection-end-line="100" selection-end-column="35" />
+        <state relative-caret-position="192">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5165#5166#0" expanded="true" />
-            <element signature="e#5206#5207#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/input.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="49" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/EntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="51" lean-forward="true" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
         </state>
       </provider>
     </entry>

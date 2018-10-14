@@ -1,6 +1,8 @@
 package internal;
 
-public class MovieDetails {
+import java.io.Serializable;
+
+public class MovieDetails implements Serializable {
     private String name;
     private String description;
     private String genre;

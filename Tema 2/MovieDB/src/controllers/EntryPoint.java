@@ -1,7 +1,11 @@
 package controllers;
 
+import internal.PageState;
+import jdk.internal.util.xml.impl.Input;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,7 +21,14 @@ public class EntryPoint extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        //needs a different approach for number and genre names
+        Cookie[] cookies = request.getCookies();
+        PageState pageState = null;
+        for (Cookie cook: cookies) {
+            if(cook.getName().equals("clientid")) {
+                pageState = InputController.pageStateMap.get(cook.getValue());
+            }
+        }
+
         ArrayList<String> genres = new ArrayList<>();
         genres.add("Action");
         genres.add("Comedy");
@@ -26,7 +37,12 @@ public class EntryPoint extends HttpServlet {
         genres.add("Drama");
 
 
+        //getcookie here
+
         String selectedOption = "Thriller";
+        if(pageState!=null){
+            selectedOption = pageState.getGenre();
+        }
         StringBuilder select = new StringBuilder();
         for (String s: genres) {
             String selected = "";
@@ -42,6 +58,13 @@ public class EntryPoint extends HttpServlet {
 //                "        <option value=\"drama\">Drama</option>";
         request.getSession().setAttribute("error","");
         request.getSession().setAttribute("select", select.toString());
+        request.getSession().setAttribute("moviename","");
+        request.getSession().setAttribute("moviedesc","");
+        if(pageState!=null){
+            request.getSession().setAttribute("moviename",pageState.getName());
+            request.getSession().setAttribute("moviedesc",pageState.getDescription());
+        }
+
         request.getRequestDispatcher("/input.jsp").forward(request,response);
 
 
