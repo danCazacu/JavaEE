@@ -18,15 +18,31 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.TreeMap;
 
+/**
+ * Main controller of the application
+ * It receives data from inpus.jsp.
+ * Processes received that and acts accordingly.
+ *  1. Forward request to result.jsp on correct input
+ *  2. Forwards request to input.jsp with error message on incorrect input
+ */
 @WebServlet(name = "InputController" , urlPatterns = "/InputController")
 public class InputController extends HttpServlet {
     static Map<String, PageState> pageStateMap = new HashMap<>();
     PropertiesManager propertiesManager;
+
     @Override
     public void init() throws ServletException {
         String path = getServletContext().getRealPath("Resources/database.properties");
         propertiesManager = new PropertiesManager(path);
     }
+
+
+    /**
+     *
+     * Sets cookie and process the request depending on type of operations
+     * @throws ServletException
+     * @throws IOException
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         setCookie(request,response);
         if(request.getParameter("operationType")==null) {
@@ -40,6 +56,12 @@ public class InputController extends HttpServlet {
         }
 
     }
+
+    /**
+     * Constructs a movie from request data and calls PropertiesManager.updateMovie
+     * @throws ServletException
+     * @throws IOException
+     */
     private void updateRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         if(checkRequestParameters(request,response)) {
             String name = request.getParameter("name");
@@ -52,6 +74,11 @@ public class InputController extends HttpServlet {
                 showInputError(request,response,"Movie name does not exist");
         }
     }
+    /**
+     * Constructs a movie from request data and calls PropertiesManager.addNewMovie
+     * @throws ServletException
+     * @throws IOException
+     */
     private void createRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if(checkRequestParameters(request,response)) {
             String name = request.getParameter("name");
@@ -68,10 +95,24 @@ public class InputController extends HttpServlet {
 
         }
     }
+
+    /**
+     *  forwards the request to input.jsp as an error with message to be displayed
+     * @param message
+     * @throws ServletException
+     * @throws IOException
+     */
     private void showInputError(HttpServletRequest request, HttpServletResponse response,String message) throws ServletException, IOException {
         request.getSession().setAttribute("error", message);
         getServletContext().getRequestDispatcher("/input.jsp").forward(request,response);
     }
+
+    /**
+     * Validates each field in form
+     * @return true if all fields are valid, false and forward as error to input.jsp otherwise
+     * @throws ServletException
+     * @throws IOException
+     */
     private boolean checkRequestParameters(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         if(name==null){
@@ -93,6 +134,12 @@ public class InputController extends HttpServlet {
         }
         return true;
     }
+
+    /**
+     * Takes data from database and forwards it to result.jsp in order to be displayed
+     * @throws ServletException
+     * @throws IOException
+     */
     private void showAllRecords(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         TreeMap<Integer, MovieDetails> movies = propertiesManager.getPropertiesAsMap();
         String databaseOutput = "OK!<br>";
@@ -127,6 +174,12 @@ public class InputController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response){
 
     }
+
+    /**
+     * Creates a PageState instance and a key
+     * Key is stores as a cookie on client side
+     * The pair is added to pageStateMap
+     */
     private void setCookie(@NotNull HttpServletRequest request, HttpServletResponse response){
         String key = ""+System.currentTimeMillis();
         Cookie[] cookies = request.getCookies();

@@ -1,5 +1,10 @@
 package internal;
 
+/**
+ * Internal class to define page state
+ * This page state is used to preserve the state of the page when cookie id is received
+ * */
+
 public class PageState {
     String requestType;
     String name;

@@ -13,6 +13,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 @WebServlet(name = "EntryPoint", urlPatterns = "/")
+/**
+ * Entry point servlet of the application
+ * It generates select form and restores the state using cookies if needed and then forwards the request to input.jsp
+ */
 public class EntryPoint extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
