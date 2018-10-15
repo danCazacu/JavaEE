@@ -3,13 +3,17 @@ package controllers;
 import internal.PageState;
 import jdk.internal.util.xml.impl.Input;
 
+import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 @WebServlet(name = "EntryPoint", urlPatterns = "/")
@@ -27,12 +31,13 @@ public class EntryPoint extends HttpServlet {
 
         Cookie[] cookies = request.getCookies();
         PageState pageState = null;
-        for (Cookie cook: cookies) {
-            if(cook.getName().equals("clientid")) {
-                pageState = InputController.pageStateMap.get(cook.getValue());
+        if(cookies!=null) {
+            for (Cookie cook : cookies) {
+                if (cook.getName().equals("clientid")) {
+                    pageState = InputController.pageStateMap.get(cook.getValue());
+                }
             }
         }
-
         ArrayList<String> genres = new ArrayList<>();
         genres.add("Action");
         genres.add("Comedy");

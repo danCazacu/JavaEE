@@ -31,9 +31,13 @@
         <%=request.getSession().getAttribute("select")%>
     </select>
 
-    <br/>
     <br>
+
+    <p style="color:blue;">Enter text:<img src="CAPTCHAProviderServlet"/></p>
+    <input type="text" name="captcha" size="20" value=""/> <br>
     <input type="submit" name="submit" value="Submit">
+
+
 </form>
 </body>
 </html>

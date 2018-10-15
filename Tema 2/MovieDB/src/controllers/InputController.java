@@ -44,15 +44,21 @@ public class InputController extends HttpServlet {
      * @throws IOException
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        setCookie(request,response);
-        if(request.getParameter("operationType")==null) {
-            showInputError(request,response,"Please select type of operation");
-        }else if(request.getParameter("operationType").toLowerCase().equals("create")){
-            createRecord(request,response);
-        }else if(request.getParameter("operationType").toLowerCase().equals("get")){
-            showAllRecords(request,response);
-        }else if(request.getParameter("operationType").toLowerCase().equals("update")){
-            updateRecord(request,response);
+        if(request.getParameter("captcha")!=null) {
+            if(verifyCAPTCHA(request, response)) {
+                setCookie(request, response);
+                if (request.getParameter("operationType") == null) {
+                    showInputError(request, response, "Please select type of operation");
+                } else if (request.getParameter("operationType").toLowerCase().equals("create")) {
+                    createRecord(request, response);
+                } else if (request.getParameter("operationType").toLowerCase().equals("get")) {
+                    showAllRecords(request, response);
+                } else if (request.getParameter("operationType").toLowerCase().equals("update")) {
+                    updateRecord(request, response);
+                }
+            }
+        }else{
+            showInputError(request,response,"Invalid CAPTCHA");
         }
 
     }
@@ -201,6 +207,14 @@ public class InputController extends HttpServlet {
         cookie.setMaxAge(60*60);
         response.addCookie(cookie);
 
+    }
+    private boolean verifyCAPTCHA(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String captcha = (String) request.getSession().getAttribute("captchakey");
+        if(!request.getParameter("captcha").equals(captcha)){
+            showInputError(request,response,"Invalid CAPTCHA field");
+            return false;
+        }
+        return true;
     }
     @Override
     public void destroy() {
