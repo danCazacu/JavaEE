@@ -7,6 +7,39 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+  
+<style>
+    input[type=text] {
+        padding: 12px 16px;
+        box-sizing: border-box;
+        border: blue;
+        border-style: dot-dot-dash;
+        border-radius: 25px;
+        background-color: #7dacbc;
+        color: white;
+    }
+
+    input[type=submit] {
+        padding: 12px 26px;
+        box-sizing: border-box;
+        border: darkslategrey;
+        border-radius: 25px;
+        background-color: grey;
+        color: black;
+        margin: 20px 35px;
+    }
+
+    input[type=radio]{
+
+        padding-right: 200px;
+    }
+
+    select{
+
+        padding: 12px 20px;
+    }
+
+</style>
 <head>
     <title>MovieDB</title>
 </head>
