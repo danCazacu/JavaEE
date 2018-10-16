@@ -10,12 +10,12 @@
 <style>
     table {
         font-family: arial, sans-serif;
-        border-collapse: collapse;
         width: 100%;
+        border: 1px solid black;
     }
 
     td, th {
-        border: 1px solid #dddddd;
+        border: 1px solid black;
         text-align: left;
         padding: 8px;
     }
