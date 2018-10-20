@@ -21,7 +21,6 @@ public class PreludeCodaFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         PreludeResponseWrapper wrapper = new PreludeResponseWrapper((HttpServletResponse) servletResponse);
-        //servletResponse.getOutputStream().write("request in".getBytes());
 
         filterChain.doFilter(servletRequest,wrapper);
 
@@ -29,6 +28,7 @@ public class PreludeCodaFilter implements Filter {
         StringWriter sw = new StringWriter();
         sw.write(content);
         sw.write("Thank you coda!");
+
         PrintWriter out = servletResponse.getWriter();
         out.write(sw.toString());
     }
