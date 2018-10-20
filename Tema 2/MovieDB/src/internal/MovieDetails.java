@@ -1,6 +1,9 @@
 package internal;
 
-public class MovieDetails {
+import java.io.Serializable;
+/**
+ * This class is used to describe a record in database/properties and thus it can be constructed from input.jsp when necessary data is provided*/
+public class MovieDetails implements Serializable {
     private String name;
     private String description;
     private String genre;

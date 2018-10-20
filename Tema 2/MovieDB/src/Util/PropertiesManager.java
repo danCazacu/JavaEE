@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.TreeMap;
+/**
+ * Utilitarian class used for interaction with properties file.
+ */
 
 public class PropertiesManager extends Properties {
 
@@ -16,6 +19,8 @@ public class PropertiesManager extends Properties {
     public PropertiesManager(String pathToFile){
 
         try {
+            File file = new File(pathToFile);
+            file.createNewFile();
             propertiesInputStream = new FileInputStream(pathToFile);
             properties = new Properties();
             properties.load(propertiesInputStream);
@@ -24,13 +29,28 @@ public class PropertiesManager extends Properties {
             e.printStackTrace();
         }
     }
-    public void addNewMovie(MovieDetails movie){
+
+    /**
+     *
+     * @param movie to be added
+     * @return True if success, false if movie name already exists
+     */
+    public boolean addNewMovie(MovieDetails movie){
         int id = (getMoviesCount())+1;
-        properties.setProperty("movie."+id+".name", movie.getName());
-        properties.setProperty("movie."+id+".description", movie.getDescription());
-        properties.setProperty("movie."+id+".genre", movie.getGenre());
-        properties.setProperty("total",""+id);
+        if(getMovieId(movie.getName())<0) {
+            properties.setProperty("movie." + id + ".name", movie.getName());
+            properties.setProperty("movie." + id + ".description", movie.getDescription());
+            properties.setProperty("movie." + id + ".genre", movie.getGenre());
+            properties.setProperty("total", "" + id);
+            return true;
+        }
+        return false;
     }
+
+    /**
+     *
+     * @return Number of movies in database(file), 0 if empty
+     */
     public int getMoviesCount(){
         String stringtotal = properties.getProperty("total");
         if(stringtotal!=null){
@@ -38,6 +58,7 @@ public class PropertiesManager extends Properties {
         }
         return 0;
     }
+
     public void store(){
         if(propertiesOutputStream !=null) {
             try {
@@ -47,6 +68,11 @@ public class PropertiesManager extends Properties {
             }
         }
     }
+
+    /**
+     *
+     * @return Ordered map where the key is movie id from file and value is data associated
+     */
     public TreeMap<Integer,MovieDetails> getPropertiesAsMap(){
         TreeMap<Integer,MovieDetails> propertiesMap = new TreeMap<>();
         for(int i = 1; i <=getMoviesCount(); i++){
@@ -58,44 +84,34 @@ public class PropertiesManager extends Properties {
         }
         return propertiesMap;
     }
-//    public String getMovieDescription(String movieName){
-//        properties = new Properties();
-//        try {
-//            properties.load(propertiesInputStream);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return properties.getProperty(movieName+".description");
-//    }
-//    public String getMovieGenre(String movieName){
-//        properties = new Properties();
-//        try {
-//            properties.load(propertiesInputStream);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return properties.getProperty(movieName+".genre");
-//    }
-//    public void setMovieDescription(String movieName, String movieDescription){
-//        properties = new Properties();
-//        try {
-//            properties.load(propertiesInputStream);
-//            properties.setProperty(movieName+".description", movieDescription);
-//            properties.store(propertiesOutputStream,"");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
-//    public void setMovieGenre(String movieName, String movieGenre){
-//        properties = new Properties();
-//        try {
-//            properties.load(propertiesInputStream);
-//            properties.setProperty(movieName+".genre", movieGenre);
-//            properties.store(propertiesOutputStream,"");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//    }
+
+    /**
+     *
+     * @param movieDetails movie to be update. Description and genre will be updated based on movie name
+     * @return True if success, False if movie name does not exist in database
+     */
+    public boolean updateMovie(MovieDetails movieDetails) {
+        int id = getMovieId(movieDetails.getName());
+        if(id>0){
+            properties.setProperty("movie."+id+".description",movieDetails.getDescription());
+            properties.setProperty("movie."+id+".genre",movieDetails.getGenre());
+            return true;
+        }
+        return false;
+
+    }
+
+    /**
+     *
+     * @param movieName to search and get it
+     * @return returns the id or -1 if movie name does not exist
+     */
+    public int getMovieId(String movieName){
+        for(int i = 1; i <=getMoviesCount(); i++) {
+            String name = properties.getProperty("movie."+i+".name");
+            if(name.toLowerCase().equals(movieName.toLowerCase()))
+                return i;
+        }
+        return -1;
+    }
 }
