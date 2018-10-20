@@ -148,7 +148,8 @@ public class InputController extends HttpServlet {
      */
     private void showAllRecords(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         TreeMap<Integer, MovieDetails> movies = propertiesManager.getPropertiesAsMap();
-        String databaseOutput = "OK!<br>";
+        //String databaseOutput = "OK!<br>";
+        String databaseOutput = "";
         databaseOutput+="<tr>";
         databaseOutput+="<th>Movie name</th>";
         databaseOutput+="<th>Movie description</th>";
@@ -201,7 +202,6 @@ public class InputController extends HttpServlet {
 
         request.getSession().setAttribute("moviename",pageState.getName());
         request.getSession().setAttribute("moviedesc",pageState.getDescription());
-
         pageStateMap.put(key,pageState);
         Cookie cookie = new Cookie("clientid",key);
         cookie.setMaxAge(60*60);

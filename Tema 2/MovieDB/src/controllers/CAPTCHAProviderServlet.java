@@ -42,18 +42,17 @@ public class CAPTCHAProviderServlet extends HttpServlet {
         int height = 50;
         BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = bufferedImage.createGraphics();
-        g2d.setColor(Color.black);
-
+        g2d.setColor(Color.lightGray);
         Random r = new Random();
         Color randomColor0 = new Color(r.nextFloat(), r.nextFloat(), r.nextFloat()); //rgb
         Color randomColor1 = new Color(r.nextFloat(), r.nextFloat(), r.nextFloat()); //rgb
         Color randomColor2 = new Color(r.nextFloat(), r.nextFloat(), r.nextFloat()); //rgb
         Color randomColor3 = new Color(r.nextFloat(), r.nextFloat(), r.nextFloat()); //rgb
 
-        Font font1 = new Font("Serif", Font.ITALIC, 12);
+        Font font1 = new Font("Serif", Font.ITALIC, 25);
         Font font2 = new Font("Monospaced", Font.BOLD, 20);
-        Font font3 = new Font("Courier", Font.ITALIC+Font.BOLD, 19);
-        Font font4 = new Font("ZapfDingbats", Font.CENTER_BASELINE, 15);
+        Font font3 = new Font("Courier", Font.ITALIC+Font.BOLD, 30);
+        Font font4 = new Font("ZapfDingbats", Font.CENTER_BASELINE, 25);
 
 
         AttributedString as = new AttributedString(s.toString());
@@ -67,7 +66,7 @@ public class CAPTCHAProviderServlet extends HttpServlet {
         as.addAttribute(TextAttribute.FOREGROUND, randomColor3, 3, 4);
 
         g2d.fillRect(0, 0, width, height);
-        g2d.drawString(as.getIterator(), 50, 10);
+        g2d.drawString(as.getIterator(), 25, 25);
         g2d.dispose();
 
         ImageIO.write(bufferedImage, "png", response.getOutputStream());

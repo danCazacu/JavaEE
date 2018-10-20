@@ -25,10 +25,9 @@
     }
 </style>
 <head>
-    <title><%=request.getParameter("name")%></title>
 </head>
 <body>
-
+<button type="button"><a href="/">Back</a></button>
 <table>
     <%=
     request.getAttribute("database")
