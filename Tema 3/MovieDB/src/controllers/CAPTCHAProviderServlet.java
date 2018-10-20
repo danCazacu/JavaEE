@@ -50,8 +50,8 @@ public class CAPTCHAProviderServlet extends HttpServlet {
         Color randomColor3 = new Color(r.nextFloat(), r.nextFloat(), r.nextFloat()); //rgb
 
         Font font1 = new Font("Serif", Font.ITALIC, 25);
-        Font font2 = new Font("Monospaced", Font.BOLD, 20);
-        Font font3 = new Font("Courier", Font.ITALIC+Font.BOLD, 30);
+        Font font2 = new Font("Monospaced", Font.BOLD, 25);
+        Font font3 = new Font("Courier", Font.ITALIC+Font.BOLD, 25);
         Font font4 = new Font("ZapfDingbats", Font.CENTER_BASELINE, 25);
 
 

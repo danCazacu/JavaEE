@@ -1,12 +1,14 @@
 package controllers;
 
 import Util.PropertiesManager;
+import Util.RedirectSender;
 import com.sun.deploy.net.HttpRequest;
 import internal.MovieDetails;
 import internal.PageState;
 import org.jetbrains.annotations.NotNull;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -47,18 +49,21 @@ public class InputController extends HttpServlet {
         if(request.getParameter("captcha")!=null) {
             if(verifyCAPTCHA(request, response)) {
                 setCookie(request, response);
-                if (request.getParameter("operationType") == null) {
-                    showInputError(request, response, "Please select type of operation");
-                } else if (request.getParameter("operationType").toLowerCase().equals("create")) {
-                    createRecord(request, response);
-                } else if (request.getParameter("operationType").toLowerCase().equals("get")) {
-                    showAllRecords(request, response);
-                } else if (request.getParameter("operationType").toLowerCase().equals("update")) {
-                    updateRecord(request, response);
+                String requestType = request.getParameter("operationType");
+                switch (requestType.toLowerCase()) {
+                    case "create":
+                        createRecord(request, response);
+                        break;
+                    case "get":
+                        showAllRecords(request, response);
+                        break;
+                    case "update":
+                        updateRecord(request, response);
+                        break;
                 }
             }
         }else{
-            showInputError(request,response,"Invalid CAPTCHA");
+            RedirectSender.showInputError(request,response,"Invalid CAPTCHA");
         }
 
     }
@@ -68,17 +73,16 @@ public class InputController extends HttpServlet {
      * @throws ServletException
      * @throws IOException
      */
-    private void updateRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        if(checkRequestParameters(request,response)) {
-            String name = request.getParameter("name");
-            String description = request.getParameter("description");
-            String genre = request.getParameter("genre");
-            MovieDetails movieDetails = new MovieDetails(name, description, genre);
-            if(propertiesManager.updateMovie(movieDetails))
-                showAllRecords(request, response);
-            else
-                showInputError(request,response,"Movie name does not exist");
-        }
+    private void updateRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        String description = request.getParameter("description");
+        String genre = request.getParameter("genre");
+        MovieDetails movieDetails = new MovieDetails(name, description, genre);
+        if (propertiesManager.updateMovie(movieDetails))
+            showAllRecords(request, response);
+        else
+            RedirectSender.showInputError(request, response, "Movie name does not exist");
+
     }
     /**
      * Constructs a movie from request data and calls PropertiesManager.addNewMovie
@@ -86,20 +90,17 @@ public class InputController extends HttpServlet {
      * @throws IOException
      */
     private void createRecord(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(checkRequestParameters(request,response)) {
-            String name = request.getParameter("name");
-            String description = request.getParameter("description");
-            String genre = request.getParameter("genre");
-            MovieDetails movieDetails = new MovieDetails(name, description, genre);
-            if(propertiesManager.addNewMovie(movieDetails))
-            {
-                showAllRecords(request, response);
-            }
-            else{
-                showInputError(request,response,"Movie name already exists! Try update.");
-            }
-
+        String name = request.getParameter("name");
+        String description = request.getParameter("description");
+        String genre = request.getParameter("genre");
+        MovieDetails movieDetails = new MovieDetails(name, description, genre);
+        if (propertiesManager.addNewMovie(movieDetails)) {
+            showAllRecords(request, response);
+        } else {
+            RedirectSender.showInputError(request, response, "Movie name already exists! Try update.");
         }
+
+
     }
 
     /**
@@ -108,10 +109,11 @@ public class InputController extends HttpServlet {
      * @throws ServletException
      * @throws IOException
      */
-    private void showInputError(HttpServletRequest request, HttpServletResponse response,String message) throws ServletException, IOException {
-        request.getSession().setAttribute("error", message);
-        getServletContext().getRequestDispatcher("/input.jsp").forward(request,response);
-    }
+//    private void showInputError(HttpServletRequest request, HttpServletResponse response,String message) throws ServletException, IOException {
+//        request.getSession().setAttribute("error", message);
+//        //getServletContext().getRequestDispatcher("/JavaServerPages/input.jsp").forward(request,response);
+//        response.sendRedirect("/JavaServerPages/input.jsp");
+//    }
 
     /**
      * Validates each field in form
@@ -119,27 +121,6 @@ public class InputController extends HttpServlet {
      * @throws ServletException
      * @throws IOException
      */
-    private boolean checkRequestParameters(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("name");
-        if(name==null){
-            showInputError(request,response,"Invalid name");
-            return false;
-        }
-        if (name.trim().length()<=0) {
-            showInputError(request,response,"Invalid name");
-            return false;
-        }
-        String description = request.getParameter("description");
-        if(description==null){
-            showInputError(request,response,"Invalid description");
-            return false;
-        }
-        if (description.trim().length()<=0) {
-            showInputError(request,response,"Invalid description");
-            return false;
-        }
-        return true;
-    }
 
     /**
      * Takes data from database and forwards it to result.jsp in order to be displayed
@@ -170,8 +151,9 @@ public class InputController extends HttpServlet {
             databaseOutput+="<th>"+movie.getGenre()+"</th>";
             databaseOutput+="</tr>";
         }
-        request.setAttribute("database", databaseOutput);
-        getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
+        request.getSession().setAttribute("database", databaseOutput);
+        //getServletContext().getRequestDispatcher("/JavaServerPages/result.jsp").forward(request, response);
+        response.sendRedirect("/JavaServerPages/result.jsp");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -211,7 +193,7 @@ public class InputController extends HttpServlet {
     private boolean verifyCAPTCHA(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String captcha = (String) request.getSession().getAttribute("captchakey");
         if(!request.getParameter("captcha").equals(captcha)){
-            showInputError(request,response,"Invalid CAPTCHA field");
+            RedirectSender.showInputError(request,response,"Invalid CAPTCHA field");
             return false;
         }
         return true;

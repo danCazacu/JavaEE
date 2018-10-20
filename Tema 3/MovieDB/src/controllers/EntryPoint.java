@@ -48,7 +48,7 @@ public class EntryPoint extends HttpServlet {
 
         //getcookie here
 
-        String selectedOption = "Thriller";
+        String selectedOption = "";
         if(pageState!=null){
             selectedOption = pageState.getGenre();
         }
@@ -60,11 +60,6 @@ public class EntryPoint extends HttpServlet {
             select.append("<option value=\"").append(s).append("\" ").append(selected).append(">").append(s).append("</option>\n");
         }
 
-//                "        <option value=\"action\" selected>Action</option>\n" +
-//                "        <option value=\"comedy\">Comedy</option>\n" +
-//                "        <option value=\"horror\">Horror</option>\n" +
-//                "        <option value=\"thriller\">Thriller</option>\n" +
-//                "        <option value=\"drama\">Drama</option>";
         request.getSession().setAttribute("error","");
         request.getSession().setAttribute("select", select.toString());
         request.getSession().setAttribute("moviename","");
@@ -74,8 +69,8 @@ public class EntryPoint extends HttpServlet {
             request.getSession().setAttribute("moviedesc",pageState.getDescription());
         }
 
-        request.getRequestDispatcher("/input.jsp").forward(request,response);
-
+        //request.getRequestDispatcher("/JavaServerPages/input.jsp").forward(request,response);
+        response.sendRedirect("/JavaServerPages/input.jsp");
 
     }
 }

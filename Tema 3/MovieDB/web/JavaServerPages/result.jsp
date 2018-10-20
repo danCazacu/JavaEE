@@ -30,7 +30,7 @@
 <button type="button"><a href="/">Back</a></button>
 <table>
     <%=
-    request.getAttribute("database")
+    request.getSession().getAttribute("database")
     %>
 </table>
 
