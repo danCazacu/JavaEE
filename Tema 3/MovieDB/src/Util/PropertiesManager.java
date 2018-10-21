@@ -3,6 +3,7 @@ package Util;
 import internal.MovieDetails;
 
 import java.io.*;
+import java.nio.file.FileSystems;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -16,7 +17,16 @@ public class PropertiesManager extends Properties {
     Properties properties;
     FileInputStream propertiesInputStream;
     FileOutputStream propertiesOutputStream;
-    public PropertiesManager(String pathToFile){
+    private static PropertiesManager propertiesManagerInstance = null;
+    public static PropertiesManager getPropertiesManagerInstance(String path){
+        if(propertiesManagerInstance==null)
+            propertiesManagerInstance = new PropertiesManager(path);
+        return propertiesManagerInstance;
+    }
+    public static PropertiesManager getPropertiesManagerInstance(){
+        return propertiesManagerInstance;
+    }
+    private PropertiesManager(String pathToFile){
 
         try {
             File file = new File(pathToFile);

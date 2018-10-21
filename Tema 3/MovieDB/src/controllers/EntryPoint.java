@@ -1,5 +1,6 @@
 package controllers;
 
+import Util.PropertiesManager;
 import internal.PageState;
 import jdk.internal.util.xml.impl.Input;
 
@@ -25,6 +26,12 @@ public class EntryPoint extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+    }
+
+    @Override
+    public void init() throws ServletException {
+        String path = getServletContext().getRealPath("Resources/database.properties");
+        PropertiesManager propertiesManager = PropertiesManager.getPropertiesManagerInstance(path);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

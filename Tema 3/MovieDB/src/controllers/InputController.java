@@ -22,7 +22,7 @@ import java.util.TreeMap;
 
 /**
  * Main controller of the application
- * It receives data from inpus.jsp.
+ * It receives data from input.jsp.
  * Processes received that and acts accordingly.
  *  1. Forward request to result.jsp on correct input
  *  2. Forwards request to input.jsp with error message on incorrect input
@@ -34,8 +34,7 @@ public class InputController extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        String path = getServletContext().getRealPath("Resources/database.properties");
-        propertiesManager = new PropertiesManager(path);
+        propertiesManager = PropertiesManager.getPropertiesManagerInstance();
     }
 
 
@@ -153,6 +152,7 @@ public class InputController extends HttpServlet {
         }
         request.getSession().setAttribute("database", databaseOutput);
         //getServletContext().getRequestDispatcher("/JavaServerPages/result.jsp").forward(request, response);
+        //request.getSession().setAttribute("lastmovieadded",request.getParameter("name"));
         response.sendRedirect("/JavaServerPages/result.jsp");
     }
 
