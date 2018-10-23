@@ -5,17 +5,35 @@
   Time: 2:31 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <%@ taglib prefix="" uri = "/WEB-INF/custom.tld" %>
 <html>
+<head>
 <style>
+
+    body {
+
+        background-image: url("images/background.jpg") ;
+        background-position: right top;
+    }
+
+
     table {
         font-family: arial, sans-serif;
         width: 100%;
         border: 1px solid black;
     }
 
-    td, th {
+    th{
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+        background-color: #8b4f7b;
+        color: white;
+    }
+
+
+    td {
         border: 1px solid black;
         text-align: left;
         padding: 8px;
@@ -24,11 +42,32 @@
     tr:nth-child(even) {
         background-color: #dddddd;
     }
+
+    button {
+        padding: 12px 26px;
+        box-sizing: border-box;
+        border: darkslategrey;
+        border-radius: 25px;
+        border-style: outset;
+        border-color: #656369;
+        background-color: grey;
+        color: black;
+        margin-left: 1%;
+    }
+
+    p {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 2%;
+    }
+
+
 </style>
-<head>
+
 </head>
 <body>
-<button type="button"><a href="/">Back</a></button>
+
 <table>
     <%=
     request.getSession().getAttribute("database")
@@ -57,5 +96,7 @@
     <%--</tr>--%>
 <%--</table>--%>
 <%--</fmt:bundle>--%>
+
+<button type="button"><a href="/">Back</a></button>
 </body>
 </html>
