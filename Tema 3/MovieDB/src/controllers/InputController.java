@@ -2,13 +2,11 @@ package controllers;
 
 import Util.PropertiesManager;
 import Util.RedirectSender;
-import com.sun.deploy.net.HttpRequest;
+import com.sun.istack.internal.NotNull;
 import internal.MovieDetails;
 import internal.PageState;
-import org.jetbrains.annotations.NotNull;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 import java.util.TreeMap;
 
 /**
@@ -131,9 +128,9 @@ public class InputController extends HttpServlet {
         //String databaseOutput = "OK!<br>";
         String databaseOutput = "";
         databaseOutput+="<tr>";
-        databaseOutput+="<th>Movie name</th>";
-        databaseOutput+="<th>Movie description</th>";
-        databaseOutput+="<th>Movie genre</th>";
+        databaseOutput+="<th width=25%>Movie name</th>";
+        databaseOutput+="<th width=25%>Movie description</th>";
+        databaseOutput+="<th width=25%>Movie genre</th>";
         databaseOutput+="</tr>";
 //        for (int i = 1; i <= movies.size(); i++) {
 //            MovieDetails movie = movies.get(i);
@@ -145,9 +142,9 @@ public class InputController extends HttpServlet {
         for (int i = 1; i <= movies.size(); i++) {
             MovieDetails movie = movies.get(i);
             databaseOutput+="<tr>";
-            databaseOutput+="<th>"+movie.getName()+"</th>";
-            databaseOutput+="<th>"+movie.getDescription()+"</th>";
-            databaseOutput+="<th>"+movie.getGenre()+"</th>";
+            databaseOutput+="<td width=25%>"+movie.getName()+"</td>";
+            databaseOutput+="<td width=25%>"+movie.getDescription()+"</td>";
+            databaseOutput+="<td width=25%>"+movie.getGenre()+"</td>";
             databaseOutput+="</tr>";
         }
         request.getSession().setAttribute("database", databaseOutput);
