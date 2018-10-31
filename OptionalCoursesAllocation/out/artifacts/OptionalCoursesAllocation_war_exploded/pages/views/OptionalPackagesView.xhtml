@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<title>Optional Packages</title>
+
+<f:view>
+    <h:messages style = "color:red;" />
+
+    <p:dataTable var="optpkg" value="#{optionalPackageBean.optionalPackagesList()}">
+        <p:column headerText="Code">
+            <h:outputText value="#{optpkg.packageId}" />
+        </p:column>
+
+        <p:column headerText="Year">
+            <h:outputText value="#{optpkg.year}" />
+        </p:column>
+
+        <p:column headerText="Semester">
+            <h:outputText value="#{optpkg.semester}" />
+        </p:column>
+
+        <p:column headerText="Number of disciplines">
+            <h:outputText value="#{optpkg.disciplineNo}" />
+        </p:column>
+
+
+        <p:column>
+            <f:facet name="header">Update</f:facet>
+            <p:commandButton action="#{optionalPackageBean.edit(optpkg.packageId)}" value="Update" class="btn btn-primary" />
+        </p:column>
+        <p:column>
+            <f:facet name="header">Delete</f:facet>
+            <p:commandButton action="#{optionalPackageBean.deleteOptionalPackage(optpkg.packageId)}" value="Delete" class="btn btn-danger" />
+        </p:column>
+
+    </p:dataTable>
+
+    <center>
+        <p:commandButton value="Insert new optional package" action="addOptionalPackage"/>
+    </center>
+
+    <ui:include src="/menu.xhtml" />
+</f:view>
+</html>

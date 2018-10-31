@@ -1,0 +1,52 @@
+"CS1101","SD","Structuri de date",1,1,"","","",""
+"CS1102","ACSO","Arhitectura calculatoarelor şi sisteme de operare",1,1,"","","",""
+"CS1103","LOGICA","Logică pentru informatică",1,1,"","","",""
+"CS1104","MATE","Matematică",1,1,"","","",""
+"CS1105","IPROG","Introducere în programare",1,1,"","","",""
+"CS1207","POO","Programare orientată-obiect",1,2,"","","",""
+"CS1208","SO","Sisteme de operare ",1,2,"","","",""
+"CS1209","FAI","Fundamente algebrice ale informaticii",1,2,"","","",""
+"CS1210","PS","Probabilităţi şi statistică",1,2,"","","",""
+"CS1211","PALG","Proiectarea algoritmilor",1,2,"","","",""
+"CS2101","RC","Reţele de calculatoare",2,1,"","","",""
+"CS2102","BD","Baze de date",2,1,"","","",""
+"CS2103","LFA","Limbaje formale, automate şi compilatoare",2,1,"","","",""
+"CS2104","AGRAF","Algoritmica grafurilor",2,1,"","","",""
+"CS2105O1","CDC","Calculabilitate, decidabilitate şi complexitate",2,1,"Ferucio Laurențiu Țiplea","http://profs.info.uaic.ro/~fltiplea/","CO1",5
+"CS2101O2","PLP","Principii ale limbajelor de programare",2,1,"Andrei Arusoaie","http://profs.info.uaic.ro/~arusoaie.andrei/lectures/PLP/plp.html","CO1",5
+"CS2101O3","AG","Algoritmi genetici",2,1,"Henri Luchian","https://drive.google.com/file/d/16V3aYAMFqSi-69YVD2l4rYP3eUtR0kjG/view","CO1",5
+"CS2207","WEB","Tehnologii WEB",2,2,"","","",""
+"CS2208","PAV","Programare avansată",2,2,"","","",""
+"CS2209","IP","Ingineria Programării",2,2,"","","",""
+"CS2210","SGBD","Practică SGBD",2,2,"","","",""
+"CS2211O1","PF","Programare funcţională",2,2,"Ștefan Ciobâcă","profs.info.uaic.ro/~pf/proposal.txt ","CO2",4
+"CS2211O2","MCM","Modele continue şi Matlab",2,2,"Florin Iacob","https://profs.info.uaic.ro/~fliacob/An2/2017-2018/index-MCM_2017-2018.htm","CO2",4
+"CS2211O3","IC","Introducere in criptografie",2,2,"Ferucio Laurențiu Țiplea","http://profs.info.uaic.ro/~fltiplea/","CO2",4
+"AIIT", "AIIT", "Antreprenoriat si inovare in IT",2,2,"Corina Forascu","http://bit.do/FII-antreprenor","CO2",3
+"CS3101","INVA","Învațare automată",3,1,"","","",""
+"CS3102","SI","Securitatea informaţiei",3,1,"","","",""
+"CS3103","IA","Inteligenţă artificială",3,1,"","","",""
+"CS3104O1","I.NET","Introducere in .NET",3,1,"Andrei Arusoaie","https://profs.info.uaic.ro/~arusoaie.andrei/lectures/NET/2016/DotNet.html","CO3",4
+"CS3104O2","DSFUM","Dezvoltarea sistemelor fizice utilizând microprocesoare",3,1,"Cosmin Vârlan","https://profs.info.uaic.ro/~vcosmin/dsfum","CO3",4
+"CS3105O3","RN","Retele neuronale",3,1,"Razvan Benchea","https://profs.info.uaic.ro/~rbenchea/rn/info.pdf","CO3",4
+"CS3105O1","A3D","Animaţie 3D: algoritmi şi tehnici fundamentale",3,1,"Anca Vitcu","http://profs.info.uaic.ro/~avitcu/ ","CO3",3
+"CS3105O2","PMP","Programare și modelare probabilistă",3,1,"Dorel Lucanu","https://sites.google.com/site/fiicourselpp/ ","CO4",3
+"DAWNC","DAWNC","Dezvoltarea aplicațiilor Web la nivel de client",3,1,"Sabin-Corneliu Buraga","https://profs.info.uaic.ro/~busaco/teach/courses/cliw/web-film.html","CO4",6
+"CS3104O4","CSSO","Capitole speciale de sisteme de operare",3,1,"Cristian Vidrașcu","http://profs.info.uaic.ro/~vidrascu/CSSO/","CO4",3
+"ASSE","ASSE","Automotive specific software engineering",3,1,"CONTINENTAL (Vlad Radulescu)","https://sites.google.com/view/fiiautomotivesystems/","CO4",3
+"CS3106","PY","Practică(Programare în Python)",3,1,"","","",""
+"CS3207","CN","Calcul numeric",3,2,"","","",""
+"CS3208","GRAFICA","Grafică pe calculator",3,2,"","","",""
+"CS3209O1","PBR","Programare bazată pe reguli ",3,2,"Dan Cristea","http://profs.info.uaic.ro/~dcristea/teaching.html","CO5",4
+"CS3104O3","TPPA","Tehnici de programare pe platforma Android",3,2,"Dragoș Gavriluț","https://sites.google.com/site/fiiandroidprogramming/home","CO5",5
+"CS3209O3","ARMS","Analiza reţelelor media sociale",3,2,"Anca Vitcu","http://profs.info.uaic.ro/~avitcu/","CO5",3
+"CS3210O1","ACTN","Aspecte computaţionale în teoria numerelor",3,2,"Sorin Iftene","http://profs.info.uaic.ro/~siftene/CNT.html ","CO5",3
+"CS3209O4","PCPIT","Psihologia comunicarii profesionale in domeniul IT-lui",3,2,"Nicoleta Armanu","https://profs.info.uaic.ro/~nicky/","CO6",3
+"CS3211O1","PMSO","Programare MS-Office",3,2,"Vlad Rădulescu","http://profs.info.uaic.ro/~rvlad/msoffice.html","CO6",5
+"CS3210O3","CC","Cloud Computing",3,2,"Lenuța Alboaie","https://profs.info.uaic.ro/~adria/teach/courses/CloudComputing/","CO6",3
+"MLMOS","MLMOS","Metodologii de lucru în mediul Open Source",3,2,"TSS - YONDER- Alex Coman (Sabin Buraga)","https://courses.tss-yonder.com/cursuri/open-source/","CO6",4
+"CS3210O2","RPA","Reţele Petri şi aplicaţii",3,2,"Oana Captarencu","https://profs.info.uaic.ro/~otto/pn-general.html","CO7",4
+"CS3211O2","SCA","Smart Card-uri si Aplicatii",3,2,"Cătălin Bîrjoveanu","https://profs.info.uaic.ro/~cbirjoveanu/web/sc.html","CO7",4
+"CS3211O3","TSP.NET","Topici speciale de programare .NET",3,2,"Ioan Asiminoaie","https://profs.info.uaic.ro/~webdata/planuri/licenta/CS3211O3.pdf","CO7",4
+"IILN","IILN","Introducere în ingineria limbajului natural",3,2,"Dan Cristea", "https://drive.google.com/file/d/1jszTUtk23W5uyZ6Co2AuNRH1jwzOs-xe/view?usp=sharing","CO7",3
+"CS20058","DAP.NET", "Dezvoltare de aplica┼úii pe platforma .NET",3,1,"Ioan Asiminoaie","http://www.info.uaic.ro/~iasimin","",""
