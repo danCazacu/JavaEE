@@ -1,0 +1,33 @@
+"CDC", "SD", 0.34, "LOGICA", 0.33, "PS", 0.33
+"PLP", "POO", 0.34, "SD", 0.33, "LOGICA", 0.33
+"AG", "PALG", 0.34, "PS", 0.33, "POO", 0.33
+
+"PF", "POO", 0.5, "PALG", 0.25, "LOGICA", 0.25
+"MCM", "MATE", 0.6, "POO", 0.4
+"IC", "FAI", 0.5, "PS", 0.5
+"AIIT", "PALG", 0.34, "POO", 0.33, "SD", 0.33
+
+"I.NET", "IP", 0.35, "POO", 0.35, "WEB", 0.3
+"DSFUM", "IPROG", 0.6, "WEB", 0.2, "RC", 0.2
+"RN", "PALG", 0.5, "PS", 0.3, "MATE", 0.2
+"A3D", "POO", 0.5, "PAV", 0.5
+
+"PMP", "PAV", 0.6, "PS", 0.4
+"DAWNC", "WEB", 0.34, "RC", 0.33, "BD", 0.33
+"CSSO", "SO", 0.6, "IPROG", 0.2, "ACSO", 0.1, "RC", 0.1
+"ASSE", "PAV", 0.34, "BD", 0.33, "IP", 0.33
+
+"PBR", "IA", 0.4, "SD", 0.2, "LOGICA", 0.2, "PF", 0.2
+"TPPA", "IPROG", 0.25, "POO", 0.3, "PAV", 0.45
+"ARMS", "AGRAF", 0.7, "WEB", 0.3
+"ACTN", "FAI", 1
+
+"PCPIT", "IPROG", 0.4, "LOGICA", 0.3, "PALG", 0.3
+"PMSO", "PAV", 0.75, "POO", 0.25
+"CC", "RC", 0.5, "WEB", 0.5
+"MLMOS", "WEB", 0.34, "PAV", 0.33, "IP", 0.33
+
+"RPA", "AGRAF", 0.4, "LFA", 0.3, "MATE", 0.3
+"SCA", "PAV", 0.6, "FAI", 0.4
+"TSP.NET", "DAP.NET", 1
+"IILN", "IP", 0.34, "WEB", 0.33, "PAV", 0.33
