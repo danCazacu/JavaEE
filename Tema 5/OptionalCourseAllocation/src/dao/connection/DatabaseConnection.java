@@ -1,0 +1,34 @@
+package dao.connection;
+
+import util.DatabaseConstants;
+
+import javax.faces.bean.ManagedBean;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+@ManagedBean(eager = true)
+public class DatabaseConnection {
+    private Connection connection;
+    private static DatabaseConnection ourInstance = new DatabaseConnection();
+
+    public static DatabaseConnection getInstance() {
+        return ourInstance;
+    }
+
+    private DatabaseConnection() {
+        try {
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(DatabaseConstants.URL, DatabaseConstants.USER, DatabaseConstants.PASSWORD);
+            System.out.println("Connection completed.");
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+            //TODO showError(ex);
+
+        }
+    }
+
+    public Connection getConnection() {
+        return connection;
+    }
+}
