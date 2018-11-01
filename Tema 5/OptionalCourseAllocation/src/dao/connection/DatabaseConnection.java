@@ -3,11 +3,13 @@ package dao.connection;
 import util.DatabaseConstants;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 @ManagedBean(eager = true)
+@SessionScoped
 public class DatabaseConnection {
     private Connection connection;
     private static DatabaseConnection ourInstance = new DatabaseConnection();

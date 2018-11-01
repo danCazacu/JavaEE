@@ -7,129 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9ddc16-bff2-4069-82eb-92f3312f6d13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/primefaces_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/primefaces_6_1_sources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bean/CourseBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bean/LecturerBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bean/LoginBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bean/OptionalCourseBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bean/OptionalPackageBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/operation/CourseOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/operation/LecturerOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/operation/OptionalCoursesOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/operation/OptionalPackageOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/DatabaseConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/util/FormUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/postgresql-42.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/primefaces-6.1-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/primefaces-6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/.idea/artifacts/OptionalCoursesAllocation_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/.idea/libraries/postgresql_42_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/.idea/libraries/primefaces_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/.idea/libraries/primefaces_6_1_sources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/OptionalCoursesAllocation.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/BasicView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/PersonBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/bean/CourseBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/bean/LecturerBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/bean/LoginBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/bean/OptionalCourseBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/bean/OptionalPackageBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/dao/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/dao/DatabaseOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/dao/UserData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/lib/postgresql-42.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/resources/Messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/resources/discipline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/resources/pachete.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/classes/resources/pref_discipline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/lib/postgresql-42.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/lib/primefaces-6.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/lib/primefaces-6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/login.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/menu.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/addForms/courseForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/addForms/lecturerForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/addForms/optionalCourseForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/addForms/optionalPackageForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/edit/editCompulsoryCourse.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/edit/editLecturer.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/edit/editOptionalCourse.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/edit/editOptionalPackage.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/views/CompulsoryCoursesView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/views/LecturerView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/views/OptionalCoursesView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/pages/views/OptionalPackagesView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/resources/images/compcourses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/resources/images/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/resources/images/lecturers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/resources/images/optcourses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/resources/images/optpackages.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/artifacts/OptionalCoursesAllocation_war_exploded/resources/images/stack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/BasicView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/PersonBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/bean/CourseBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/bean/LecturerBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/bean/LoginBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/bean/OptionalCourseBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/bean/OptionalPackageBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/dao/Author.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/dao/DatabaseOperations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/dao/UserData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/lib/postgresql-42.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/resources/Messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/resources/discipline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/resources/pachete.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/out/production/OptionalCoursesAllocation/resources/pref_discipline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/bean/CourseBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/bean/LecturerBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/bean/LoginBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/bean/OptionalCourseBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/bean/OptionalPackageBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/dao/DatabaseOperations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/resources/Messages.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/resources/discipline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/resources/pachete.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/src/resources/pref_discipline.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/WEB-INF/faces-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/WEB-INF/lib/postgresql-42.2.5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/WEB-INF/lib/primefaces-6.1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/WEB-INF/lib/primefaces-6.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/login.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/menu.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/addForms/courseForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/addForms/lecturerForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/addForms/optionalCourseForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/addForms/optionalPackageForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/edit/editCompulsoryCourse.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/edit/editLecturer.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/edit/editOptionalCourse.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/edit/editOptionalPackage.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/views/CompulsoryCoursesView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/views/LecturerView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/views/OptionalCoursesView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/pages/views/OptionalPackagesView.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/resources/images/compcourses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/resources/images/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/resources/images/lecturers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/resources/images/optcourses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/resources/images/optpackages.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../OptionalCoursesAllocation/web/resources/images/stack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tema 4/OptionalCoursesAllocation/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 4/OptionalCoursesAllocation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/progress.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Tema 4/OptionalCoursesAllocation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 4/OptionalCoursesAllocation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tema 4/OptionalCoursesAllocation/src/dao/DatabaseOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 4/OptionalCoursesAllocation/src/dao/DatabaseOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,30 +28,76 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="36" />
+          <entry key="java" value="39" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="36" />
+          <entry key="JAVA" value="39" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="java" value="1694" />
+          <entry key="java" value="1700" />
+          <entry key="txt" value="1361" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1694" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="JAVA" value="1700" />
+          <entry key="PLAIN_TEXT" value="1362" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/progress.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/DatabaseConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -201,6 +127,8 @@
         <option value="$PROJECT_DIR$/src/util/form/CourseFormUtil.java" />
         <option value="$PROJECT_DIR$/src/util/FormUtils.java" />
         <option value="$PROJECT_DIR$/src/bean/OptionalPackageBean.java" />
+        <option value="$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/resources/progress.txt" />
       </list>
     </option>
   </component>
@@ -241,12 +169,6 @@
               <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
               <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
@@ -302,7 +224,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541103089725" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541104080677" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -389,7 +311,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5939000" />
+    <option name="totallyTimeSpent" value="6503000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,21 +326,14 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -426,16 +341,23 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.3289689" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="JSF" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,43 +379,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/util/DatabaseConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/operation/LecturerOperations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
@@ -629,6 +514,40 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/DatabaseConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/progress.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
         </state>
       </provider>
     </entry>

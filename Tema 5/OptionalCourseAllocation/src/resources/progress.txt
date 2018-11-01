@@ -1,0 +1,19 @@
+Bean
+Am redus pachetul de bean sa aiba doar get si set, practic sa descrie o strctura de date.
+Cred ca este bine sa mentinem doar in felul asta si sa adugam/stergem proprietati daca va fi nevoie
+
+Dao
+Conexiunea este pastrada in DatabaseConnection. Nu sunt 100% sigur ca o sa instantieze bine pentru fiecare sesiune dar o sa se instantieze in operatii.
+DatabaseOperations este doar un template (clasa abstracta) pentru celelate operatii.
+Am folosit parametrul ala T doar ca sa imi faca mai usor autocomplete cand suprascriu functiile, mare vrajeala nu e
+Am pus pe langa functiile care au cheia de cautare si o functie care primeste int pt ca am vazut ca unele chei sunt int
+
+Util
+Datele de conectare la baza de date ca sa fie mai usor de gasit si de modificat (teoretic, ca sa nu scriem parola in plain text,
+cauti pe net un string to utf 8 converter si iti face stringul care mai apoi il convertesti
+daca nu iti iese in 5 minute pui parola si nu pierzi timpul :))
+Mai avem aici FormUtils gen alea pentru genre,semester...care trebuie completate automat in form
+
+
+Te rog sa te uiti peste ce am facut eu si sa imi spui daca se poate imbunatati si daca am gresit ceva
+si sa scrii si tu cateva randuri aici cand te apuci de jsf ca acolo sunt prastie
