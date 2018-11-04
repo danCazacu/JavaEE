@@ -1,14 +1,19 @@
 package dao.operation;
 
 import bean.CourseBean;
+import util.Constants;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
+@ManagedBean(name = "courseOperations")
+@RequestScoped
 public class CourseOperations extends DatabaseOperations<CourseBean> {
-
+    private static String updateKey;
     @Override
     public ArrayList<CourseBean> getAll() {
         ArrayList<CourseBean> lstCompulsoryCourses = new ArrayList<>();
@@ -110,39 +115,46 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
         /* Setting The Particular Lecturer Details In Session */
         Map<String,Object> sessionMapObj = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
         //TODO SAME AS IN LECTURER editCompulsoryCourseId = id;
+        if(primaryKey!=null && primaryKey.trim().length()>0) {
+            try {
 
-        try {
+                pstmt = connection.prepareStatement("select * from course where id = ?");
+                pstmt.setInt(1, Integer.parseInt(primaryKey));
+                resultSet = pstmt.executeQuery();
+                if (resultSet != null) {
 
-            pstmt = connection.prepareStatement("select * from course where id = ?");
-            pstmt.setInt(1, Integer.parseInt(primaryKey));
-            resultSet = pstmt.executeQuery();
-            if(resultSet != null) {
+                    resultSet.next();
+                    editRecord = new CourseBean();
+                    editRecord.setCode(resultSet.getString("code"));
+                    editRecord.setShortName(resultSet.getString("short_name"));
+                    editRecord.setName(resultSet.getString("name"));
+                    editRecord.setYearOfStudy(resultSet.getInt("year"));
+                    editRecord.setSemester(resultSet.getInt("semester"));
+                    editRecord.setCredits(resultSet.getInt("credits"));
+                    editRecord.setUrl(resultSet.getString("url"));
+                    editRecord.setLecturer(resultSet.getString("lecturer_name"));
+                    editRecord.setOptPackage(null);
+                }
+                sessionMapObj.put("editCompulsoryCourseObj", editRecord);
+                updateKey = primaryKey;
+            } catch (Exception sqlException) {
 
-                resultSet.next();
-                editRecord = new CourseBean();
-                editRecord.setCode(resultSet.getString("code"));
-                editRecord.setShortName(resultSet.getString("short_name"));
-                editRecord.setName(resultSet.getString("name"));
-                editRecord.setYearOfStudy(resultSet.getInt("year"));
-                editRecord.setSemester(resultSet.getInt("semester"));
-                editRecord.setCredits(resultSet.getInt("credits"));
-                editRecord.setUrl(resultSet.getString("url"));
-                editRecord.setLecturer(resultSet.getString("lecturer_name"));
-                editRecord.setOptPackage(null);
+                //showError(sqlException);
+                return "editCompulsoryCourse";
             }
-            sessionMapObj.put("editCompulsoryCourseObj", editRecord);
-
-        } catch(Exception sqlException) {
-
-            //showError(sqlException);
-            return "editCompulsoryCourse";
+        }else{
+            sessionMapObj.remove(Constants.Lecturer.SessionKeys.EDIT_RECORD_KEY);
+            updateKey = null;
         }
-
         return "editCompulsoryCourse";
     }
 
     @Override
-    public String update(CourseBean updateRecord, String primaryKey) {
+    public String update(CourseBean updateRecord) {
+        if(updateKey == null || updateKey.trim().length()<0)
+        {
+            return insert(updateRecord);
+        }
         try {
 
             pstmt = connection.prepareStatement("update course set code=?, short_name=?, name=?, year=?, semester=?, credits=?, url=?, optpackages_code=?, lecturer_name=? where id=?");
@@ -155,7 +167,7 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
             pstmt.setString(7, updateRecord.getUrl());
             pstmt.setString(8, null);
             pstmt.setString(9, updateRecord.getLecturer());
-            pstmt.setInt(10, Integer.valueOf(primaryKey));
+            pstmt.setInt(10, Integer.valueOf(updateKey));
 
             pstmt.executeUpdate();
         } catch (Exception sqlException) {

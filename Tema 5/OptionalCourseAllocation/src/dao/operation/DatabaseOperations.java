@@ -18,7 +18,7 @@ public abstract class DatabaseOperations<T> {
     public abstract String insert(T newRecord);
     public abstract void delete(String deleteRecord);
     public abstract String getForEdit(String primaryKey);
-    public abstract String update(T updateRecord, String primaryKey);
+    public abstract String update(T updateRecord);
 
     public void delete(int deleteRecord){
         delete(""+deleteRecord);
@@ -26,7 +26,7 @@ public abstract class DatabaseOperations<T> {
     public String getForEdit(int primaryKey){
         return getForEdit(""+primaryKey);
     }
-    public String update(T updateRecord, int primaryKey){
-        return update(updateRecord,""+primaryKey);
-    }
+//    public String update(T updateRecord, int primaryKey){
+//        return update(updateRecord,""+primaryKey);
+//    }
 }

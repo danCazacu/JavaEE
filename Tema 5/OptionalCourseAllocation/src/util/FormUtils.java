@@ -1,8 +1,12 @@
 package util;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import java.util.ArrayList;
 import java.util.List;
 
+@ManagedBean(name = "formUtils")
+@RequestScoped
 public class FormUtils {
     public List<String> completeYearOfStudy(String query) {
         List<String> results = new ArrayList<String>();

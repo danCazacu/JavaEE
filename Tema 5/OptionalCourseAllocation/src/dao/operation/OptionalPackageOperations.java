@@ -1,13 +1,19 @@
 package dao.operation;
 
 import bean.OptionalPackageBean;
+import util.Constants;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
+@ManagedBean(name = "optionalPackageOperations")
+@RequestScoped
 public class OptionalPackageOperations extends DatabaseOperations<OptionalPackageBean> {
+    private static String updateKey;
     @Override
     public ArrayList<OptionalPackageBean> getAll() {
         ArrayList<OptionalPackageBean> lstOptionalPackages = new ArrayList<>();
@@ -99,40 +105,47 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
         /* Setting The Particular Lecturer Details In Session */
         Map<String,Object> sessionMapObj = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
         //TODO editOptionalPackgeCode = optPkgCode;
+        if(primaryKey!=null && primaryKey.trim().length()>0) {
+            try {
 
-        try {
+                pstmt = connection.prepareStatement("select * from optional_packages where code = ?");
+                pstmt.setString(1, primaryKey);
+                resultSet = pstmt.executeQuery();
+                if (resultSet != null) {
+                    resultSet.next();
+                    editRecord = new OptionalPackageBean();
+                    editRecord.setPackageId(resultSet.getString("code"));
+                    editRecord.setYear(resultSet.getInt("year"));
+                    editRecord.setSemester(resultSet.getInt("semester"));
+                    editRecord.setDisciplineNumber(resultSet.getInt("disciplineno"));
+                }
+                sessionMapObj.put("editOptionalPackageObj", editRecord);
+                updateKey = primaryKey;
+            } catch (Exception sqlException) {
 
-            pstmt = connection.prepareStatement("select * from optional_packages where code = ?");
-            pstmt.setString(1, primaryKey);
-            resultSet = pstmt.executeQuery();
-            if(resultSet != null) {
-                resultSet.next();
-                editRecord = new OptionalPackageBean();
-                editRecord.setPackageId(resultSet.getString("code"));
-                editRecord.setYear(resultSet.getInt("year"));
-                editRecord.setSemester(resultSet.getInt("semester"));
-                editRecord.setDisciplineNumber(resultSet.getInt("disciplineno"));
+                //showError(sqlException);
+                return "editOptionalCourse";
             }
-            sessionMapObj.put("editOptionalPackageObj", editRecord);
-
-        } catch(Exception sqlException) {
-
-            //showError(sqlException);
-            return "editOptionalCourse";
+        }else{
+            sessionMapObj.remove(Constants.Lecturer.SessionKeys.EDIT_RECORD_KEY);
+            updateKey = null;
         }
-
         return "editOptionalPackage";
     }
 
     @Override
-    public String update(OptionalPackageBean updateRecord, String primaryKey) {
+    public String update(OptionalPackageBean updateRecord) {
+        if(updateKey == null || updateKey.trim().length()<0)
+        {
+            return insert(updateRecord);
+        }
         try {
             pstmt = connection.prepareStatement("update optional_packages set code=?, year=?, semester=?, disciplineno=? where code=?");
             pstmt.setString(1, updateRecord.getPackageId());
             pstmt.setInt(2, updateRecord.getYear());
             pstmt.setInt(3, updateRecord.getSemester());
             pstmt.setInt(4, updateRecord.getDisciplineNumber());
-            pstmt.setString(5, primaryKey);
+            pstmt.setString(5, updateKey);
             pstmt.executeUpdate();
 
         } catch (Exception sqlException) {

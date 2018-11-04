@@ -1,6 +1,6 @@
 package dao.connection;
 
-import util.DatabaseConstants;
+import util.Constants;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -21,7 +21,7 @@ public class DatabaseConnection {
     private DatabaseConnection() {
         try {
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection(DatabaseConstants.URL, DatabaseConstants.USER, DatabaseConstants.PASSWORD);
+            connection = DriverManager.getConnection(Constants.Database.URL, Constants.Database.USER, Constants.Database.PASSWORD);
             System.out.println("Connection completed.");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<title>Lecturers</title>
+
+<f:view>
+    <h:messages style = "color:red;" />
+
+    <p:dataTable var="lecturer" value="#{lecturerOperations.getAll()}">
+
+        <p:column headerText="Name">
+            <h:outputText value="#{lecturer.name}" />
+        </p:column>
+
+        <p:column headerText="Email">
+            <h:outputText value="#{lecturer.email}" />
+        </p:column>
+
+        <p:column headerText="Gender">
+            <h:outputText value="#{lecturer.gender}" />
+        </p:column>
+
+        <p:column headerText="URL">
+            <h:outputText value="#{lecturer.url}" />
+        </p:column>
+
+
+        <p:column>
+            <f:facet name="header">Update</f:facet>
+            <p:commandButton action="#{lecturerOperations.getForEdit(lecturer.name)}" value="Update" class="btn btn-primary" />
+        </p:column>
+        <p:column>
+            <f:facet name="header">Delete</f:facet>
+            <p:commandButton value="Delete" action="#{lecturerOperations.delete(lecturer.name)}" class="btn btn-danger">
+            </p:commandButton>
+        </p:column>
+
+    </p:dataTable>
+
+    <center>
+        <p:commandButton value="Insert New Lecturer" action="#{lecturerOperations.getForEdit('')}"  />
+    </center>
+
+    <ui:include src="/menu.xhtml" />
+</f:view>
+</html>
