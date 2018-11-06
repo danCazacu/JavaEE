@@ -178,4 +178,9 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
 
         return "viewCompulsoryCourses";
     }
+
+    @Override
+    public String cancel() {
+        return null;
+    }
 }

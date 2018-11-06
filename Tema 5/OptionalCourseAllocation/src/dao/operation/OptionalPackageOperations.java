@@ -156,4 +156,9 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
 
         return "viewOptionalPackages";
     }
+
+    @Override
+    public String cancel() {
+        return null;
+    }
 }

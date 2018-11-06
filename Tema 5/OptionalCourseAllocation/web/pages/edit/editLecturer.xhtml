@@ -1,53 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:my="http://java.sun.com/jsf/composite/mycomp">
+
 
 <h:head>
     <title>Edit lecturer</title>
 </h:head>
 <h:body>
+    <ui:composition template="/pages/templates/page.xhtml">
 
+    <ui:define name="content">
     <h:messages style = "color:red;" />
     <h:form>
-        <h:panelGrid columns="2" cellpadding="10">
-
+        <p:panelGrid id="lecturerPanel" columns="2" cellpadding="5">
             <p:outputLabel value="Name:" style="font-weight:bold" />
             <p:inputText id="name" value="#{lecturerBean.name}" required="true">
             </p:inputText>
 
             <p:outputLabel value="Email:" style="font-weight:bold" />
-            <p:inputText id="email" value="#{lecturerBean.email}" validatorMessage="Invalid email format" required="true">
-                <f:validateRegex
-                        pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
-            </p:inputText>
-            <p:watermark for="email" value="" />
-            <p:message for="email"/>
+            <my:email value="Enter your email id" />
+
 
             <p:outputLabel value="Gender:" style="font-weight:bold" />
-            <p:autoComplete id="gender" dropdown="true" editable="false" completeMethod="#{formUtils.completeGenders}"  value="#{lecturerBean.gender}" required="true" forceSelection="TRUE"/>
+            <p:autoComplete id="gender" dropdown="true" editable="false" completeMethod="#{formUtils.completeGenders}"  value="#{lecturerBean.gender}" required="true" forceSelection="TRUE">
+
+            </p:autoComplete>
 
             <p:outputLabel value="Lecturer URL:" style="font-weight:bold" />
-            <p:inputText id="url" value="#{lecturerBean.url}" validatorMessage="Invalid url format" required="true">
-                <!--<f:validateRegex-->
-                        <!--pattern="^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$" />-->
+            <p:inputText id="url" value="#{lecturerBean.url}" converter="urlConverter">
             </p:inputText>
             <p:watermark for="url" value="" />
             <p:message for="url"/>
 
+            <p:commandButton value="Save" action="#{lecturerOperations.update(lecturerBean)}" ajax="false" icon="ui-icon-check"/>
+            <p:commandButton value="Cancel"  action="#{lecturerOperations.cancel()}" ajax="true" icon="ui-icon-check"/>
 
-            <center>
-                <p:commandButton value="Edit" action="#{lecturerOperations.update(lecturerBean)}" ajax="false" icon="ui-icon-check"/>
-            </center>
-        </h:panelGrid>
-
-
+        </p:panelGrid>
     </h:form>
-
-    <ui:include src="/menu.xhtml" />
+    </ui:define>
+    </ui:composition>
 </h:body>
 </html>

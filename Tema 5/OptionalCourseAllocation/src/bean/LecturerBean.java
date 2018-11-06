@@ -5,7 +5,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @ManagedBean(name = "lecturerBean")
@@ -22,6 +24,9 @@ public class LecturerBean implements Serializable {
 
     private List<String> compulsoryCourses;
     private List<String> optionalCourses;
+
+    private List<String> selectedColumns = new ArrayList<>();
+    private Map<String, String> columnMap = new LinkedHashMap<>();
 
     @PostConstruct
     public void init() {
@@ -103,4 +108,33 @@ public class LecturerBean implements Serializable {
         this.url = url;
     }
 
+    @PostConstruct
+    private void postConstruct() {
+        initColumnProperties();
+    }
+
+    private void initColumnProperties() {
+        addColumn("name", "Name");
+        addColumn("email", "Email");
+        addColumn("gender", "Gender");
+        addColumn("url", "Lecturer url");
+        selectedColumns.addAll(columnMap.keySet());
+    }
+
+    private void addColumn(String propertyName, String displayName) {
+        columnMap.put(propertyName, displayName);
+    }
+
+
+    public List<String> getSelectedColumns() {
+        return selectedColumns;
+    }
+
+    public void setSelectedColumns(List<String> selectedColumns) {
+        this.selectedColumns = selectedColumns;
+    }
+
+    public Map<String, String> getColumnMap() {
+        return columnMap;
+    }
 }

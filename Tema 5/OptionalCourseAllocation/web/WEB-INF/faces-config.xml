@@ -3,28 +3,10 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-    <application>
-        <message-bundle>
-            resources.Messages
-        </message-bundle>
-        <resource-bundle>
-            <base-name>Messages</base-name>
-            <var>msg</var>
-        </resource-bundle>
-        <locale-config>
-            <default-locale>en</default-locale>
-            <!--<supported-locale>ro</supported-locale>-->
-        </locale-config>
-    </application>
 
     <!-- Navigation rules from LecturerView.xhtml -->
     <navigation-rule>
         <from-view-id>/pages/views/LecturerView.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>addLecturer</from-outcome>
-            <to-view-id>/pages/addForms/lecturerForm.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
         <navigation-case>
             <from-outcome>editLecturer</from-outcome>
             <to-view-id>/pages/edit/editLecturer.xhtml</to-view-id>
@@ -32,20 +14,6 @@
         </navigation-case>
     </navigation-rule>
 
-    <!-- Navigation rules from lecturerForm.xhtml -->
-    <navigation-rule>
-        <from-view-id>/pages/addForms/lecturerForm.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>viewLecturers</from-outcome>
-            <to-view-id>/pages/views/LecturerView.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>addLecturer</from-outcome>
-            <to-view-id>/pages/addForms/lecturerForm.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
-    </navigation-rule>
 
     <!-- Navigation rules from editLecturer.xhtml -->
     <navigation-rule>
@@ -66,31 +34,17 @@
     <navigation-rule>
         <from-view-id>/pages/views/OptionalPackagesView.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>addOptionalPackage</from-outcome>
-            <to-view-id>/pages/addForms/optionalPackageForm.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
-        <navigation-case>
             <from-outcome>editOptionalPackage</from-outcome>
             <to-view-id>/pages/edit/editOptionalPackage.xhtml</to-view-id>
             <redirect />
         </navigation-case>
-    </navigation-rule>
-
-    <!-- Navigation rules from optionalPackageForm.xhtml -->
-    <navigation-rule>
-        <from-view-id>/pages/addForms/optionalPackageForm.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>viewOptionalPackages</from-outcome>
             <to-view-id>/pages/views/OptionalPackagesView.xhtml</to-view-id>
             <redirect />
         </navigation-case>
-        <navigation-case>
-            <from-outcome>addOptionalPackage</from-outcome>
-            <to-view-id>/pages/addForms/optionalPackageForm.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
     </navigation-rule>
+
 
     <!-- Navigation rules from editOptionalPackage.xhtml -->
     <navigation-rule>
@@ -111,28 +65,13 @@
     <navigation-rule>
         <from-view-id>/pages/views/CompulsoryCoursesView.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>addCompulsoryCourse</from-outcome>
-            <to-view-id>/pages/addForms/courseForm.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
-        <navigation-case>
             <from-outcome>editCompulsoryCourse</from-outcome>
             <to-view-id>/pages/edit/editCompulsoryCourse.xhtml</to-view-id>
             <redirect />
         </navigation-case>
-    </navigation-rule>
-
-    <!-- Navigation rules from courseForm.xhtml -->
-    <navigation-rule>
-        <from-view-id>/pages/addForms/courseForm.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>viewCompulsoryCourses</from-outcome>
             <to-view-id>/pages/views/CompulsoryCoursesView.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>addCompulsoryCourse</from-outcome>
-            <to-view-id>/pages/addForms/courseForm.xhtml</to-view-id>
             <redirect />
         </navigation-case>
     </navigation-rule>
@@ -156,31 +95,17 @@
     <navigation-rule>
         <from-view-id>/pages/views/OptionalCoursesView.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>addOptionalCourse</from-outcome>
-            <to-view-id>/pages/addForms/optionalCourseForm.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
-        <navigation-case>
             <from-outcome>editOptionalCourse</from-outcome>
             <to-view-id>/pages/edit/editOptionalCourse.xhtml</to-view-id>
             <redirect />
         </navigation-case>
-    </navigation-rule>
-
-    <!-- Navigation rules from optionalCourseForm.xhtml -->
-    <navigation-rule>
-        <from-view-id>/pages/addForms/optionalCourseForm.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>viewOptionalCourses</from-outcome>
             <to-view-id>/pages/views/OptionalCoursesView.xhtml</to-view-id>
             <redirect />
         </navigation-case>
-        <navigation-case>
-            <from-outcome>addOptionalCourse</from-outcome>
-            <to-view-id>/pages/addForms/optionalCourseForm.xhtml</to-view-id>
-            <redirect />
-        </navigation-case>
     </navigation-rule>
+
 
     <!-- Navigation rules from editCompulsoryCourse.xhtml -->
     <navigation-rule>
@@ -196,5 +121,17 @@
             <redirect />
         </navigation-case>
     </navigation-rule>
+
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>fr</supported-locale>
+        </locale-config>
+
+        <resource-bundle>
+            <base-name>resources.messages</base-name>
+            <var>msg</var>
+        </resource-bundle>
+    </application>
 
 </faces-config>

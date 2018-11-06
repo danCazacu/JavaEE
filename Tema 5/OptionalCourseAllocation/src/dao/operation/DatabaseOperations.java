@@ -19,6 +19,7 @@ public abstract class DatabaseOperations<T> {
     public abstract void delete(String deleteRecord);
     public abstract String getForEdit(String primaryKey);
     public abstract String update(T updateRecord);
+    public abstract String cancel();
 
     public void delete(int deleteRecord){
         delete(""+deleteRecord);

@@ -182,4 +182,9 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
 
         return "viewOptionalCourses";
     }
+
+    @Override
+    public String cancel() {
+        return null;
+    }
 }

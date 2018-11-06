@@ -17,3 +17,17 @@ Mai avem aici FormUtils gen alea pentru genre,semester...care trebuie completate
 
 Te rog sa te uiti peste ce am facut eu si sa imi spui daca se poate imbunatati si daca am gresit ceva
 si sa scrii si tu cateva randuri aici cand te apuci de jsf ca acolo sunt prastie
+
+
+----------5.10.2018----------
+Pentru butonul de delete am adaugat ajax = "true"  si update="lecturerDT"
+    lecturerDT este id-ul componentei ce trebuie updatata,refresh-uita cumva,
+
+LecturerView.xhtml:
+<p:dataTable id="lecturerDT" var="lecturer" value="#{lecturerOperations.getAll()}">
+<p:commandButton value="Delete" action="#{lecturerOperations.delete(lecturer.name)}" ajax="true" update="lecturerDT" class="btn btn-danger">
+
+Neimportant dar ca sa stii: am pus numele butonului de Edit din editLecturer.xhtml "Save" (m-am gandit ca are sens si pentru insert si pentru update)
+
+Added converter, validator deja avem
+

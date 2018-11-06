@@ -6,39 +6,46 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Lecturers View</title>
+</h:head>
 
-<title>Lecturers</title>
+<ui:composition template="/pages/templates/dataView.xhtml">
+<ui:define name="dataViewContent">
 
-<f:view>
     <h:messages style = "color:red;" />
 
-    <p:dataTable var="lecturer" value="#{lecturerOperations.getAll()}">
+    <p:dataTable id="lecturerDT" var="lecturer" value="#{lecturerOperations.getAll()}">
 
-        <p:column headerText="Name">
-            <h:outputText value="#{lecturer.name}" />
+        <p:column>
+            <f:facet name="header">Name</f:facet>
+           "#{lecturer.name}"
         </p:column>
 
-        <p:column headerText="Email">
-            <h:outputText value="#{lecturer.email}" />
+        <p:column>
+            <f:facet name="header">Email</f:facet>
+            "#{lecturer.email}"
         </p:column>
 
-        <p:column headerText="Gender">
-            <h:outputText value="#{lecturer.gender}" />
+        <p:column >
+            <f:facet name="header">Gender</f:facet>
+            "#{lecturer.gender}"
         </p:column>
 
         <p:column headerText="URL">
-            <h:outputText value="#{lecturer.url}" />
+            <f:facet name="header">URL</f:facet>
+            "#{lecturer.url}"
         </p:column>
 
 
         <p:column>
             <f:facet name="header">Update</f:facet>
-            <p:commandButton action="#{lecturerOperations.getForEdit(lecturer.name)}" value="Update" class="btn btn-primary" />
+            <p:commandButton action="#{lecturerOperations.getForEdit('')}" value="Update" class="btn btn-primary" />
         </p:column>
+
         <p:column>
             <f:facet name="header">Delete</f:facet>
-            <p:commandButton value="Delete" action="#{lecturerOperations.delete(lecturer.name)}" class="btn btn-danger">
-            </p:commandButton>
+            <p:commandButton value="Delete" action="#{lecturerOperations.delete(lecturer.name)}" ajax="true" update="lecturerDT" class="btn btn-danger"/>
         </p:column>
 
     </p:dataTable>
@@ -47,6 +54,6 @@
         <p:commandButton value="Insert New Lecturer" action="#{lecturerOperations.getForEdit('')}"  />
     </center>
 
-    <ui:include src="/menu.xhtml" />
-</f:view>
+</ui:define>
+</ui:composition>
 </html>

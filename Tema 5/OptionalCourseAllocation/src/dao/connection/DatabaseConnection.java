@@ -19,6 +19,7 @@ public class DatabaseConnection {
     }
 
     private DatabaseConnection() {
+
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(Constants.Database.URL, Constants.Database.USER, Constants.Database.PASSWORD);

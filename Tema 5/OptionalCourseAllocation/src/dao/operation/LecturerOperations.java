@@ -14,6 +14,7 @@ import java.util.Map;
 @RequestScoped
 public class LecturerOperations extends DatabaseOperations<LecturerBean>{
     private static String updateKey;
+
     @Override
     public ArrayList<LecturerBean> getAll() {
         ArrayList<LecturerBean> allLecturers = new ArrayList<>();
@@ -46,6 +47,7 @@ public class LecturerOperations extends DatabaseOperations<LecturerBean>{
      * @param newRecord
      * @return string as navigation result - where to route next
      */
+
     @Override
     public String insert(LecturerBean newRecord) {
 
@@ -65,7 +67,7 @@ public class LecturerOperations extends DatabaseOperations<LecturerBean>{
             inserted = pstmt.executeUpdate();
         } catch (SQLException e) {
             //TODO showError(e);
-            navigationResult = Constants.Lecturer.Routing.ADD;
+            navigationResult = Constants.Lecturer.Routing.EDIT;
         }
 
         if(inserted != 0){
@@ -73,7 +75,7 @@ public class LecturerOperations extends DatabaseOperations<LecturerBean>{
             navigationResult = Constants.Lecturer.Routing.VIEW;
         }else{
 
-            navigationResult = Constants.Lecturer.Routing.ADD;
+            navigationResult = Constants.Lecturer.Routing.EDIT;
         }
 
         return navigationResult;
@@ -90,8 +92,6 @@ public class LecturerOperations extends DatabaseOperations<LecturerBean>{
             sqlException.printStackTrace();
             //TODO showError(sqlException);
         }
-
-        //TODO reload();
     }
 
     @Override
@@ -137,6 +137,7 @@ public class LecturerOperations extends DatabaseOperations<LecturerBean>{
             return insert(updateRecord);
         }
         try {
+
             pstmt = connection.prepareStatement("update lecturer set name=?, email=?, gender=?, url=? where name=?");
             pstmt.setString(1, updateRecord.getName());
             pstmt.setString(2, updateRecord.getEmail());
@@ -150,6 +151,12 @@ public class LecturerOperations extends DatabaseOperations<LecturerBean>{
             //TODO showError(sqlException);
             return Constants.Lecturer.Routing.EDIT;
         }
+
+        return Constants.Lecturer.Routing.VIEW;
+    }
+
+    @Override
+    public String cancel(){
 
         return Constants.Lecturer.Routing.VIEW;
     }
