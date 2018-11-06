@@ -39,7 +39,7 @@
             <p:message for="url"/>
 
             <p:commandButton value="Save" action="#{lecturerOperations.update(lecturerBean)}" ajax="false" icon="ui-icon-check"/>
-            <p:commandButton value="Cancel"  action="#{lecturerOperations.cancel()}" ajax="true" icon="ui-icon-check"/>
+            <p:commandButton value="Cancel"  action="#{lecturerOperations.cancel()}" immediate="true"  icon="ui-icon-check"/>
 
         </p:panelGrid>
     </h:form>
