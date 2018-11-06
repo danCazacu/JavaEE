@@ -6,61 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e9ddc16-bff2-4069-82eb-92f3312f6d13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bean/AjaxPollBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bean/LocaleLanguage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/messages_fr.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/resources/mycomp/email.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/OptionalCourseAllocation_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/OptionalCourseAllocation_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/primefaces_6_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/primefaces_6_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/primefaces_6_1_sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/primefaces_6_1_sources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OptionalCourseAllocation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OptionalCourseAllocation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/CourseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/CourseBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/LecturerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/LecturerBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/OptionalCourseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/OptionalCourseBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean/OptionalPackageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean/OptionalPackageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/operation/CourseOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/operation/CourseOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/operation/LecturerOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/operation/LecturerOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/operation/OptionalCoursesOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/operation/OptionalCoursesOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/operation/OptionalPackageOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/operation/OptionalPackageOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/progress.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/progress.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/FormUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/FormUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/menu.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/addForms/courseForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/addForms/lecturerForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/addForms/optionalCourseForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/addForms/optionalPackageForm.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/edit/editCompulsoryCourse.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/edit/editCompulsoryCourse.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/edit/editOptionalCourse.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/edit/editOptionalCourse.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/templates/page.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/templates/page.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/views/CompulsoryCoursesView.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/views/CompulsoryCoursesView.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/views/LecturerView.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/views/LecturerView.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/views/OptionalCoursesView.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/views/OptionalCoursesView.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/pages/views/OptionalPackagesView.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/views/OptionalPackagesView.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/compcourses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/lecturers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/optcourses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/optpackages.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/images/stack.png" beforeDir="false" />
-    </list>
+    <list default="true" id="0e9ddc16-bff2-4069-82eb-92f3312f6d13" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +148,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -211,38 +157,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/pages/templates/dataEdit.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/resources/mycomp/email.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/templates/dataView.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/templates/header.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="459">
+              <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -567,12 +486,12 @@
       <workItem from="1541426991790" duration="2056000" />
       <workItem from="1541446293520" duration="5888000" />
       <workItem from="1541495315347" duration="6341000" />
-      <workItem from="1541501722526" duration="3865000" />
+      <workItem from="1541501722526" duration="4491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55545000" />
+    <option name="totallyTimeSpent" value="56171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -969,31 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/templates/header.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/views/LecturerView.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="56" selection-start-line="56" selection-end-line="57" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/templates/dataView.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/templates/dataEdit.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="20" column="35" lean-forward="true" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1008,6 +906,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/templates/dataView.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/templates/header.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/templates/dataEdit.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
         </state>
       </provider>
     </entry>
