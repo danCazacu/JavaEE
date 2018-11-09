@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+    <composite:interface>
+        <composite:attribute name="value" required="false"/>
+    </composite:interface>
+   <composite:implementation>
+        <p:inputText id="email" value="#{lecturerBean.email}" validatorMessage="Invalid email format" required="true">
+            <f:validateRegex
+                    pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+        </p:inputText>
+        <p:watermark for="email" value="" />
+        <p:message for="email"/>
+    </composite:implementation>
+</h:body>
+</html>
