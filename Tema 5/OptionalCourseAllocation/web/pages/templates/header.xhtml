@@ -21,8 +21,9 @@
         </h:form>
 
         <h:form>
-            <h:outputText id="txt_count" value="#{ajaxPollBean.number}" />
-            <p:poll interval="3" listener="#{ajaxPollBean.increment}" update="txt_count" />
+            <h:outputText value="Number of active sessions: "/>
+            <h:outputText id="txt_count" value="#{formUtils.numberOfSessions()}" />
+            <p:poll interval="1" update="txt_count" />
         </h:form>
     </ui:composition>
 </body>

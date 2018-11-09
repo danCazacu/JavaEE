@@ -135,7 +135,7 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
                     editRecord.setLecturer(resultSet.getString("lecturer_name"));
                     editRecord.setOptPackage(null);
                 }
-                sessionMapObj.put("editCompulsoryCourseObj", editRecord);
+                sessionMapObj.put("courseBean", editRecord);
                 updateKey = primaryKey;
             } catch (Exception sqlException) {
 
@@ -143,7 +143,7 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
                 return "editCompulsoryCourse";
             }
         }else{
-            sessionMapObj.remove(Constants.Lecturer.SessionKeys.EDIT_RECORD_KEY);
+            sessionMapObj.remove("courseBean");
             updateKey = null;
         }
         return "editCompulsoryCourse";
@@ -173,14 +173,14 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
         } catch (Exception sqlException) {
 
             //showError(sqlException);
-            return "editCompulsoryCourse";
+            return Constants.Course.Routing.EDIT;
         }
 
-        return "viewCompulsoryCourses";
+        return Constants.Course.Routing.VIEW;
     }
 
     @Override
     public String cancel() {
-        return null;
+        return Constants.Course.Routing.VIEW;
     }
 }

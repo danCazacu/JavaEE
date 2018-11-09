@@ -37,4 +37,7 @@ public class FormUtils {
 
        return genders;
     }
+    public int numberOfSessions(){
+        return SessionCounter.getConcurrentUsers();
+    }
 }

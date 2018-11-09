@@ -6,6 +6,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+
 <h:head>
     <title>Lecturers View</title>
 </h:head>
@@ -40,7 +41,7 @@
 
         <p:column>
             <f:facet name="header">Update</f:facet>
-            <p:commandButton action="#{lecturerOperations.getForEdit('')}" value="Update" class="btn btn-primary" />
+            <p:commandButton action="#{lecturerOperations.getForEdit(lecturer.name)}" value="Update" class="btn btn-primary" />
         </p:column>
 
         <p:column>

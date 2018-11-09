@@ -138,7 +138,7 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
                     editRecord.setLecturer(resultSet.getString("lecturer_name"));
                     editRecord.setOptPackage(resultSet.getString("optpackages_code"));
                 }
-                sessionMapObj.put("editOptionalCourseObj", editRecord);
+                sessionMapObj.put("optionalCourseBean", editRecord);
                 updateKey = primaryKey;
             } catch (Exception sqlException) {
 
@@ -146,7 +146,7 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
                 return "editOptionalCourse";
             }
         }else{
-            sessionMapObj.remove(Constants.Lecturer.SessionKeys.EDIT_RECORD_KEY);
+            sessionMapObj.remove("optionalCourseBean");
             updateKey = null;
         }
 
@@ -185,6 +185,6 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
 
     @Override
     public String cancel() {
-        return null;
+        return "viewOptionalCourses";
     }
 }

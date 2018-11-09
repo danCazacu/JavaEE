@@ -15,6 +15,14 @@ import java.util.Map;
 public class LecturerOperations extends DatabaseOperations<LecturerBean>{
     private static String updateKey;
 
+    public ArrayList<String> getAllLecturerNames(){
+        ArrayList<LecturerBean> lecturerBeans = getAll();
+        ArrayList<String> names = new ArrayList<>();
+        for (LecturerBean lecturerBean: lecturerBeans) {
+            names.add(lecturerBean.getName());
+        }
+        return names;
+    }
     @Override
     public ArrayList<LecturerBean> getAll() {
         ArrayList<LecturerBean> allLecturers = new ArrayList<>();

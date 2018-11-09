@@ -107,9 +107,9 @@
     </navigation-rule>
 
 
-    <!-- Navigation rules from editCompulsoryCourse.xhtml -->
+    <!-- Navigation rules from editOptionalCourse.xhtml -->
     <navigation-rule>
-        <from-view-id>/pages/edit/editCompulsoryCourse.xhtml</from-view-id>
+        <from-view-id>/pages/edit/editOptionalCourse.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>viewOptionalCourses</from-outcome>
             <to-view-id>/pages/views/OptionalCoursesView.xhtml</to-view-id>

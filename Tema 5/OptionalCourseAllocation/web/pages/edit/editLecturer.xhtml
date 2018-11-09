@@ -18,7 +18,7 @@
     <ui:define name="content">
     <h:messages style = "color:red;" />
     <h:form>
-        <p:panelGrid id="lecturerPanel" columns="2" cellpadding="5">
+        <h:panelGrid id="lecturerPanel" columns="2" cellpadding="5">
             <p:outputLabel value="Name:" style="font-weight:bold" />
             <p:inputText id="name" value="#{lecturerBean.name}" required="true">
             </p:inputText>
@@ -41,7 +41,7 @@
             <p:commandButton value="Save" action="#{lecturerOperations.update(lecturerBean)}" ajax="false" icon="ui-icon-check"/>
             <p:commandButton value="Cancel"  action="#{lecturerOperations.cancel()}" immediate="true"  icon="ui-icon-check"/>
 
-        </p:panelGrid>
+        </h:panelGrid>
     </h:form>
     </ui:define>
     </ui:composition>

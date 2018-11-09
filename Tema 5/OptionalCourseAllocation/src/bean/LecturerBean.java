@@ -41,7 +41,7 @@ public class LecturerBean implements Serializable {
         optionalCourses.add("RN");
         optionalCourses.add("RE");
 
-
+        initColumnProperties();
     }
 
     public String getName() {
@@ -108,9 +108,12 @@ public class LecturerBean implements Serializable {
         this.url = url;
     }
 
-    @PostConstruct
-    private void postConstruct() {
-        initColumnProperties();
+    public List<String> getSelectedColumns() {
+        return selectedColumns;
+    }
+
+    public void setSelectedColumns(List<String> selectedColumns) {
+        this.selectedColumns = selectedColumns;
     }
 
     private void initColumnProperties() {
@@ -123,15 +126,6 @@ public class LecturerBean implements Serializable {
 
     private void addColumn(String propertyName, String displayName) {
         columnMap.put(propertyName, displayName);
-    }
-
-
-    public List<String> getSelectedColumns() {
-        return selectedColumns;
-    }
-
-    public void setSelectedColumns(List<String> selectedColumns) {
-        this.selectedColumns = selectedColumns;
     }
 
     public Map<String, String> getColumnMap() {

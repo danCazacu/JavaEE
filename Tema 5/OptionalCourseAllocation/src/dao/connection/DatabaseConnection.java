@@ -22,7 +22,7 @@ public class DatabaseConnection {
 
         try {
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection(Constants.Database.URL, Constants.Database.USER, Constants.Database.PASSWORD);
+            connection = DriverManager.getConnection(Constants.Database.URL2, Constants.Database.USER, Constants.Database.hex);
             System.out.println("Connection completed.");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();

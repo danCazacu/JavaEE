@@ -30,7 +30,9 @@ public class CourseBean implements Serializable {
     }
 
     public CourseBean(){
-
+        credits = 1;
+        semester = 1;
+        yearOfStudy = 1;
     }
 
 

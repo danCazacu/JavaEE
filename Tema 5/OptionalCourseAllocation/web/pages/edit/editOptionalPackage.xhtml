@@ -6,42 +6,47 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+<ui:composition template="/pages/templates/page.xhtml">
+<ui:define name="content">
 <f:view>
     <h:messages style = "color:red;" />
 
     <h:form>
         <h:panelGrid columns="2" cellpadding="2">
             <p:outputLabel value="Optional package:" style="font-weight:bold" />
-            <p:inputText id="packageId" value="#{editOptionalPackageObj.packageId}" required="true">
+            <p:inputText id="packageId" value="#{optionalPackageBean.packageId}" required="true">
             </p:inputText>
 
             <p:outputLabel value="Year of study:" style="font-weight:bold" />
-            <p:autoComplete id="yearOfStudy" dropdown="true"  validatorMessage="Wrong year number" value="#{editOptionalPackageObj.year}" completeMethod="#{editOptionalPackageObj.completeYearOfStudy}" required="true" forceSelection="TRUE">
+            <p:autoComplete id="yearOfStudy" dropdown="true"  validatorMessage="Wrong year number" value="#{optionalPackageBean.year}" completeMethod="#{formUtils.completeYearOfStudy}" required="true" forceSelection="TRUE">
              <f:validateLongRange maximum="3" minimum="1" />
             </p:autoComplete>
             <p:watermark for="yearOfStudy" value="" />
             <p:message for="yearOfStudy"/>
 
             <p:outputLabel value="Semester:" style="font-weight:bold" />
-            <p:autoComplete id="semester" dropdown="true" validatorMessage="Wrong semester number" value="#{editOptionalPackageObj.semester}" completeMethod="#{editOptionalPackageObj.completeSemester}" required="true" forceSelection="TRUE">
+            <p:autoComplete id="semester" dropdown="true" validatorMessage="Wrong semester number" value="#{optionalPackageBean.semester}" completeMethod="#{formUtils.completeSemester}" required="true" forceSelection="TRUE">
                 <f:validateLongRange maximum="6" minimum="1" />
             </p:autoComplete>
             <p:watermark for="semester" value="" />
             <p:message for="semester"/>
 
             <p:outputLabel value="Number of disciplines:" style="font-weight:bold" />
-            <p:spinner id="disciplineNo" value="#{editOptionalPackageObj.disciplineNo}" min="0" max="5" validatorMessage="Wrong discipline number">
+            <p:spinner id="disciplineNo" value="#{optionalPackageBean.disciplineNumber}" min="0" max="5" validatorMessage="Wrong discipline number">
                 <f:validateLongRange maximum="5" minimum="1" />
                 <p:watermark for="disciplineNo" value="" />
                 <p:message for="disciplineNo"/>
             </p:spinner>
 
-            <center>
-                <p:commandButton value="Edit" action="#{lecturerOperations.update(editOptionalPackageObj)}" ajax="false" icon="ui-icon-check"/>
-            </center>
+            <p:commandButton value="Save" action="#{optionalPackageOperations.update(optionalPackageBean)}" ajax="false" icon="ui-icon-check"/>
+            <p:commandButton value="Cancel"  action="#{optionalPackageOperations.cancel()}" immediate="true"  icon="ui-icon-check"/>
+
         </h:panelGrid>
     </h:form>
-
-    <ui:include src="/pages/templates/menu.xhtml" />
 </f:view>
+</ui:define>
+</ui:composition>
 </html>

@@ -7,8 +7,12 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-<title>Optional Packages</title>
+<h:head>
+    <title>Optional Packages</title>
+</h:head>
 
+<ui:composition template="/pages/templates/dataView.xhtml">
+<ui:define name="dataViewContent">
 <f:view>
     <h:messages style = "color:red;" />
 
@@ -26,7 +30,7 @@
         </p:column>
 
         <p:column headerText="Number of disciplines">
-            <h:outputText value="#{optpkg.disciplineNo}" />
+            <h:outputText value="#{optpkg.disciplineNumber}" />
         </p:column>
 
 
@@ -42,9 +46,10 @@
     </p:dataTable>
 
     <center>
-        <p:commandButton value="Insert new optional package" action="addOptionalPackage"/>
+        <p:commandButton value="Insert new optional package" action="#{optionalPackageOperations.getForEdit('')}"/>
     </center>
 
-    <ui:include src="/pages/templates/menu.xhtml" />
 </f:view>
+</ui:define>
+</ui:composition>
 </html>

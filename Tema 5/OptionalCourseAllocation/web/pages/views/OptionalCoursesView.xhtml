@@ -7,7 +7,13 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 
-<title>Optional Courses</title>
+
+<h:head>
+    <title>Optional Courses</title>
+</h:head>
+
+<ui:composition template="/pages/templates/dataView.xhtml">
+<ui:define name="dataViewContent">
 <f:view>
 
     <h:messages style = "color:red;" />
@@ -65,9 +71,9 @@
     </p:dataTable>
 
     <center>
-        <p:commandButton value="Insert New Optional Course" action="addOptionalCourse"  />
+        <p:commandButton value="Insert New Optional Course" action="#{optionalCourseOperations.getForEdit('')}"  />
     </center>
-
-    <ui:include src="/pages/templates/menu.xhtml" />
 </f:view>
+</ui:define>
+</ui:composition>
 </html>

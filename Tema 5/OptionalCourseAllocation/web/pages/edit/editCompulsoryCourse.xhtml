@@ -11,50 +11,51 @@
     <title>Edit compulsory course</title>
 </h:head>
 
+<ui:composition template="/pages/templates/page.xhtml">
+<ui:define name="content">
 <f:view>
     <h:form>
-
         <h:messages style = "color:red;" />
             <h:panelGrid columns="2" cellpadding="10">
 
                 <p:outputLabel value="Course code:" style="font-weight:bold" />
-                <p:inputText id="code" value="#{editCompulsoryCourseObj.code}" required="true">
+                <p:inputText id="code" value="#{courseBean.code}" required="true">
                     <f:validateLength minimum = "2" />
                 </p:inputText>
 
                 <p:outputLabel value="Course short-name:" style="font-weight:bold" />
-                <p:inputText id="shortName" value="#{editCompulsoryCourseObj.shortName}" required="true">
+                <p:inputText id="shortName" value="#{courseBean.shortName}" required="true">
                     <f:validateLength minimum = "2"/>
                 </p:inputText>
 
                 <p:outputLabel value="Course name:" style="font-weight:bold" />
-                <p:inputText id="name" value="#{editCompulsoryCourseObj.name}" required="true">
+                <p:inputText id="name" value="#{courseBean.name}" required="true">
                     <f:validateLength minimum = "2"/>
                 </p:inputText>
 
                 <p:outputLabel value="Year of study:" style="font-weight:bold" />
-                <p:spinner id="yearOfStudy" min="1" max="3" validatorMessage="Wrong year number" value="#{editCompulsoryCourseObj.yearOfStudy}">
+                <p:spinner id="yearOfStudy" min="1" max="3" validatorMessage="Wrong year number" value="#{courseBean.yearOfStudy}">
                     <f:validateLongRange maximum="3" minimum="1" />
                     <p:watermark for="yearOfStudy" value="" />
                     <p:message for="yearOfStudy"/>
                 </p:spinner>
 
                 <p:outputLabel value="Semester:" style="font-weight:bold" />
-                <p:spinner id="semester" min="1" max="6" validatorMessage="Wrong semester number" value="#{editCompulsoryCourseObj.semester}">
+                <p:spinner id="semester" min="1" max="6" validatorMessage="Wrong semester number" value="#{courseBean.semester}">
                     <f:validateLongRange maximum="6" minimum="1" />
                     <p:watermark for="semester" value="" />
                     <p:message for="semester"/>
                 </p:spinner>
 
                 <p:outputLabel value="Number of credits:" style="font-weight:bold" />
-                <p:spinner id="credits" min="1" max="10" validatorMessage="Wrong credits number" value="#{editCompulsoryCourseObj.credits}">
+                <p:spinner id="credits" min="1" max="10" validatorMessage="Wrong credits number" value="#{courseBean.credits}">
                     <f:validateLongRange maximum="10" minimum="1" />
                     <p:watermark for="credits" value="" />
                     <p:message for="credits"/>
                 </p:spinner>
 
                 <p:outputLabel value="URL:" style="font-weight:bold" />
-                <p:inputText id="url" value="#{editCompulsoryCourseObj.url}" validatorMessage="Invalid url format" required="true">
+                <p:inputText id="url" value="#{courseBean.url}" converter="urlConverter" required="true">
                     <!--<f:validateRegex-->
                             <!--pattern="^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$" />-->
                 </p:inputText>
@@ -62,19 +63,18 @@
                 <p:message for="url"/>
 
                 <p:outputLabel value="Lecturers:" style="font-weight:bold" />
-                <p:selectOneMenu id="lecturer" value="#{editCompulsoryCourseObj.lecturer}" filter="true" filterMatchMode="startsWith">
+                <p:selectOneMenu id="lecturer" value="#{courseBean.lecturer}" filter="true" filterMatchMode="startsWith">
                     <f:selectItem itemLabel="Select One" itemValue="" />
-                    <f:selectItems value="#{courseBean.lecturersNameList}" />
+                    <f:selectItems value="#{lecturerOperations.getAllLecturerNames()}" />
                 </p:selectOneMenu>
 
-
-                <center>
-                    <p:commandButton value="Edit" action="#{lecturerOperations.update(editCompulsoryCourseObj)}" ajax="false" icon="ui-icon-check"/>
-                </center>
+                <p:commandButton value="Save" action="#{courseOperations.update(courseBean)}" ajax="false" icon="ui-icon-check"/>
+                <p:commandButton value="Cancel"  action="#{courseOperations.cancel()}" immediate="true"  icon="ui-icon-check"/>
 
             </h:panelGrid>
         </h:form>
 
-<ui:include src="/pages/templates/menu.xhtml" />
 </f:view>
+</ui:define>
+</ui:composition>
 </html>

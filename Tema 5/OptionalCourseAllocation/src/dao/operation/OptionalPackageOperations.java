@@ -52,7 +52,26 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
 
         return lstOptionalPackages;
     }
+    public ArrayList getAllPackagesCodes() {
 
+        ArrayList lstPkgCodes = new ArrayList<>();
+        try {
+
+            stmt = connection.createStatement();
+            resultSet = stmt.executeQuery("select * from optional_packages");
+            while (resultSet.next()) {
+
+                String code = resultSet.getString("code");
+                lstPkgCodes.add(code);
+            }
+
+        } catch (Exception sqlSelectException) {
+
+            //showError(sqlSelectException);
+        }
+
+        return lstPkgCodes;
+    }
     @Override
     public String insert(OptionalPackageBean newRecord) {
         int inserted = 0;
@@ -119,7 +138,7 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
                     editRecord.setSemester(resultSet.getInt("semester"));
                     editRecord.setDisciplineNumber(resultSet.getInt("disciplineno"));
                 }
-                sessionMapObj.put("editOptionalPackageObj", editRecord);
+                sessionMapObj.put("optionalPackageBean", editRecord);
                 updateKey = primaryKey;
             } catch (Exception sqlException) {
 
@@ -127,7 +146,7 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
                 return "editOptionalCourse";
             }
         }else{
-            sessionMapObj.remove(Constants.Lecturer.SessionKeys.EDIT_RECORD_KEY);
+            sessionMapObj.remove("optionalPackageBean");
             updateKey = null;
         }
         return "editOptionalPackage";
@@ -159,6 +178,6 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
 
     @Override
     public String cancel() {
-        return null;
+        return "viewOptionalPackages";
     }
 }

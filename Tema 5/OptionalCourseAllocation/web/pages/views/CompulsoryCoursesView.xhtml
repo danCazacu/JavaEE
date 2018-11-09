@@ -6,8 +6,11 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-
+<h:head>
 <title>Compulsory Courses</title>
+</h:head>
+<ui:composition template="/pages/templates/dataView.xhtml">
+<ui:define name="dataViewContent">
 <f:view>
 
     <h:messages style = "color:red;" />
@@ -61,9 +64,10 @@
     </p:dataTable>
 
     <center>
-        <p:commandButton value="Insert New Course" action="addCompulsoryCourse"  />
+        <p:commandButton value="Insert New Course" action="#{courseOperations.getForEdit('')}"  />
     </center>
 
-    <ui:include src="/pages/templates/menu.xhtml" />
 </f:view>
+</ui:define>
+</ui:composition>
 </html>
