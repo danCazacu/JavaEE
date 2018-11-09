@@ -14,64 +14,47 @@ import java.util.Map;
 @RequestScoped
 public class OptionalPackageOperations extends DatabaseOperations<OptionalPackageBean> {
     private static String updateKey;
+
+    public ArrayList<String> getAllPackagesCodes() {
+
+        ArrayList<OptionalPackageBean> optionalPackagesBeans = getAll();
+        ArrayList<String> lstOptionalPackagesCodes = new ArrayList<>();
+       for(OptionalPackageBean optionalPackageBean: optionalPackagesBeans){
+
+           lstOptionalPackagesCodes.add(optionalPackageBean.getPackageId());
+       }
+
+        return lstOptionalPackagesCodes;
+    }
+
     @Override
     public ArrayList<OptionalPackageBean> getAll() {
         ArrayList<OptionalPackageBean> lstOptionalPackages = new ArrayList<>();
         try {
-//
-//            if(connection == null){
-//
-//                OptionalPackageBean optPkgObj = new OptionalPackageBean();
-//                optPkgObj.setPackageId("conn null");
-//
-//                lstOptionalPackages.add(optPkgObj);
-//            }
 
-            stmt = connection.createStatement();
-            resultSet = stmt.executeQuery("select * from optional_packages");
+            if(connection != null) {
 
-            if(resultSet == null){
+                stmt = connection.createStatement();
+                resultSet = stmt.executeQuery("select * from optional_packages");
+                while (resultSet.next()) {
 
-                OptionalPackageBean optPkgObj = new OptionalPackageBean();
-                optPkgObj.setPackageId("resultset null");
+                    OptionalPackageBean optionalPackageObj = new OptionalPackageBean();
+                    optionalPackageObj.setPackageId(resultSet.getString(Constants.OptionalPackage.Table.COLUMN_CODE));
+                    optionalPackageObj.setYear(resultSet.getInt(Constants.OptionalPackage.Table.COLUMN_YEAR));
+                    optionalPackageObj.setSemester(resultSet.getInt(Constants.OptionalPackage.Table.COLUMN_SEMESTER));
+                    optionalPackageObj.setDisciplineNumber(resultSet.getInt(Constants.OptionalPackage.Table.COLUMN_DISCIPLINE_NUMBER));
 
-                lstOptionalPackages.add(optPkgObj);
-            }
-            while (resultSet.next()) {
-
-                OptionalPackageBean optPkgObj = new OptionalPackageBean();
-                optPkgObj.setPackageId(resultSet.getString("code"));
-                optPkgObj.setYear(resultSet.getInt("year"));
-                optPkgObj.setSemester(resultSet.getInt("semester"));
-                optPkgObj.setDisciplineNumber(resultSet.getInt("disciplineNo"));
-                lstOptionalPackages.add(optPkgObj);
+                    lstOptionalPackages.add(optionalPackageObj);
+                }
             }
         } catch (Exception sqlSelectException) {
+            sqlSelectException.printStackTrace();
             //showError(sqlSelectException);
         }
 
         return lstOptionalPackages;
     }
-    public ArrayList getAllPackagesCodes() {
 
-        ArrayList lstPkgCodes = new ArrayList<>();
-        try {
-
-            stmt = connection.createStatement();
-            resultSet = stmt.executeQuery("select * from optional_packages");
-            while (resultSet.next()) {
-
-                String code = resultSet.getString("code");
-                lstPkgCodes.add(code);
-            }
-
-        } catch (Exception sqlSelectException) {
-
-            //showError(sqlSelectException);
-        }
-
-        return lstPkgCodes;
-    }
     @Override
     public String insert(OptionalPackageBean newRecord) {
         int inserted = 0;
@@ -82,23 +65,24 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
 
                 pstmt = connection.prepareStatement("insert into optional_packages(code, year, semester, disciplineno) values(?, ?, ? , ?)");
                 pstmt.setString(1, newRecord.getPackageId());
-                pstmt.setInt(2, newRecord.getSemester());
-                pstmt.setInt(3, newRecord.getYear());
+                pstmt.setInt(2, newRecord.getYear());
+                pstmt.setInt(3, newRecord.getSemester());
                 pstmt.setInt(4, newRecord.getDisciplineNumber());
             }
 
             inserted = pstmt.executeUpdate();
-        } catch (SQLException e) {
-            //showError(e);
-            navigationResult = "addOptionalPackage";
+        } catch (SQLException insertSQLException) {
+            //TODO showError(e);
+            insertSQLException.printStackTrace();
+            navigationResult = Constants.OptionalPackage.Routing.EDIT;
         }
 
         if(inserted != 0){
 
-            navigationResult = "viewOptionalPackages";
+            navigationResult = Constants.OptionalPackage.Routing.VIEW;
         }else{
 
-            navigationResult = "addOptionalPackage";
+            navigationResult = Constants.OptionalPackage.Routing.EDIT;
         }
 
         return navigationResult;
@@ -112,10 +96,9 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
             pstmt.setString(1, deleteRecord);
             pstmt.executeUpdate();
         } catch(Exception sqlException){
-            //showError(sqlException);
+            sqlException.printStackTrace();
+            //TODO showError(sqlException);
         }
-
-        //reload();
     }
 
     @Override
@@ -133,23 +116,24 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
                 if (resultSet != null) {
                     resultSet.next();
                     editRecord = new OptionalPackageBean();
-                    editRecord.setPackageId(resultSet.getString("code"));
-                    editRecord.setYear(resultSet.getInt("year"));
-                    editRecord.setSemester(resultSet.getInt("semester"));
-                    editRecord.setDisciplineNumber(resultSet.getInt("disciplineno"));
+                    editRecord.setPackageId(resultSet.getString(Constants.OptionalPackage.Table.COLUMN_CODE));
+                    editRecord.setYear(resultSet.getInt(Constants.OptionalPackage.Table.COLUMN_YEAR));
+                    editRecord.setSemester(resultSet.getInt(Constants.OptionalPackage.Table.COLUMN_SEMESTER));
+                    editRecord.setDisciplineNumber(resultSet.getInt(Constants.OptionalPackage.Table.COLUMN_DISCIPLINE_NUMBER));
                 }
-                sessionMapObj.put("optionalPackageBean", editRecord);
+                sessionMapObj.put(Constants.OptionalPackage.SessionKeys.EDIT_RECORD_KEY, editRecord);
                 updateKey = primaryKey;
             } catch (Exception sqlException) {
 
-                //showError(sqlException);
-                return "editOptionalCourse";
+                sqlException.printStackTrace();
+                //TODO showError(sqlException);
+                return Constants.OptionalPackage.Routing.EDIT;
             }
         }else{
-            sessionMapObj.remove("optionalPackageBean");
+            sessionMapObj.remove(Constants.OptionalPackage.SessionKeys.EDIT_RECORD_KEY);
             updateKey = null;
         }
-        return "editOptionalPackage";
+        return Constants.OptionalPackage.Routing.EDIT;
     }
 
     @Override
@@ -169,15 +153,16 @@ public class OptionalPackageOperations extends DatabaseOperations<OptionalPackag
 
         } catch (Exception sqlException) {
 
-            //showError(sqlException);
-            return "editOptionalPackage";
+            //TODO showError(sqlException);
+            return Constants.OptionalPackage.Routing.EDIT;
         }
 
-        return "viewOptionalPackages";
+        return Constants.OptionalPackage.Routing.VIEW;
     }
 
     @Override
     public String cancel() {
-        return "viewOptionalPackages";
+
+        return Constants.OptionalPackage.Routing.VIEW;
     }
 }

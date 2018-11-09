@@ -14,8 +14,19 @@ import java.util.Map;
 @RequestScoped
 public class CourseOperations extends DatabaseOperations<CourseBean> {
     private static String updateKey;
+
+    public ArrayList<String> getAllCompulsoryCoursesNames(){
+        ArrayList<CourseBean> compulsoryCourseBeans = getAll();
+        ArrayList<String> names = new ArrayList<>();
+        for (CourseBean compulsoryCourseBean: compulsoryCourseBeans) {
+            names.add(compulsoryCourseBean.getName());
+        }
+        return names;
+    }
+
     @Override
     public ArrayList<CourseBean> getAll() {
+
         ArrayList<CourseBean> lstCompulsoryCourses = new ArrayList<>();
         try {
 
@@ -28,18 +39,18 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
 
                     CourseBean compulsoryCourse = new CourseBean();
 
-                    compulsoryCourse.setId(resultSet.getInt("id"));
-                    compulsoryCourse.setCode(resultSet.getString("code"));
-                    compulsoryCourse.setShortName(resultSet.getString("short_name"));
-                    compulsoryCourse.setName(resultSet.getString("name"));
-                    compulsoryCourse.setYearOfStudy(resultSet.getInt("year"));
-                    compulsoryCourse.setSemester(resultSet.getInt("semester"));
-                    compulsoryCourse.setCredits(resultSet.getInt("credits"));
-                    compulsoryCourse.setUrl(resultSet.getString("url"));
+                    compulsoryCourse.setId(resultSet.getInt(Constants.Course.Table.COLUMN_ID));
+                    compulsoryCourse.setCode(resultSet.getString(Constants.Course.Table.COLUMN_CODE));
+                    compulsoryCourse.setShortName(resultSet.getString(Constants.Course.Table.COLUMN_SHORT_NAME));
+                    compulsoryCourse.setName(resultSet.getString(Constants.Course.Table.COLUMN_NAME));
+                    compulsoryCourse.setYearOfStudy(resultSet.getInt(Constants.Course.Table.COLUMN_YEAR));
+                    compulsoryCourse.setSemester(resultSet.getInt(Constants.Course.Table.COLUMN_SEMESTER));
+                    compulsoryCourse.setCredits(resultSet.getInt(Constants.Course.Table.COLUMN_CREDITS));
+                    compulsoryCourse.setUrl(resultSet.getString(Constants.Course.Table.COLUMN_URL));
 
                     if(resultSet.getString("lecturer_name") != null){
 
-                        compulsoryCourse.setLecturer(resultSet.getString("lecturer_name"));
+                        compulsoryCourse.setLecturer(resultSet.getString(Constants.Course.Table.COLUMN_FK_LECTURER_NAME));
                     }else{
 
                         compulsoryCourse.setLecturer("");
@@ -59,6 +70,7 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
 
     @Override
     public String insert(CourseBean newRecord) {
+
         int inserted = 0;
         String navigationResult = "";
 
@@ -78,18 +90,18 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
             }
 
             inserted = pstmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException insertSQLException) {
+            insertSQLException.printStackTrace();
             //TODO showError(e);
-            navigationResult = "addCompulsoryCourse";
+            navigationResult = Constants.Course.RoutingCompulsory.EDIT;
         }
 
         if(inserted != 0){
 
-            navigationResult = "viewCompulsoryCourses";
+            navigationResult =  Constants.Course.RoutingCompulsory.VIEW;
         }else{
 
-            navigationResult = "addCompulsoryCourse";
+            navigationResult =  Constants.Course.RoutingCompulsory.EDIT;
         }
 
         return navigationResult;
@@ -103,10 +115,9 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
             pstmt.setInt(1, Integer.parseInt(deleteRecord));
             pstmt.executeUpdate();
         } catch(Exception sqlException){
-            //showError(sqlException);
+            sqlException.printStackTrace();
+            //TODO showError(sqlException);
         }
-
-        //reload();
     }
 
     @Override
@@ -125,28 +136,29 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
 
                     resultSet.next();
                     editRecord = new CourseBean();
-                    editRecord.setCode(resultSet.getString("code"));
-                    editRecord.setShortName(resultSet.getString("short_name"));
-                    editRecord.setName(resultSet.getString("name"));
-                    editRecord.setYearOfStudy(resultSet.getInt("year"));
-                    editRecord.setSemester(resultSet.getInt("semester"));
-                    editRecord.setCredits(resultSet.getInt("credits"));
-                    editRecord.setUrl(resultSet.getString("url"));
-                    editRecord.setLecturer(resultSet.getString("lecturer_name"));
+                    editRecord.setCode(resultSet.getString(Constants.Course.Table.COLUMN_CODE));
+                    editRecord.setShortName(resultSet.getString(Constants.Course.Table.COLUMN_SHORT_NAME));
+                    editRecord.setName(resultSet.getString(Constants.Course.Table.COLUMN_NAME));
+                    editRecord.setYearOfStudy(resultSet.getInt(Constants.Course.Table.COLUMN_YEAR));
+                    editRecord.setSemester(resultSet.getInt(Constants.Course.Table.COLUMN_SEMESTER));
+                    editRecord.setCredits(resultSet.getInt(Constants.Course.Table.COLUMN_CREDITS));
+                    editRecord.setUrl(resultSet.getString(Constants.Course.Table.COLUMN_URL));
+                    editRecord.setLecturer(resultSet.getString(Constants.Course.Table.COLUMN_FK_LECTURER_NAME));
                     editRecord.setOptPackage(null);
                 }
-                sessionMapObj.put("courseBean", editRecord);
+                sessionMapObj.put(Constants.Course.SessionKeysCompulsory.EDIT_RECORD_KEY, editRecord);
                 updateKey = primaryKey;
             } catch (Exception sqlException) {
 
-                //showError(sqlException);
-                return "editCompulsoryCourse";
+                sqlException.printStackTrace();
+                //TODO showError(sqlException);
+                return Constants.Course.RoutingCompulsory.EDIT;
             }
         }else{
-            sessionMapObj.remove("courseBean");
+            sessionMapObj.remove(Constants.Course.SessionKeysCompulsory.EDIT_RECORD_KEY);
             updateKey = null;
         }
-        return "editCompulsoryCourse";
+        return Constants.Course.RoutingCompulsory.EDIT;
     }
 
     @Override
@@ -172,15 +184,16 @@ public class CourseOperations extends DatabaseOperations<CourseBean> {
             pstmt.executeUpdate();
         } catch (Exception sqlException) {
 
-            //showError(sqlException);
-            return Constants.Course.Routing.EDIT;
+            sqlException.printStackTrace();
+            //TODO showError(sqlException);
+            return Constants.Course.RoutingCompulsory.EDIT;
         }
 
-        return Constants.Course.Routing.VIEW;
+        return Constants.Course.RoutingCompulsory.VIEW;
     }
 
     @Override
     public String cancel() {
-        return Constants.Course.Routing.VIEW;
+        return Constants.Course.RoutingCompulsory.VIEW;
     }
 }

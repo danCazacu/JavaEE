@@ -69,7 +69,7 @@
                 </p:selectOneMenu>
 
                 <p:outputLabel value="Optional package:" style="font-weight:bold" />
-                <p:selectOneMenu id="optPkg" value="#{optionalCourseBean.optPackage}" filter="true" filterMatchMode="startsWith">
+                <p:selectOneMenu id="optPkg" value="#{optionalCourseBean.optPackage}" filter="true" filterMatchMode="startsWith" required="true">
                     <f:selectItem itemLabel="Select One" itemValue="" />
                     <f:selectItems value="#{optionalPackageOperations.getAllPackagesCodes()}" />
                 </p:selectOneMenu>

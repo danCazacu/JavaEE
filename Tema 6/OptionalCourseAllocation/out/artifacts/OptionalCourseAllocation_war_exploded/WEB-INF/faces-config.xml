@@ -65,7 +65,7 @@
     <navigation-rule>
         <from-view-id>/pages/views/CompulsoryCoursesView.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>editCompulsoryCourse</from-outcome>
+            <from-outcome>editCompulsoryCourses</from-outcome>
             <to-view-id>/pages/edit/editCompulsoryCourse.xhtml</to-view-id>
             <redirect />
         </navigation-case>
@@ -85,7 +85,7 @@
             <redirect />
         </navigation-case>
         <navigation-case>
-            <from-outcome>editCompulsoryCourse</from-outcome>
+            <from-outcome>editCompulsoryCourses</from-outcome>
             <to-view-id>/pages/edit/editCompulsoryCourse.xhtml</to-view-id>
             <redirect />
         </navigation-case>

@@ -2,6 +2,7 @@ package dao.operation;
 
 import bean.CourseBean;
 import bean.OptionalCourseBean;
+import com.sun.corba.se.impl.orbutil.closure.Constant;
 import util.Constants;
 
 import javax.faces.bean.ManagedBean;
@@ -16,6 +17,7 @@ import java.util.Map;
 @RequestScoped
 public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourseBean> {
     private static String updateKey;
+
     @Override
     public ArrayList<OptionalCourseBean> getAll() {
         ArrayList<OptionalCourseBean> lstOptionalCourses = new ArrayList<>();
@@ -26,23 +28,23 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
 
             while (resultSet.next()) {
 
-                if(resultSet.getString("optpackages_code") != null) {
+                if(resultSet.getString(Constants.Course.Table.COLUMN_FK_OPTIONAL_PACKAGES_CODE) != null) {
 
                     OptionalCourseBean optionalCourse = new OptionalCourseBean();
 
-                    optionalCourse.setOptPackage(resultSet.getString("optpackages_code"));
-                    optionalCourse.setId(resultSet.getInt("id"));
-                    optionalCourse.setCode(resultSet.getString("code"));
-                    optionalCourse.setShortName(resultSet.getString("short_name"));
-                    optionalCourse.setName(resultSet.getString("name"));
-                    optionalCourse.setYearOfStudy(resultSet.getInt("year"));
-                    optionalCourse.setSemester(resultSet.getInt("semester"));
-                    optionalCourse.setCredits(resultSet.getInt("credits"));
-                    optionalCourse.setUrl(resultSet.getString("url"));
+                    optionalCourse.setOptPackage(resultSet.getString(Constants.Course.Table.COLUMN_FK_OPTIONAL_PACKAGES_CODE));
+                    optionalCourse.setId(resultSet.getInt(Constants.Course.Table.COLUMN_ID));
+                    optionalCourse.setCode(resultSet.getString(Constants.Course.Table.COLUMN_CODE));
+                    optionalCourse.setShortName(resultSet.getString(Constants.Course.Table.COLUMN_SHORT_NAME));
+                    optionalCourse.setName(resultSet.getString(Constants.Course.Table.COLUMN_NAME));
+                    optionalCourse.setYearOfStudy(resultSet.getInt(Constants.Course.Table.COLUMN_YEAR));
+                    optionalCourse.setSemester(resultSet.getInt(Constants.Course.Table.COLUMN_SEMESTER));
+                    optionalCourse.setCredits(resultSet.getInt(Constants.Course.Table.COLUMN_CREDITS));
+                    optionalCourse.setUrl(resultSet.getString(Constants.Course.Table.COLUMN_URL));
 
-                    if(resultSet.getString("lecturer_name") != null){
+                    if(resultSet.getString(Constants.Course.Table.COLUMN_FK_LECTURER_NAME) != null){
 
-                        optionalCourse.setLecturer(resultSet.getString("lecturer_name"));
+                        optionalCourse.setLecturer(resultSet.getString(Constants.Course.Table.COLUMN_FK_LECTURER_NAME));
                     }else{
 
                         optionalCourse.setLecturer("");
@@ -53,7 +55,8 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
             }
         } catch (Exception sqlSelectException) {
 
-            //showError(sqlSelectException);
+            sqlSelectException.printStackTrace();
+            //TODO showError(sqlSelectException);
 
         }
 
@@ -63,6 +66,7 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
 
     @Override
     public String insert(OptionalCourseBean newRecord) {
+
         int inserted = 0;
         String navigationResult = "";
 
@@ -82,17 +86,18 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
             }
 
             inserted = pstmt.executeUpdate();
-        } catch (SQLException e) {
-            //showError(e);
-            navigationResult = "addOptionalCourse";
+        } catch (SQLException insertSQLException) {
+            insertSQLException.printStackTrace();
+            //TODO showError(e);
+            navigationResult = Constants.Course.RoutingOptional.EDIT;
         }
 
         if(inserted != 0){
 
-            navigationResult = "viewOptionalCourses";
+            navigationResult = Constants.Course.RoutingOptional.VIEW;
         }else{
 
-            navigationResult = "addOptionalCourse";
+            navigationResult = Constants.Course.RoutingOptional.EDIT;
         }
 
         return navigationResult;
@@ -100,16 +105,16 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
 
     @Override
     public void delete(String deleteRecord) {
+
         try {
 
             pstmt = connection.prepareStatement("delete from course where id = ?" );
             pstmt.setInt(1, Integer.parseInt(deleteRecord));
             pstmt.executeUpdate();
         } catch(Exception sqlException){
-            //showError(sqlException);
+            sqlException.printStackTrace();
+            //TODO showError(sqlException);
         }
-
-        //reload();
     }
 
     @Override
@@ -128,29 +133,30 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
 
                     resultSet.next();
                     editRecord = new OptionalCourseBean();
-                    editRecord.setCode(resultSet.getString("code"));
-                    editRecord.setShortName(resultSet.getString("short_name"));
-                    editRecord.setName(resultSet.getString("name"));
-                    editRecord.setYearOfStudy(resultSet.getInt("year"));
-                    editRecord.setSemester(resultSet.getInt("semester"));
-                    editRecord.setCredits(resultSet.getInt("credits"));
-                    editRecord.setUrl(resultSet.getString("url"));
-                    editRecord.setLecturer(resultSet.getString("lecturer_name"));
-                    editRecord.setOptPackage(resultSet.getString("optpackages_code"));
+                    editRecord.setCode(resultSet.getString(Constants.Course.Table.COLUMN_CODE));
+                    editRecord.setShortName(resultSet.getString(Constants.Course.Table.COLUMN_SHORT_NAME));
+                    editRecord.setName(resultSet.getString(Constants.Course.Table.COLUMN_NAME));
+                    editRecord.setYearOfStudy(resultSet.getInt(Constants.Course.Table.COLUMN_YEAR));
+                    editRecord.setSemester(resultSet.getInt(Constants.Course.Table.COLUMN_SEMESTER));
+                    editRecord.setCredits(resultSet.getInt(Constants.Course.Table.COLUMN_CREDITS));
+                    editRecord.setUrl(resultSet.getString(Constants.Course.Table.COLUMN_URL));
+                    editRecord.setLecturer(resultSet.getString(Constants.Course.Table.COLUMN_FK_LECTURER_NAME));
+                    editRecord.setOptPackage(resultSet.getString(Constants.Course.Table.COLUMN_FK_OPTIONAL_PACKAGES_CODE));
                 }
-                sessionMapObj.put("optionalCourseBean", editRecord);
+                sessionMapObj.put(Constants.Course.SessionKeysOptional.EDIT_RECORD_KEY, editRecord);
                 updateKey = primaryKey;
             } catch (Exception sqlException) {
 
-                //showError(sqlException);
-                return "editOptionalCourse";
+                sqlException.printStackTrace();
+                //TODO showError(sqlException);
+                return Constants.Course.RoutingOptional.EDIT;
             }
         }else{
-            sessionMapObj.remove("optionalCourseBean");
+            sessionMapObj.remove(Constants.Course.SessionKeysOptional.EDIT_RECORD_KEY);
             updateKey = null;
         }
 
-        return "editOptionalCourse";
+        return Constants.Course.RoutingOptional.EDIT;
     }
 
     @Override
@@ -177,14 +183,14 @@ public class OptionalCoursesOperations extends DatabaseOperations<OptionalCourse
         } catch (Exception sqlException) {
 
             //showError(sqlException);
-            return "editOptionalCourse";
+            return Constants.Course.RoutingOptional.EDIT;
         }
 
-        return "viewOptionalCourses";
+        return Constants.Course.RoutingOptional.VIEW;
     }
 
     @Override
     public String cancel() {
-        return "viewOptionalCourses";
+        return Constants.Course.RoutingOptional.VIEW;
     }
 }

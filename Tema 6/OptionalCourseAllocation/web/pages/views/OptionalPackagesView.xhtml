@@ -16,7 +16,7 @@
 <f:view>
     <h:messages style = "color:red;" />
 
-    <p:dataTable var="optpkg" value="#{optionalPackageOperations.getAll()}">
+    <p:dataTable id="optionalPackageDT" var="optpkg" value="#{optionalPackageOperations.getAll()}">
         <p:column headerText="Code">
             <h:outputText value="#{optpkg.packageId}" />
         </p:column>
@@ -40,7 +40,7 @@
         </p:column>
         <p:column>
             <f:facet name="header">Delete</f:facet>
-            <p:commandButton action="#{optionalPackageOperations.delete(optpkg.packageId)}" value="Delete" class="btn btn-danger" />
+            <p:commandButton action="#{optionalPackageOperations.delete(optpkg.packageId)}" value="Delete"  ajax="true" update="optionalPackageDT" class="btn btn-danger" />
         </p:column>
 
     </p:dataTable>

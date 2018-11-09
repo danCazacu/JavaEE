@@ -15,7 +15,7 @@
 
     <h:messages style = "color:red;" />
 
-    <p:dataTable var="compCourse" value="#{courseOperations.getAll()}">
+    <p:dataTable id = "compulsoryCourseDT" var="compCourse" value="#{courseOperations.getAll()}">
 
 
         <p:column headerText="Code">
@@ -57,7 +57,7 @@
         </p:column>
         <p:column>
             <f:facet name="header">Delete</f:facet>
-            <p:commandButton value="Delete" action="#{courseOperations.delete(compCourse.id)}" class="btn btn-danger">
+            <p:commandButton value="Delete" action="#{courseOperations.delete(compCourse.id)}"  ajax="true" update="compulsoryCourseDT" class="btn btn-danger">
             </p:commandButton>
         </p:column>
 
