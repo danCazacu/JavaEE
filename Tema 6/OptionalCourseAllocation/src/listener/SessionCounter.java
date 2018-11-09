@@ -1,4 +1,4 @@
-package util;
+package listener;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;

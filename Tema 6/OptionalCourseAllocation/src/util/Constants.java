@@ -6,8 +6,7 @@ public final class Constants {
     public static class Database {
         public static String URL = "jdbc:postgresql://localhost:5432/JavaEE";
         public static String USER = "postgres";
-        public static String hex = "copilotu";
-        public static String PASSWORD = "andreea";
+        public static String PASSWORD = "copilotu";
     }
 
     public static class Lecturer{

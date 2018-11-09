@@ -1,6 +1,6 @@
 package dao.operation;
 
-import bean.OptionalPackageBean;
+import bean.database.OptionalPackageBean;
 import util.Constants;
 
 import javax.faces.bean.ManagedBean;

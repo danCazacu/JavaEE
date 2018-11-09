@@ -1,8 +1,6 @@
 package dao.operation;
-
-import bean.CourseBean;
-import bean.OptionalCourseBean;
-import com.sun.corba.se.impl.orbutil.closure.Constant;
+import bean.database.CourseBean;
+import bean.database.OptionalCourseBean;
 import util.Constants;
 
 import javax.faces.bean.ManagedBean;

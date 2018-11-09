@@ -1,4 +1,4 @@
-package gallery;
+package bean;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;

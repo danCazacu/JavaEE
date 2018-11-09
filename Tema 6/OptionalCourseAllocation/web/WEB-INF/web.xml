@@ -13,6 +13,6 @@
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <listener>
-        <listener-class>util.SessionCounter</listener-class>
+        <listener-class>listener.SessionCounter</listener-class>
     </listener>
 </web-app>

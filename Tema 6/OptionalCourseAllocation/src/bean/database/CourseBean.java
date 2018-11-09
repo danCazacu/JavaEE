@@ -1,4 +1,4 @@
-package bean;
+package bean.database;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;

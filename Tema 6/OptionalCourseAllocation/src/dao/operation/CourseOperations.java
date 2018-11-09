@@ -1,6 +1,6 @@
 package dao.operation;
 
-import bean.CourseBean;
+import bean.database.CourseBean;
 import util.Constants;
 
 import javax.faces.bean.ManagedBean;

@@ -1,6 +1,6 @@
 package dao.operation;
 
-import dao.connection.DatabaseConnection;
+import dao.connection.PostgreConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public abstract class DatabaseOperations<T> {
-    protected Connection connection = DatabaseConnection.getInstance().getConnection();
+    protected Connection connection = PostgreConnection.getConnection();
     protected ResultSet resultSet;
     protected PreparedStatement pstmt;
     protected Statement stmt;
@@ -30,4 +30,5 @@ public abstract class DatabaseOperations<T> {
 //    public String update(T updateRecord, int primaryKey){
 //        return update(updateRecord,""+primaryKey);
 //    }
+
 }

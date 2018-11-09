@@ -11,6 +11,7 @@ import java.sql.SQLException;
 @ManagedBean(eager = true)
 @SessionScoped
 public class DatabaseConnection {
+
     private Connection connection;
     private static DatabaseConnection ourInstance = new DatabaseConnection();
 

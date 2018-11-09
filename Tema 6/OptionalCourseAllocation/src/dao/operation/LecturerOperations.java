@@ -1,6 +1,6 @@
 package dao.operation;
 
-import bean.LecturerBean;
+import bean.database.LecturerBean;
 import util.Constants;
 
 import javax.faces.bean.ManagedBean;
@@ -14,7 +14,6 @@ import java.util.Map;
 @RequestScoped
 public class LecturerOperations extends DatabaseOperations<LecturerBean>{
     private static String updateKey;
-
     public ArrayList<String> getAllLecturerNames(){
         ArrayList<LecturerBean> lecturerBeans = getAll();
         ArrayList<String> names = new ArrayList<>();
@@ -108,7 +107,6 @@ public class LecturerOperations extends DatabaseOperations<LecturerBean>{
         /* Setting The Particular Lecturer Details In Session */
         Map<String,Object> sessionMapObj = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
 
-        //TODO watch out for this it has been commented out and you need to find a soultion to be passed as parameter to update String editLecturerName = primaryKey;
         if(primaryKey!=null && primaryKey.trim().length()>0) {
             try {
 
