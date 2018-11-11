@@ -20,6 +20,7 @@ public class MyThread extends Thread {
         this.namesList = names;
     }
 
+
     @Override
     public void run() {
         try

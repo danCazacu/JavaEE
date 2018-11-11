@@ -1,5 +1,7 @@
 package com.company;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
@@ -7,6 +9,24 @@ import java.util.concurrent.CountDownLatch;
 public class Main {
 
     public static void main(String[] args) {
+        repositoryTestTema6();
+    }
+
+    public static void repositoryTestTema6(){
+        CountDownLatch latch = new CountDownLatch(1);
+        MySecondThread threads[] = new MySecondThread[10000];
+        for(int i = 0; i<threads.length; i++){
+
+            threads[i] = new MySecondThread(latch);
+        }
+        for(int i = 0; i<threads.length; i++){
+            threads[i].start();
+        }
+        latch.countDown();
+
+    }
+
+    public static void tema1(){
 
         /**
          * get the name list
@@ -23,7 +43,7 @@ public class Main {
 
 
         CountDownLatch latch = new CountDownLatch(1);
-        MyThread threads[] = new MyThread[1000];
+        MyThread threads[] = new MyThread[10000];
         for(int i = 0; i<threads.length; i++){
 
             threads[i] = new MyThread(latch, lstNames);
@@ -89,8 +109,5 @@ public class Main {
 
         return lstNames;
     }
-
-
-
 
 }
