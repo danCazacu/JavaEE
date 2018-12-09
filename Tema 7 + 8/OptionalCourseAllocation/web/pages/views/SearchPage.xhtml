@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Lecturers View</title>
+</h:head>
+
+<ui:composition template="/pages/templates/dataView.xhtml">
+<ui:define name="dataViewContent">
+
+    <h:messages style = "color:red;" />
+<h:form>
+
+    <br/> <br/> <br/>
+
+    <h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+
+
+        <p:row>
+        <p:selectBooleanCheckbox value="#{searchPage.typeFiler}" itemLabel="By type" />
+
+            <h:panelGroup id="typeFilterOptions" >
+                <p:selectBooleanCheckbox value="#{searchPage.compulsoryCourseFilter}" itemLabel="compulsory" />
+                <p:selectBooleanCheckbox value="#{searchPage.optionalCourseFilter}" itemLabel="optional" />
+            </h:panelGroup>
+        </p:row>
+
+        <br/>
+
+        <p:row>
+            <p:selectBooleanCheckbox value="#{searchPage.nameFilter}" itemLabel="By name" />
+            <p:inputText id="name" itemLabel="contains" value="#{searchPage.containsNameFilter}" />
+        </p:row>
+
+        <br/>
+
+        <p:row>
+            <p:selectBooleanCheckbox value="#{searchPage.yearFilter}" itemLabel="By year" />
+                <p:selectBooleanCheckbox value="#{searchPage.year1Filter}" itemLabel="1" />
+                <p:selectBooleanCheckbox value="#{searchPage.year2Filter}" itemLabel="2" />
+                <p:selectBooleanCheckbox value="#{searchPage.year3Filter}" itemLabel="3" />
+        </p:row>
+
+        <br/>
+
+        <p:row>
+            <p:selectBooleanCheckbox value="#{searchPage.semesterFilter}" itemLabel="By semester" />
+                <p:selectBooleanCheckbox value="#{searchPage.semester1Filter}" itemLabel="1" />
+                <p:selectBooleanCheckbox value="#{searchPage.semester2Filter}" itemLabel="2" />
+        </p:row>
+
+        <br/>
+        <p:row>
+
+            <p:selectBooleanCheckbox value="#{searchPage.creditsFilter}" itemLabel="By credits" />
+
+            <p:spinner id="minCredits" itemLabel="min" value="#{searchPage.minCreditsFilter}" min="1" max="10" validatorMessage="Wrong credits number">
+                <f:validateLongRange maximum="10" minimum="1" />
+                <p:watermark for="minCredits" value="" />
+            </p:spinner>
+
+            <p:spinner id="maxCredits" itemLabel="max" value="#{searchPage.maxCreditsFilter}" min="1" max="10" validatorMessage="Wrong credits number">
+                <f:validateLongRange maximum="10" minimum="1" />
+                <p:watermark for="maxCredits" value="" />
+            </p:spinner>
+        </p:row>
+
+        <br/>
+
+        <p:row>
+         <p:selectBooleanCheckbox value="#{searchPage.optionalPackageFilter}" itemLabel="By optional package" />
+            <p:selectCheckboxMenu id="optPkg" value="#{searchPage.lstOptionalPackagesFilter}" filter="true" label = "Select optional package(s)" filterMatchMode="startsWith">
+                <f:selectItems value="#{optionalPackageOperations.getAll()}" var="optionalPackage"
+                               itemLabel="#{optionalPackage.code}" itemValue="#{optionalPackage}"/>
+
+            </p:selectCheckboxMenu>
+        </p:row>
+
+    </h:panelGrid>
+    <p:commandButton value="Submit" action="#{searchPage.doFilter(searchPage)}" ajax="false" update="searchpageDT" />
+
+    <p:commandButton value="Submit with dialog" icon="pi pi-check" update="display" oncomplete="PF('dlg').show()" />
+
+    <p:dialog header="Values" modal="true" resizable="false" showEffect="fade" widgetVar="dlg">
+        <h:panelGrid columns="1" id="display">
+            <h:outputText value="Type: #{searchPage.typeFiler}" />
+                <h:outputText value="  Compulsory: #{searchPage.compulsoryCourseFilter}" />
+                <h:outputText value="  Optional: #{searchPage.optionalCourseFilter}" />
+            <h:outputText value="Name: #{searchPage.nameFilter}" />
+            <h:outputText value="Year: #{searchPage.yearFilter}" />
+            <h:outputText value="Semester: #{searchPage.semesterFilter}" />
+            <h:outputText value="Credits: #{searchPage.creditsFilter}" />
+                <h:outputText value="minCredits #{searchPage.minCreditsFilter}" />
+                <h:outputText value="maxCredits #{searchPage.maxCreditsFilter}" />
+
+
+            <h:outputText value="Optional package: #{searchPage.optionalPackageFilter}" />
+        </h:panelGrid>
+    </p:dialog>
+
+    <br/> <br/> <br/> <br/> <br/> <br/>
+
+    <p:dataTable id="searchpageDT"  var="search" value="#{searchPage.lstSearcheResult}" scrollable="true" scrollHeight="500"  >
+
+        <p:column headerText="Code">
+            <h:outputText value="#{search.course.code}" />
+        </p:column>
+
+        <p:column headerText="Short name">
+            <h:outputText value="#{search.course.shortName}" />
+        </p:column>
+
+        <p:column headerText="Name">
+            <h:outputText value="#{search.course.name}" />
+        </p:column>
+
+        <p:column headerText="Year" sortBy="#{course.year}">
+            <h:outputText value="#{search.course.year}"  />
+        </p:column>
+
+        <p:column headerText="Semester" sortBy="#{optCourse.course.semester}">
+            <h:outputText value="#{search.course.semester}" />
+        </p:column>
+
+        <p:column headerText="Number of credits">
+            <h:outputText value="#{search.course.credits}" />
+        </p:column>
+
+        <p:column headerText="URL">
+            <h:outputText value="#{search.course.url}" />
+        </p:column>
+
+        <p:column headerText="Optional Package Code">
+            <h:outputText value="#{search.optionalPackageCode}" />
+        </p:column>
+
+        <p:column headerText="Lecturer(s)">
+            <f:facet name="header">Lecturer(s)</f:facet>
+            <h:outputText value = "#{search.course.getLecturersAsString()}"/>
+        </p:column>
+    </p:dataTable>
+
+
+    <br/><br/><br/>
+
+
+</h:form>
+
+</ui:define>
+</ui:composition>
+</html>

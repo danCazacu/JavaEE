@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Lecturers View</title>
+</h:head>
+
+<ui:composition template="/pages/templates/dataView.xhtml">
+<ui:define name="dataViewContent">
+
+    <h:messages style = "color:red;" />
+<h:form>
+    <p:dataTable id="studentDT" var="student" value="#{studentOperations.getAll()}"  sortable="true"  scrollable="true" scrollHeight="600">
+
+
+        <p:column>
+            <f:facet name="header">Name</f:facet>
+            <h:outputText value="#{student.name}" />
+        </p:column>
+
+        <p:column>
+            <f:facet name="header">Email</f:facet>
+            <h:outputText value="#{student.email}" />
+        </p:column>
+
+        <!--<p:column>
+            <f:facet name="header">Complete/Incomplete Preferences</f:facet>
+            <h:outputText value="#{studentOperations.getCOmpleteOrIncomplete(student)}" />
+        </p:column>-->
+
+        <p:column headerText="Year" sortBy="#{student.year}">
+            <h:outputText value="#{student.year}" />
+        </p:column>
+
+
+        <p:column>
+            <f:facet name="header">Update</f:facet>
+            <p:commandButton action="#{studentOperations.getForEdit(student.name)}" value="Update" class="btn btn-primary" />
+        </p:column>
+
+        <p:column>
+            <f:facet name="header">Delete</f:facet>
+            <p:commandButton value="Delete"  action="#{studentOperations.delete(student.id)}" ajax="true" update="studentDT" class="btn btn-danger"/>
+        </p:column>
+
+    </p:dataTable>
+</h:form>
+    <center>
+        <p:commandButton value="Insert New Student"  action="#{studentOperations.getForEdit('')}" />
+    </center>
+
+</ui:define>
+</ui:composition>
+</html>

@@ -14,6 +14,7 @@ import java.util.Map;
 @RequestScoped
 public class LecturerOperations extends DatabaseOperations<LecturerBean>{
     private static String updateKey;
+
     public ArrayList<String> getAllLecturerNames(){
         ArrayList<LecturerBean> lecturerBeans = getAll();
         ArrayList<String> names = new ArrayList<>();

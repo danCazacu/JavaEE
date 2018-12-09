@@ -7,15 +7,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9ddc16-bff2-4069-82eb-92f3312f6d13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Tema 1/WebRequester/src/com/company/MySecondThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/RepositoryOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tema 1/WebRequester/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 1/WebRequester/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tema 1/WebRequester/out/production/WebRequester/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 1/WebRequester/out/production/WebRequester/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tema 1/WebRequester/out/production/WebRequester/com/company/MyThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 1/WebRequester/out/production/WebRequester/com/company/MyThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tema 1/WebRequester/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 1/WebRequester/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Tema 1/WebRequester/src/com/company/MyThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 1/WebRequester/src/com/company/MyThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/src/bean/GalleryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/src/bean/LocaleLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/src/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/src/resources/messages_fr.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/src/resources/progress.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/src/util/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/WEB-INF/faces-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/WEB-INF/lib/postgresql-42.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/WEB-INF/lib/primefaces-6.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/WEB-INF/lib/primefaces-6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/edit/editCompulsoryCourse.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/edit/editLecturer.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/edit/editOptionalCourse.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/edit/editOptionalPackage.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/edit/editStudent.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/templates/dataView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/templates/footer.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/templates/header.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/templates/menu.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/templates/page.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/views/CompulsoryCoursesView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/views/LecturerView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/views/OptionalCoursesView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/views/OptionalPackagesView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/pages/views/StudentView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/gallery/imageCS1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/gallery/imageCS2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/gallery/imageCS3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/gallery/imageCS4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/gallery/imageCS5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/gallery/imageCS6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/menu/compcourses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/menu/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/menu/lecturers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/menu/optcourses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/menu/optpackages.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/images/menu/stack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/web/resources/mycomp/email.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/connection/PostgreConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/connection/PostgreConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/converter/URLConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 7/OptionalCourseAllocation/src/converter/URLConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/operation/LecturerOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/operation/LecturerOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -190,35 +223,44 @@
     <session id="-200023892">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="16" />
-          <entry key="xhtml" value="9" />
+          <entry key="java" value="30" />
+          <entry key="xhtml" value="14" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="16" />
-          <entry key="XHTML" value="9" />
+          <entry key="JAVA" value="30" />
+          <entry key="XHTML" value="14" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="804" />
-          <entry key="xhtml" value="117" />
+          <entry key="java" value="805" />
+          <entry key="xhtml" value="165" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="804" />
-          <entry key="XHTML" value="117" />
+          <entry key="JAVA" value="805" />
+          <entry key="XHTML" value="165" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -257,24 +299,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/connection/PostgreConnection.java">
+        <entry file="file://$PROJECT_DIR$/web/pages/views/LecturerView.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-              <folding>
-                <element signature="e#711#712#0" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
-                <element signature="e#1496#1497#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="571">
+              <caret line="43" column="64" lean-forward="true" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/servlet/RepositoryOperations.java">
+        <entry file="file://$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            <state relative-caret-position="731">
+              <caret line="46" column="77" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/operation/LecturerOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="571">
+              <caret line="135" column="44" lean-forward="true" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="44" />
+              <folding>
+                <element signature="method#getAll#0;class#LecturerOperations#0" />
+                <element signature="method#insert#0;class#LecturerOperations#0" />
+                <element signature="method#delete#0;class#LecturerOperations#0" />
+                <element signature="method#cancel#0;class#LecturerOperations#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="50" />
+              <folding>
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#807#808#0" expanded="true" />
+                <element signature="e#853#854#0" expanded="true" />
+                <element signature="e#901#902#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/util/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -338,7 +423,6 @@
         <option value="$PROJECT_DIR$/src/bean/CourseBean.java" />
         <option value="$PROJECT_DIR$/web/pages/edit/editCompulsoryCourse.xhtml" />
         <option value="$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml" />
-        <option value="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" />
         <option value="$PROJECT_DIR$/src/bean/AjaxPollBean.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/util/SessionCounter.java" />
@@ -352,11 +436,12 @@
         <option value="$PROJECT_DIR$/web/pages/templates/menu.xhtml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
         <option value="$PROJECT_DIR$/src/util/Constants.java" />
-        <option value="$PROJECT_DIR$/src/dao/operation/LecturerOperations.java" />
         <option value="$PROJECT_DIR$/src/dao/operation/OptionalCoursesOperations.java" />
         <option value="$PROJECT_DIR$/src/dao/operation/OptionalPackageOperations.java" />
         <option value="$PROJECT_DIR$/src/dao/connection/PostgreConnection.java" />
         <option value="$PROJECT_DIR$/src/servlet/RepositoryOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/operation/LecturerOperations.java" />
+        <option value="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" />
       </list>
     </option>
   </component>
@@ -374,17 +459,20 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-2569" />
+    <option name="y" value="-361" />
+    <option name="width" value="2578" />
+    <option name="height" value="1408" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -407,6 +495,19 @@
               <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
               <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -422,6 +523,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="operation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
@@ -491,35 +598,39 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541946676425" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543102561046" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\JavaEE\Tema 5\OptionalCourseAllocation\web\resources" />
-      <recent name="D:\GitHub\JavaEE\Tema 5\OptionalCourseAllocation\src\resources" />
-      <recent name="D:\Andreea_Personal\Java_labs_EE\JavaEE-dev_branch_tema5_OptionalCourseAllocation\Tema 5\OptionalCourseAllocation\web\pages\templates" />
-      <recent name="D:\Andreea_Personal\Java_labs_EE\JavaEE-dev_branch_tema5_OptionalCourseAllocation\Tema 5\OptionalCourseAllocation\src\gallery" />
-      <recent name="D:\Andreea_Personal\Java_labs_EE\JavaEE-dev_branch_tema5_OptionalCourseAllocation\Tema 5\OptionalCourseAllocation\web\resources\images\menu" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Andreea_Personal\Java_labs_EE\JavaEE-dev_branch_tema5_OptionalCourseAllocation\Tema 5\OptionalCourseAllocation\src\resources" />
       <recent name="D:\GitHub Repositories\JavaEEold\Tema 5\OptionalCourseAllocation\web\pages\addForms" />
       <recent name="D:\GitHub Repositories\JavaEEold\Tema 5\OptionalCourseAllocation\web\pages" />
       <recent name="D:\GitHub Repositories\JavaEEold\Tema 5\OptionalCourseAllocation\web\pages\views" />
       <recent name="D:\GitHub Repositories\JavaEEold\Tema 5\OptionalCourseAllocation\web" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="converter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\JavaEE\Tema 5\OptionalCourseAllocation\web\resources" />
+      <recent name="D:\GitHub\JavaEE\Tema 5\OptionalCourseAllocation\src\resources" />
+      <recent name="D:\Andreea_Personal\Java_labs_EE\JavaEE-dev_branch_tema5_OptionalCourseAllocation\Tema 5\OptionalCourseAllocation\web\pages\templates" />
+      <recent name="D:\Andreea_Personal\Java_labs_EE\JavaEE-dev_branch_tema5_OptionalCourseAllocation\Tema 5\OptionalCourseAllocation\src\gallery" />
+      <recent name="D:\Andreea_Personal\Java_labs_EE\JavaEE-dev_branch_tema5_OptionalCourseAllocation\Tema 5\OptionalCourseAllocation\web\resources\images\menu" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -631,11 +742,21 @@
       <workItem from="1541841110087" duration="569000" />
       <workItem from="1541867707449" duration="4956000" />
       <workItem from="1541931249222" duration="7699000" />
+      <workItem from="1542457336838" duration="720000" />
+      <workItem from="1542459133166" duration="2469000" />
+      <workItem from="1542483923267" duration="1215000" />
+      <workItem from="1542526821669" duration="1163000" />
+      <workItem from="1543086912887" duration="2299000" />
+      <workItem from="1543131221090" duration="2733000" />
+      <workItem from="1543138761938" duration="1274000" />
+      <workItem from="1543307085373" duration="616000" />
+      <workItem from="1543333491852" duration="31000" />
+      <workItem from="1543772061602" duration="3527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85974000" />
+    <option name="totallyTimeSpent" value="102021000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,15 +768,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-2567" y="-359" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.61403507" visible="true" weight="0.24054463" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.60322255" visible="true" weight="0.14835165" />
       <window_info id="Structure" order="1" sideWeight="0.5007587" side_tool="true" weight="0.16733266" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Web" order="6" sideWeight="0.3859649" side_tool="true" visible="true" weight="0.24054463" />
+      <window_info id="Web" order="6" sideWeight="0.39677745" side_tool="true" visible="true" weight="0.14835165" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
@@ -770,17 +892,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/util/form/CourseFormUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/bean/LoginBean.java" />
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/primefaces-6.1.jar!/org/primefaces/component/api/UIData.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="715" selection-start-line="715" selection-end-line="715" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/addForms/courseForm.xhtml" />
-    <entry file="file://$PROJECT_DIR$/web/pages/addForms/lecturerForm.xhtml" />
     <entry file="jar://$PROJECT_DIR$/../../../glassfish4/glassfish/modules/javax.faces.jar!/com/sun/faces/application/resource/ResourceManager.class" />
     <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/primefaces-6.1.jar!/org/primefaces/component/graphicimage/GraphicImageRenderer.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -809,46 +920,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bean/OptionalCourseBean.java" />
-    <entry file="file://$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bean/LecturerBean.java" />
     <entry file="file://$PROJECT_DIR$/src/bean/CourseBean.java" />
     <entry file="file://$PROJECT_DIR$/src/bean/OptionalPackageBean.java" />
-    <entry file="file://$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/messages.properties">
+      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
-      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/messages_fr.properties">
+      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
-      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -887,13 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/templates/dataView.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -929,13 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/edit/editOptionalCourse.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="71" column="143" selection-start-line="71" selection-start-column="143" selection-end-line="71" selection-end-column="143" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/pages/views/CompulsoryCoursesView.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -963,33 +1039,6 @@
           <caret line="67" column="46" lean-forward="true" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/views/LecturerView.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="54" column="90" selection-start-line="54" selection-start-column="90" selection-end-line="54" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="59" column="48" lean-forward="true" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/operation/OptionalPackageOperations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="84" column="38" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#update#0;class#OptionalPackageOperations#0" />
-            <element signature="method#cancel#0;class#OptionalPackageOperations#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/operation/OptionalCoursesOperations.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1009,39 +1058,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/operation/LecturerOperations.java">
+    <entry file="file://$PROJECT_DIR$/src/servlet/RepositoryOperations.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/connection/PostgreConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/converter/URLConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/connection/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/database/CourseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/database/LecturerBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/database/OptionalCourseBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bean/database/OptionalPackageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editOptionalCourse.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="74" column="34" lean-forward="true" selection-start-line="70" selection-start-column="15" selection-end-line="74" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/operation/OptionalPackageOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="5" selection-start-line="17" selection-start-column="2" selection-end-line="27" selection-end-column="5" />
           <folding>
-            <element signature="method#insert#0;class#LecturerOperations#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#update#0;class#OptionalPackageOperations#0" />
+            <element signature="method#cancel#0;class#OptionalPackageOperations#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/operation/DatabaseOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/connection/PostgreConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="238">
+          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="50" />
           <folding>
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/RepositoryOperations.java">
+    <entry file="file://$PROJECT_DIR$/web/pages/views/LecturerView.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="43" column="39" lean-forward="true" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        <state relative-caret-position="571">
+          <caret line="43" column="64" lean-forward="true" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/operation/LecturerOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="135" column="44" lean-forward="true" selection-start-line="135" selection-start-column="44" selection-end-line="135" selection-end-column="44" />
+          <folding>
+            <element signature="method#getAll#0;class#LecturerOperations#0" />
+            <element signature="method#insert#0;class#LecturerOperations#0" />
+            <element signature="method#delete#0;class#LecturerOperations#0" />
+            <element signature="method#cancel#0;class#LecturerOperations#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="46" column="77" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -1105,6 +1248,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

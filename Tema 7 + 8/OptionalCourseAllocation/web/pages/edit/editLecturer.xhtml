@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:my="http://java.sun.com/jsf/composite/mycomp">
+
+
+<h:head>
+    <title>Edit lecturer</title>
+</h:head>
+<h:body>
+    <ui:composition template="/pages/templates/page.xhtml">
+
+        <ui:define name="content">
+            <h:messages style = "color:red;" />
+            <h:form>
+                <h:panelGrid id="lecturerPanel" columns="2" cellpadding="5">
+                    <p:outputLabel value="Name:" style="font-weight:bold" />
+                    <p:inputText id="name" value="#{lecturerEntity.name}" required="true">
+                    </p:inputText>
+
+                    <p:outputLabel value="Email:" style="font-weight:bold" />
+                    <p:inputText id="email" value="#{lecturerEntity.email}" validatorMessage="Invalid email format" required="true">
+                        <f:validateRegex
+                                pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+                    </p:inputText>
+                    <p:watermark for="email" value="" />
+                    <p:message for="email"/>
+
+                    <p:outputLabel value="Lecturer URL:" style="font-weight:bold" converter = "urlConverter"/>
+                    <p:inputText id="url" value="#{lecturerEntity.url}" >
+                    </p:inputText>
+                    <p:watermark for="url" value="" />
+                    <p:message for="url"/>
+
+                    <p:outputLabel value="Course(s) :" style="font-weight:bold" />
+                    <p:selectCheckboxMenu id="lecturerCourses" value="#{lecturerEntity.courses}" label = "Please select courses(s)" converter="courseEntityConverter"
+                                          filter="true" filterMatchMode="startsWith" panelStyle="width:250px" >
+                        <f:selectItems value="#{courseOperations.getAllWithOptional()}" var="course"
+                                       itemLabel="#{course.name}" itemValue="#{course}" converter="courseEntityConverter" />
+                        <f:selectItem itemValue="#{null}" itemLabel="Please select course(s)" noSelectionOption="true" />
+                    </p:selectCheckboxMenu>
+                    <p:watermark for="url" value="" />
+                    <p:message for="url"/>
+
+                    <p:commandButton value="Save" action="#{lecturerOperations.update(lecturerEntity)}" ajax="false" icon="ui-icon-check"/>
+                    <p:commandButton value="Cancel"  action="#{lecturerOperations.cancel()}" immediate="true"  icon="ui-icon-check"/>
+
+                </h:panelGrid>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

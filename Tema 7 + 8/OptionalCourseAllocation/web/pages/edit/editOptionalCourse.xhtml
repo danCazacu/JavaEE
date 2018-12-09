@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Edit optional course</title>
+</h:head>
+<ui:composition template="/pages/templates/page.xhtml">
+<ui:define name="content">
+<f:view>
+    <h:form>
+
+        <h:messages style = "color:red;" />
+            <h:panelGrid columns="2" cellpadding="10">
+
+                <p:outputLabel value="Course code:" style="font-weight:bold" />
+                <p:inputText id="code" value="#{optionalCourseEntity.course.code}" required="true">
+                    <f:validateLength minimum = "2" />
+                </p:inputText>
+
+                <p:outputLabel value="Course short-name:" style="font-weight:bold" />
+                <p:inputText id="shortName" value="#{optionalCourseEntity.course.shortName}" required="true">
+                    <f:validateLength minimum = "2"/>
+                </p:inputText>
+
+                <p:outputLabel value="Course name:" style="font-weight:bold" />
+                <p:inputText id="name" value="#{optionalCourseEntity.course.name}" required="true">
+                    <f:validateLength minimum = "2"/>
+                </p:inputText>
+
+                <p:outputLabel value="Year of study:" style="font-weight:bold" />
+                <p:spinner id="yearOfStudy" min="1" max="3" validatorMessage="Wrong year number" value="#{optionalCourseEntity.course.year}">
+                    <f:validateLongRange maximum="3" minimum="1" />
+                    <p:watermark for="yearOfStudy" value="" />
+                    <p:message for="yearOfStudy"/>
+                </p:spinner>
+
+                <p:outputLabel value="Semester:" style="font-weight:bold" />
+                <p:spinner id="semester" min="1" max="6" validatorMessage="Wrong semester number" value="#{optionalCourseEntity.course.semester}">
+                    <f:validateLongRange maximum="6" minimum="1" />
+                    <p:watermark for="semester" value="" />
+                    <p:message for="semester"/>
+                </p:spinner>
+
+                <p:outputLabel value="Number of credits:" style="font-weight:bold" />
+                <p:spinner id="credits" min="1" max="10" validatorMessage="Wrong credits number" value="#{optionalCourseEntity.course.credits}">
+                    <f:validateLongRange maximum="10" minimum="1" />
+                    <p:watermark for="credits" value="" />
+                    <p:message for="credits"/>
+                </p:spinner>
+
+                <p:outputLabel value="URL:" style="font-weight:bold" />
+                <p:inputText id="url" value="#{optionalCourseEntity.course.url}" converter="urlConverter" required="true">
+                   </p:inputText>
+                <p:watermark for="url" value="" />
+                <p:message for="url"/>
+
+                <p:outputLabel value="Lecturer :" style="font-weight:bold" />
+                <p:selectCheckboxMenu id="coLecturers" value="#{optionalCourseEntity.course.lecturers}" label = "Please select lecturer(s)" converter="lecturerEntityConverter"
+                                      filter="true" filterMatchMode="startsWith" panelStyle="width:250px" >
+                    <f:selectItems value="#{lecturerOperations.getAll()}" var="lecturer"
+                                   itemLabel="#{lecturer.name}" itemValue="#{lecturer}" converter="lecturerEntityConverter"/>
+                    <f:selectItem itemValue="#{null}" itemLabel="Please select lecturer(s)" noSelectionOption="true" />
+                </p:selectCheckboxMenu>
+                <p:watermark for="url" value="" />
+                <p:message for="url"/>
+
+
+                <p:outputLabel value="Optional package:" style="font-weight:bold" />
+                <p:selectOneMenu id="optPkg" value="#{optionalCourseEntity.optionalPackage}" filter="true" filterMatchMode="startsWith" required="true" >
+                    <f:selectItems value="#{optionalPackageOperations.getAll()}" var="optionalPackage"
+                                    itemLabel="#{optionalPackage.code}" itemValue="#{optionalPackage}"/>
+                    <f:selectItem itemValue="#{null}" itemLabel="Please select an optional package" noSelectionOption="true" />
+                </p:selectOneMenu>
+                <p:watermark for="url" value="" />
+                <p:message for="url"/>
+
+                <p:commandButton value="Save" action="#{optionalCourseOperations.update(optionalCourseEntity)}" ajax="false" icon="ui-icon-check"/>
+                <p:commandButton value="Cancel"  action="#{optionalCourseOperations.cancel()}" immediate="true"  icon="ui-icon-check"/>
+
+            </h:panelGrid>
+        </h:form>
+</f:view>
+</ui:define>
+</ui:composition>
+</html>

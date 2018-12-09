@@ -38,6 +38,12 @@
             <p:watermark for="url" value="" />
             <p:message for="url"/>
 
+            <p:outputLabel value="Course:" style="font-weight:bold" />
+            <p:selectOneMenu id="course" value="#{lecturerBean.optPackage}" filter="true" filterMatchMode="startsWith" required="true">
+                <f:selectItem itemLabel="Select One" itemValue="" />
+                <f:selectItems value="#{optionalPackageOperations.getAllPackagesCodes()}" />
+            </p:selectOneMenu>
+
             <p:commandButton value="Save" action="#{lecturerOperations.update(lecturerBean)}" ajax="false" icon="ui-icon-check"/>
             <p:commandButton value="Cancel"  action="#{lecturerOperations.cancel()}" immediate="true"  icon="ui-icon-check"/>
 

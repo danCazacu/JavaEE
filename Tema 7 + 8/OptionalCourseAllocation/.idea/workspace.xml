@@ -1,0 +1,1493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="OptionalCourseAllocation:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/hw8/SearchPage.java" line="42" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b50e3a29-f10f-42f3-bbcc-f7289ce97926" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/bean/GalleryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bean/LocaleLanguage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/messages_fr.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/progress.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/postgresql-42.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/primefaces-6.1-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/primefaces-6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/edit/editCompulsoryCourse.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/edit/editOptionalCourse.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/edit/editStudent.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/templates/dataView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/templates/footer.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/templates/header.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/templates/menu.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/templates/page.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/views/CompulsoryCoursesView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/views/LecturerView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/views/OptionalCoursesView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/views/OptionalPackagesView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/pages/views/StudentView.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/gallery/imageCS1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/gallery/imageCS2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/gallery/imageCS3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/gallery/imageCS4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/gallery/imageCS5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/gallery/imageCS6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/menu/compcourses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/menu/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/menu/lecturers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/menu/optcourses.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/menu/optpackages.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/images/menu/stack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/mycomp/email.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation/src/converter/URLConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/converter/URLConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation/src/dao/operation/LecturerOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation/src/dao/operation/LecturerOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation/web/pages/edit/editLecturer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation/web/pages/edit/editLecturer.xhtml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/OptionalCourseAllocation$GlassFish_4_1_2.ic" NAME="GlassFish 4.1.2 Coverage Results" MODIFIED="1543863409408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="courses_persons: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="optional_courses: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="optional_packages: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="JavaEE@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="JavaEE: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="student_preferences: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="416325051">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="4" />
+          <entry key="project.open.time.15" value="2" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="3" />
+          <entry key="project.opened" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="3" />
+          <entry key="course_prefrences" value="2" />
+          <entry key="courses" value="42" />
+          <entry key="courses_persons" value="2" />
+          <entry key="java" value="298" />
+          <entry key="lecturers_courses" value="7" />
+          <entry key="optional_courses" value="30" />
+          <entry key="optional_courses22" value="1" />
+          <entry key="optional_packages" value="21" />
+          <entry key="persons" value="20" />
+          <entry key="persons_id_seq" value="2" />
+          <entry key="sql" value="32" />
+          <entry key="student_grades" value="4" />
+          <entry key="student_preferences" value="27" />
+          <entry key="txt" value="1" />
+          <entry key="xhtml" value="142" />
+          <entry key="xml" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="3" />
+          <entry key="Database Element" value="156" />
+          <entry key="JAVA" value="298" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="SQL" value="2" />
+          <entry key="Scratch" value="32" />
+          <entry key="XHTML" value="142" />
+          <entry key="XML" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cell" value="42" />
+          <entry key="dummy" value="184" />
+          <entry key="java" value="25044" />
+          <entry key="sql" value="351" />
+          <entry key="txt" value="248" />
+          <entry key="xhtml" value="3642" />
+          <entry key="xml" value="308" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="25043" />
+          <entry key="JPA QL" value="1" />
+          <entry key="PLAIN_TEXT" value="432" />
+          <entry key="SQL" value="141" />
+          <entry key="Scratch" value="252" />
+          <entry key="XHTML" value="3642" />
+          <entry key="XML" value="308" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/DatabaseOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#cancel#0;class#DatabaseOperations#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dao/LecturerOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/StudentOperations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>converter</find>
+      <find>setTy</find>
+      <find>e</find>
+      <find>counter</find>
+      <find>entityManager</find>
+      <find>en</find>
+      <find>comm</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/dao/OptionalCoursesOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/CoursesOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/LecturersOperations.java" />
+        <option value="$PROJECT_DIR$/src/resources/progress.txt" />
+        <option value="$PROJECT_DIR$/web/pages/views/StudentsView.xhtml" />
+        <option value="$PROJECT_DIR$/src/util/JPASingletonResource.java" />
+        <option value="$PROJECT_DIR$/src/util/EntityManageProducer.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c6a26a59-45c3-4d83-a25e-478d317799ac/console_4.sql" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/src/converter/URLConverter.java" />
+        <option value="$PROJECT_DIR$/src/converter/LecturerEntity.java" />
+        <option value="$PROJECT_DIR$/web/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/entity/StudentPreferencesEntity.java" />
+        <option value="$PROJECT_DIR$/web/pages/views/LecturerView.xhtml" />
+        <option value="$PROJECT_DIR$/web/pages/edit/editStudent.xhtml" />
+        <option value="$PROJECT_DIR$/src/entity/PersonEntity.java" />
+        <option value="$PROJECT_DIR$/web/pages/templates/footer.xhtml" />
+        <option value="$PROJECT_DIR$/src/entity/LecturerEntity.java" />
+        <option value="$PROJECT_DIR$/src/converter/CourseEntityCoverter.java" />
+        <option value="$PROJECT_DIR$/src/converter/LecturerEntityConverter.java" />
+        <option value="$PROJECT_DIR$/src/converter/OptionalPackageEntityConverter.java" />
+        <option value="$PROJECT_DIR$/src/entity/StudentEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/OptionalPackageEntity.java" />
+        <option value="$PROJECT_DIR$/web/pages/edit/editCompulsoryCourse.xhtml" />
+        <option value="$PROJECT_DIR$/web/pages/views/OptionalPackagesView.xhtml" />
+        <option value="$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml" />
+        <option value="$PROJECT_DIR$/web/pages/views/CompulsoryCoursesView.xhtml" />
+        <option value="$PROJECT_DIR$/src/util/Constants.java" />
+        <option value="$PROJECT_DIR$/src/entity/OptionalCourseEntity.java" />
+        <option value="$PROJECT_DIR$/web/pages/edit/editOptionalCourse.xhtml" />
+        <option value="$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml" />
+        <option value="$PROJECT_DIR$/web/pages/templates/menu.xhtml" />
+        <option value="$PROJECT_DIR$/src/util/PerssistenceUtil.java" />
+        <option value="$PROJECT_DIR$/src/criteria/OptionalCourse.java" />
+        <option value="$PROJECT_DIR$/src/criteria/Course_.java" />
+        <option value="$PROJECT_DIR$/src/criteria/OptionalCourse_.java" />
+        <option value="$PROJECT_DIR$/src/util/JPAUtil.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/entity/CourseEntity.java" />
+        <option value="$PROJECT_DIR$/src/entity/Test.java" />
+        <option value="$PROJECT_DIR$/web/pages/views/StudentView.xhtml" />
+        <option value="$PROJECT_DIR$/web/pages/views/OptionalCoursesView.xhtml" />
+        <option value="$PROJECT_DIR$/src/hw8/SearchPageBean.java" />
+        <option value="$PROJECT_DIR$/web/pages/views/SearchPage.xhtml" />
+        <option value="$PROJECT_DIR$/src/hw8/SearchPage.java" />
+        <option value="$PROJECT_DIR$/src/dao/LecturerOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/CourseOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/OptionalCourseOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/OptionalPackageOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/StudentOperations.java" />
+        <option value="$PROJECT_DIR$/src/dao/DatabaseOperations.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-230" />
+    <option name="y" value="85" />
+    <option name="width" value="2430" />
+    <option name="height" value="1380" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="converter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hw8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="edit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OptionalCourseAllocation" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OptionalCourseAllocation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="Downloaded.Files.Path" value="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\web\WEB-INF\lib" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/GitHub/JavaEE/Tema 7/OptionalCourseAllocation/src/entity/CourseEntity.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544355383849" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Tema 6/OptionalCourseAllocation" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\src\entity" />
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\web\WEB-INF\lib" />
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\web\WEB-INF" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\web\pages\views" />
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\web\pages\edit" />
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\src\bean" />
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\src" />
+      <recent name="D:\GitHub\JavaEE\Tema 7\OptionalCourseAllocation\web\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="converter" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="entity" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="GlassFish Server.GlassFish 4.1.2">
+    <configuration name="Test" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="entity.Test" />
+      <module name="OptionalCourseAllocation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="entity.Test" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GlassFish 4.1.2" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.1.2" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/OptionalCourseAllocation_war_exploded/index.xhtml" />
+      <deployment>
+        <artifact name="OptionalCourseAllocation:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="DOMAIN" value="domain1" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="GlassFish" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="OptionalCourseAllocation:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Test" />
+      <item itemvalue="GlassFish Server.GlassFish 4.1.2" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b50e3a29-f10f-42f3-bbcc-f7289ce97926" name="Default Changelist" comment="" />
+      <created>1542528798987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542528798987</updated>
+      <workItem from="1542528803154" duration="9454000" />
+      <workItem from="1542557210291" duration="319000" />
+      <workItem from="1542557553068" duration="5864000" />
+      <workItem from="1542565168630" duration="260000" />
+      <workItem from="1542565458204" duration="3802000" />
+      <workItem from="1542961379995" duration="27371000" />
+      <workItem from="1543069184493" duration="11873000" />
+      <workItem from="1543084433614" duration="18057000" />
+      <workItem from="1543131375148" duration="7327000" />
+      <workItem from="1543138761082" duration="3580000" />
+      <workItem from="1543163402424" duration="8116000" />
+      <workItem from="1543307112334" duration="13811000" />
+      <workItem from="1543333526362" duration="3754000" />
+      <workItem from="1543771592481" duration="11462000" />
+      <workItem from="1543847524534" duration="11067000" />
+      <workItem from="1543858940158" duration="8995000" />
+      <workItem from="1543868004342" duration="3277000" />
+      <workItem from="1543917230997" duration="5806000" />
+      <workItem from="1543938386045" duration="746000" />
+      <workItem from="1543939167979" duration="2415000" />
+      <workItem from="1544349708089" duration="3506000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="160862000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7570093" visible="true" weight="0.2033557" />
+      <window_info id="Structure" order="1" sideWeight="0.23305085" side_tool="true" weight="0.2627688" />
+      <window_info id="Persistence" order="2" sideWeight="0.24299066" side_tool="true" weight="0.20872483" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.25815603" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3134752" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36737588" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32859176" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32765958" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32859176" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32859176" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32859176" />
+      <window_info anchor="bottom" id="SQL Generator" order="14" weight="0.32859176" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info active="true" anchor="right" id="Database" order="7" sideWeight="0.4988345" visible="true" weight="0.24697986" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5011655" side_tool="true" weight="0.19597316" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7570093" visible="true" weight="0.20872483" />
+      <window_info id="Structure" order="1" sideWeight="0.23305085" side_tool="true" weight="0.2627688" />
+      <window_info id="Persistence" order="2" sideWeight="0.24299066" side_tool="true" visible="true" weight="0.20872483" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.25815603" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30070922" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3929078" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32859176" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32859176" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32765958" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32859176" />
+      <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32859176" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32859176" />
+      <window_info anchor="bottom" id="SQL Generator" order="14" weight="0.32859176" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.19597316" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/OptionalPackageEntity.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/converter/OptionalPackageEntityConverter.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalPackageOperations.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/CourseOperations.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/CourseOperations.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/CourseOperations.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="189" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/CourseOperations.java</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/CourseOperations.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>146</line>
+          <properties />
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>110</line>
+          <properties />
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>197</line>
+          <properties />
+          <option name="timeStamp" value="246" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>191</line>
+          <properties />
+          <option name="timeStamp" value="247" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="249" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>144</line>
+          <properties />
+          <option name="timeStamp" value="252" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="253" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="255" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="256" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>205</line>
+          <properties />
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>213</line>
+          <properties />
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>278</line>
+          <properties />
+          <option name="timeStamp" value="266" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>239</line>
+          <properties />
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Test.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="271" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/hw8/SearchPage.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GlassfishConfiguration">
+        <watch expression="courses.toArray()[0]" />
+        <watch expression="editRecord" />
+        <watch expression="((NullPointerException)e).cause" language="JAVA" custom="java.lang.NullPointerException" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>((NullPointerException)e).cause</expression-string>
+        <language-id>JAVA</language-id>
+        <custom-info>java.lang.NullPointerException</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>optionalCourse</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/optional_packages" />
+    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/StudentPreferencesCompositeKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/StudentPreferencesEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="33" column="2" selection-start-line="33" selection-end-line="55" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/persons" />
+    <entry file="file://$PROJECT_DIR$/web/pages/templates/header.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/templates/footer.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/converter/OptionalPackageEntityConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/converter/LecturerEntityConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="90" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/StudentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/LecturerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/OptionalPackageEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="75" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/PersonEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="68" lean-forward="true" selection-start-line="6" selection-end-line="7" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editCompulsoryCourse.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editOptionalPackage.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="38" column="106" selection-start-line="38" selection-start-column="85" selection-end-line="38" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="40" column="72" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/views/OptionalPackagesView.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" selection-start-line="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/converter/CourseEntityCoverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/templates/menu.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/views/LecturerView.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editOptionalCourse.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="78" column="34" lean-forward="true" selection-start-line="73" selection-start-column="15" selection-end-line="78" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editStudent.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="89" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/edit/editLecturer.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="49" column="116" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/eclipselink-2.7.3.jar!/org/eclipse/persistence/internal/jpa/querydef/FromImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/criteria/Course_.java" />
+    <entry file="file://$PROJECT_DIR$/src/criteria/OptionalCourse_.java" />
+    <entry file="file://$PROJECT_DIR$/src/util/JPAUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="100" selection-start-line="10" selection-start-column="100" selection-end-line="10" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Tema 2/MovieDB/src/Util/PropertiesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/student_preferences" />
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/optional_courses" />
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/student_grades" />
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/courses" />
+    <entry file="file://$PROJECT_DIR$/src/entity/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doInsertInStudentPref#0;class#Test#0" />
+            <element signature="method#addLecturer#0;class#Test#0" />
+            <element signature="method#addStudent#0;class#Test#0" />
+            <element signature="method#getAllLecturers#0;class#Test#0" />
+            <element signature="method#showAllLecturers#0;class#Test#0" />
+            <element signature="method#addOptionalPackage#0;class#Test#0" />
+            <element signature="method#addCourse#0;class#Test#0" />
+            <element signature="method#manyToManyLecturersCourses#0;class#Test#0" />
+            <element signature="method#add3OptionalCourses#0;class#Test#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw8/SearchPageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/OptionalCourseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="83" selection-start-line="7" selection-start-column="83" selection-end-line="7" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/views/StudentView.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="22" selection-start-line="31" selection-start-column="8" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/views/CompulsoryCoursesView.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="141" selection-start-line="59" selection-start-column="101" selection-end-line="59" selection-end-column="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/views/OptionalCoursesView.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="3" selection-start-line="60" selection-start-column="8" selection-end-line="64" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/CourseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hw8/SearchPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2678#2686#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/pages/views/SearchPage.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="68" column="60" selection-start-line="68" selection-start-column="60" selection-end-line="68" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/CourseOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/OptionalCourseOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#insert#0;class#OptionalCourseOperations#0" />
+            <element signature="method#getPrefered#0;class#OptionalCourseOperations#0" />
+            <element signature="method#getForEdit#0;class#OptionalCourseOperations#0" />
+            <element signature="method#update#0;class#OptionalCourseOperations#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/OptionalPackageOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/StudentOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/DatabaseOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#cancel#0;class#DatabaseOperations#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/lecturers_courses">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c6a26a59-45c3-4d83-a25e-478d317799ac/database/JavaEE/schema/public/table/courses_persons">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/LecturerOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>OptionalCourseAllocation:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPA</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>OptionalCourseAllocation</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>org.eclipse.persistence:eclipselink:2.7.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

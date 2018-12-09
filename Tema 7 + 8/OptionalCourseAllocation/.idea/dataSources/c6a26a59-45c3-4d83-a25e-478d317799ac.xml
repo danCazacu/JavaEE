@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="JavaEE@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
+    <root id="1">
+      <ServerVersion>11.0</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="GameTweeter">
+      <ObjectId>16522</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="JavaEE">
+      <ObjectId>17733</ObjectId>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>123</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="4" parent="1" name="javaEE">
+      <ObjectId>16410</ObjectId>
+      <Owner>javaEE</Owner>
+    </database>
+    <database id="5" parent="1" name="postgres">
+      <ObjectId>13012</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="testdb">
+      <ObjectId>16393</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="7" parent="1" name="javaEE">
+      <ObjectId>16409</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="17" parent="3" name="information_schema">
+      <ObjectId>12716</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="3" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="3" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="20" parent="3" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="21" parent="3" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="22" parent="3" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-12-09.13:37:40.652</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1303</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="23" parent="3" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="3" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="3" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="3" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="3" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="28" parent="3" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <sequence id="29" parent="22" name="courses_id_seq">
+      <ObjectId>50524</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1293</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="30" parent="22" name="optional_packages_id_seq">
+      <ObjectId>50514</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1291</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="31" parent="22" name="persons_id_seq">
+      <ObjectId>50501</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1289</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="32" parent="22" name="courses">
+      <ObjectId>50526</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1295</StateNumber>
+    </table>
+    <table id="33" parent="22" name="courses_persons">
+      <ObjectId>50583</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1301</StateNumber>
+    </table>
+    <table id="34" parent="22" name="optional_courses">
+      <ObjectId>50538</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1295</StateNumber>
+    </table>
+    <table id="35" parent="22" name="optional_packages">
+      <ObjectId>50516</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1295</StateNumber>
+    </table>
+    <table id="36" parent="22" name="persons">
+      <ObjectId>50503</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1297</StateNumber>
+    </table>
+    <table id="37" parent="22" name="student_grades">
+      <ObjectId>50568</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1299</StateNumber>
+    </table>
+    <table id="38" parent="22" name="student_preferences">
+      <ObjectId>50596</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>1303</StateNumber>
+    </table>
+    <column id="39" parent="32" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1293</StateNumber>
+      <DefaultExpression>nextval(&apos;courses_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>courses_id_seq</SequenceName>
+    </column>
+    <column id="40" parent="32" name="short_name">
+      <Position>2</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <StateNumber>1293</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="32" name="name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>1293</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="42" parent="32" name="code">
+      <Position>4</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <StateNumber>1293</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="32" name="year">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1293</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="44" parent="32" name="semester">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1293</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="45" parent="32" name="credits">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1293</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="46" parent="32" name="url">
+      <Position>8</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>1293</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="47" parent="32" name="courses_pkey">
+      <ObjectId>50530</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="48" parent="32" name="courses_short_name_key">
+      <ObjectId>50532</ObjectId>
+      <ColNames>short_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="49" parent="32" name="courses_name_key">
+      <ObjectId>50534</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="50" parent="32" name="courses_code_key">
+      <ObjectId>50536</ObjectId>
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="32" name="courses_pkey">
+      <ObjectId>50531</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>courses_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="52" parent="32" name="courses_short_name_key">
+      <ObjectId>50533</ObjectId>
+      <ColNames>short_name</ColNames>
+      <UnderlyingIndexName>courses_short_name_key</UnderlyingIndexName>
+    </key>
+    <key id="53" parent="32" name="courses_name_key">
+      <ObjectId>50535</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>courses_name_key</UnderlyingIndexName>
+    </key>
+    <key id="54" parent="32" name="courses_code_key">
+      <ObjectId>50537</ObjectId>
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>courses_code_key</UnderlyingIndexName>
+    </key>
+    <column id="55" parent="33" name="lecturers_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1301</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="56" parent="33" name="courseentity_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1301</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="57" parent="33" name="courses_persons_persons_id_fk">
+      <ObjectId>50586</ObjectId>
+      <ColNames>lecturers_id</ColNames>
+      <RefTableId>50503</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>persons</RefTableName>
+      <RefKeyName>persons_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="58" parent="33" name="courses_persons_courses_id_fk">
+      <ObjectId>50591</ObjectId>
+      <ColNames>courseentity_id</ColNames>
+      <RefTableId>50526</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>courses</RefTableName>
+      <RefKeyName>courses_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="59" parent="34" name="course_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1295</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="60" parent="34" name="optionalpackages_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1295</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="61" parent="34" name="optional_courses_pk">
+      <ObjectId>50541</ObjectId>
+      <ColNames>course_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="34" name="optional_courses_pk">
+      <ObjectId>50542</ObjectId>
+      <ColNames>course_id</ColNames>
+      <UnderlyingIndexName>optional_courses_pk</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="63" parent="34" name="optional_courses_courses_id_fk">
+      <ObjectId>50543</ObjectId>
+      <ColNames>course_id</ColNames>
+      <RefTableId>50526</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>courses</RefTableName>
+      <RefKeyName>courses_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="64" parent="34" name="optional_courses_optional_packages_id_fk">
+      <ObjectId>50548</ObjectId>
+      <ColNames>optionalpackages_id</ColNames>
+      <RefTableId>50516</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>optional_packages</RefTableName>
+      <RefKeyName>optional_packages_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="65" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1291</StateNumber>
+      <DefaultExpression>nextval(&apos;optional_packages_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>optional_packages_id_seq</SequenceName>
+    </column>
+    <column id="66" parent="35" name="code">
+      <Position>2</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <StateNumber>1291</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="67" parent="35" name="year">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1291</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="35" name="semester">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1291</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="69" parent="35" name="optional_packages_pkey">
+      <ObjectId>50520</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="70" parent="35" name="optional_packages_code_key">
+      <ObjectId>50522</ObjectId>
+      <ColNames>code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="35" name="optional_packages_pkey">
+      <ObjectId>50521</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>optional_packages_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="72" parent="35" name="optional_packages_code_key">
+      <ObjectId>50523</ObjectId>
+      <ColNames>code</ColNames>
+      <UnderlyingIndexName>optional_packages_code_key</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1289</StateNumber>
+      <DefaultExpression>nextval(&apos;persons_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>persons_id_seq</SequenceName>
+    </column>
+    <column id="74" parent="36" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1289</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="75" parent="36" name="email">
+      <Position>3</Position>
+      <DataType>varchar(65)|0s</DataType>
+      <StateNumber>1289</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="76" parent="36" name="person_type">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <StateNumber>1289</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="77" parent="36" name="year">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1289</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="78" parent="36" name="url">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1289</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="79" parent="36" name="persons_pkey">
+      <ObjectId>50510</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="80" parent="36" name="persons_name_key">
+      <ObjectId>50512</ObjectId>
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="81" parent="36" name="persons_pkey">
+      <ObjectId>50511</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>persons_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="82" parent="36" name="persons_name_key">
+      <ObjectId>50513</ObjectId>
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>persons_name_key</UnderlyingIndexName>
+    </key>
+    <column id="83" parent="37" name="student_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1299</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="84" parent="37" name="course_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1299</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="85" parent="37" name="grade">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1299</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="86" parent="37" name="student_grades_pkey">
+      <ObjectId>50571</ObjectId>
+      <ColNames>student_id
+course_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="87" parent="37" name="student_grades_pkey">
+      <ObjectId>50572</ObjectId>
+      <ColNames>student_id
+course_id</ColNames>
+      <UnderlyingIndexName>student_grades_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="88" parent="37" name="student_grades_student_id_fkey">
+      <ObjectId>50573</ObjectId>
+      <ColNames>student_id</ColNames>
+      <RefTableId>50503</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>persons</RefTableName>
+      <RefKeyName>persons_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <foreign-key id="89" parent="37" name="student_grades_course_id_fkey">
+      <ObjectId>50578</ObjectId>
+      <ColNames>course_id</ColNames>
+      <RefTableId>50526</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>courses</RefTableName>
+      <RefKeyName>courses_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+    <column id="90" parent="38" name="optional_course_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1303</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="91" parent="38" name="student_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1303</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="92" parent="38" name="position">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1303</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="93" parent="38" name="student_preferences_unique">
+      <ObjectId>50599</ObjectId>
+      <ColNames>optional_course_id
+student_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="94" parent="38" name="student_preferences_unique">
+      <ObjectId>50600</ObjectId>
+      <ColNames>optional_course_id
+student_id</ColNames>
+      <UnderlyingIndexName>student_preferences_unique</UnderlyingIndexName>
+    </key>
+    <foreign-key id="95" parent="38" name="student_preferences_optional_courses_course_id_fk">
+      <ObjectId>50601</ObjectId>
+      <ColNames>optional_course_id</ColNames>
+      <RefTableId>50538</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>optional_courses</RefTableName>
+      <RefKeyName>optional_courses_pk</RefKeyName>
+      <RefColNames>course_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="96" parent="38" name="student_preferences_persons_id_fk">
+      <ObjectId>50606</ObjectId>
+      <ColNames>student_id</ColNames>
+      <RefTableId>50503</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>persons</RefTableName>
+      <RefKeyName>persons_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
