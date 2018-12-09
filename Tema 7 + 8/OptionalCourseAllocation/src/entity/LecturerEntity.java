@@ -23,11 +23,11 @@ public class LecturerEntity extends PersonEntity {
     }
 
 
-    @JoinTable(name = "lecturers_courses",
+    @JoinTable(name = "courses_persons",
                 joinColumns = {
-                    @JoinColumn(name = "lecturer_id", referencedColumnName = "id")},
+                    @JoinColumn(name = "lecturers_id", referencedColumnName = "id")},
                 inverseJoinColumns = {
-                    @JoinColumn(name = "course_id", referencedColumnName = "id")})
+                    @JoinColumn(name = "courseentity_id", referencedColumnName = "id")})
     @ManyToMany( fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE})
     private Set<CourseEntity> courses = new HashSet<>();
 
